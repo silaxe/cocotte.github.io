@@ -1,0 +1,50 @@
+#home .startMenu {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#home #menu .ui-slider input {
+    display: none;
+}
+
+#home #menu .ui-slider .ui-slider-track {
+    margin-left: 15px;
+}
+
+footer p {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    background-color: #ff0032;
+    bottom: 10px;
+}
+
+#game .ui-content {
+    padding: 0;
+    background: url('http://demo.lapprimerie.com/rush2016/img/lava.gif') repeat;
+}
+
+#game .safeZone {
+    width: 88%;
+    height: 92%;
+    background: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#game .kenny{
+    width: 82px;
+    height: 82px;
+    background: url('http://demo.lapprimerie.com/rush2016/img/kenny.gif') no-repeat center center;
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+#game .kenny.dead{
+    background-image: url('http://demo.lapprimerie.com/rush2016/img/kennydead.png');
+}
