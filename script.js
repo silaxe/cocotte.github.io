@@ -1,32 +1,39 @@
+// On définit nos variables
+var pression = 0;
 $(document).ready(function() {
-    //On test si le navigateur peut accéder au gyroscope
-    if (window.DeviceOrientationEvent)
-    {
-        $('#type').html('DeviceOrientation');
-        //Dans le cas DeviceOrientationEvent on écoute l'évenement deviceorientation
-        window.addEventListener('deviceorientation', function(e) {
-            //gamma calcul en degrés la position gauche/droite (droite positif)
-            var x = e.gamma;
+window.addEventListener("deviceorientation", handleOrientation, true);
+function handleOrientation(event) {
+  //Définition des axes
+  var beta = Math.round(event.beta);
+  var gamma = Math.round(event.gamma);
 
-            //beta calcul en degrés la position haut/bas (haut positif)
-            var y = e.beta;
+  $('#beta').text("Inclinaison haut-bas :" + beta);
+  $('#gamma').text("Inclinaison gauche-droite :" + gamma);
 
-            //alpha calcul en degrés la position de la boussole
-            var dir = e.alpha
+  if((beta >= 15 && beta < 20) || (beta <= -15 && beta > -20))
+  {
+    $('#roulage').text('mini');
+  }
+  else if(beta >= 20 || beta <= -20)
+  {
+    $('#roulage').text('medium');
+  }
+  else
+  {
+    $('#roulage').text('None');
+  }
 
-            //On écrit les valeurs dans les span HTML
-            $('#Gamma').html(Math.round(x));
-            $('#Beta').html(Math.round(y));
-            $('#Alpha').html(Math.round(dir));
-
-            //On écrit détecte le mouvement gauche/droite, s'il est plus grand que 0 on augmente le rouge de la div, sinon on augmente le noir de la div
-            if(x>0)
-                $('#carre').css('background', '-webkit-gradient(linear, left top, right top, color-stop(' + x/90 + ', #ff0000), color-stop(1, #000000))');
-            else
-                $('#carre').css('background', '-webkit-gradient(linear, left top, right top, color-stop(0, #ff0000), color-stop(' + (1-(x/-90)) + ', #000000))');
-
-        }, false);
-    }
-    else
-        $('#type').html('Non supporté');
-});
+  if((gamma >= 10 && gamma < 15) || (gamma <= -10 && gamma > -15))
+  {
+    $('#tangage').text('mini');
+  }
+  else if(gamma >= 15 || gamma <= -15)
+  {
+    $('#tangage').text('medium');
+  }
+  else
+  {
+    $('#tangage').text('None');
+  }
+}
+});   
