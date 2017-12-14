@@ -24,6 +24,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="http://demo.lapprimerie.com/rush2016/js/addtohomescreen.min.js"></script>
+    <script src="script_timer.js"></script>
 
     <!-- Manifest qui référence les icones et les options de la webApp pour Android -->
     <link rel="manifest" href="http://demo.lapprimerie.com/rush2016/manifest.json">
@@ -92,7 +93,7 @@
             <label for="menuDifficulty3">Difficile</label>
         </fieldset>
         <a href="#rules" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Rules</a>
-        <a href="#play" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Play!</a>
+        <a href="#game" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Play!</a>
     </div>
     <!-- On crée la page Rules -->
     <div data-role="panel" id="rules">
@@ -106,16 +107,15 @@
         <p>
     </div>
     <!-- On créé la page game -->
-    <div data-role="page" id="play">
+    <div data-role="page" id="game">
         <!-- On créé un bouton de retour vers la page home -->
         <a href="#home" data-rel="back" class="ui-btn ui-btn-left ui-alt-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l">Back</a>
         <!-- On ajoute la div principale de la page (dans laquelle se trouvera le jeu) -->
         <div data-role="main" class="ui-content">
           <div class="slower_button"></div>
           <div class="faster_button"></div>
-          <div class="tap_cocotte"></div>
 
-          <div class="safeZone"></div>
+          <div class="gameZone"></div>
         </div>
     </div>
     <!-- On ajoute une balise audio avec une id pour pouvoir l'appeler facilement depuis le JS -->

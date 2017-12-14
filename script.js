@@ -44,4 +44,4 @@ function handleOrientation(event) {
     $('#tangage').text('None');
   }
 }
-});   
+});

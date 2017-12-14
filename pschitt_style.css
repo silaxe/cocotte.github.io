@@ -27,10 +27,10 @@ footer p {
     background: url('http://demo.lapprimerie.com/rush2016/img/lava.gif') repeat;
 }
 
-#game .safeZone {
-    width: 88%;
+#game .gameZone {
+    width: 80%;
     height: 92%;
-    background: #ffffff;
+    background: #fff00f;
     position: absolute;
     top: 50%;
     left: 50%;
