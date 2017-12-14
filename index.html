@@ -1,30 +1,106 @@
-<html>
-<head>coucou</head
-<body>
-  <video autoplay></video>
-<!-- -->
-  <script>
-  navigator.getUserMedia = navigator.getUserMedia ||
-                           navigator.webkitGetUserMedia ||
-                           navigator.mozGetUserMedia;
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Don't Kill Kenny</title>
+    <!-- On définie le viewport (la fenêtre) pour donner ses dimention et signifier les possibilités de zoom de l'utilisateur (ici seul l'affiche normal est autorisé) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-  if (navigator.getUserMedia) {
-     navigator.getUserMedia({ audio: true, video: { width: 1280, height: 720 } },
-        function(videoStream) {
-           var video = document.querySelector('video');
-           //video.src = window.URL.createObjectURL(stream);
-           video.srcObject = videoStream;
-           video.onloadedmetadata = function(e) {
-             video.play();
-           };
-        },
-        function(err) {
-           console.log("The following error occurred: " + err.name);
-        }
-     );
-  } else {
-     console.log("getUserMedia not supported");
-  }
-  </script>
+    <!-- Les 2 balises suivantes permettent d'indiquer au navigateur qu'il peut considérer le site en temps que Web app lorsque il est lancé depuis le bureau -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Style de la barre d'état (valeurs: default / black / black-translucent) -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <!-- Nom de la webapp sur le bureau-->
+    <meta name="apple-mobile-web-app-title" content="Don't Kill Kenny">
+    <meta name="mobile-web-app-title" content="Don't Kill Kenny">
+
+    <!--
+        On appel jQuery Mobile pour préparer la UI de notre webApp
+        On appel addtohomescreen.css et addtohomescreen.min.js pour donner un message d'information aux utilisateurs afin de leur indiquer que la webApp est enregistrable sur tablette et smartphone
+    -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css">
+    <link rel="stylesheet" href="http://demo.lapprimerie.com/rush2016/css/addtohomescreen.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="http://demo.lapprimerie.com/rush2016/js/addtohomescreen.min.js"></script>
+
+    <!-- Manifest qui référence les icones et les options de la webApp pour Android -->
+    <link rel="manifest" href="http://demo.lapprimerie.com/rush2016/manifest.json">
+    <!-- Fichier de config qui référence les icones et les options de la webApp pour Windows -->
+    <meta name="msapplication-config" content="http://demo.lapprimerie.com/rush2016/browserconfig.xml">
+    <!-- Configuration pour Windows 8 (browserconfig.xml a été introduit dans windows 8.1) -->
+    <meta name="msapplication-TileColor" content="#00aef0">
+    <meta name="msapplication-TileImage" content="http://demo.lapprimerie.com/rush2016/img/ms/icon_144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- ICONES -->
+    <!-- il faut mettre l'icone la plus grande en 1er car add2Home utilise toujours la première icone avec le rel="apple-touch-icon" -->
+    <link rel="apple-touch-icon" sizes="180x180" href="http://demo.lapprimerie.com/rush2016/img/icon/ios/icon_180.png"><!-- iPhone 6 Plus -->
+    <link rel="apple-touch-icon" sizes="152x152" href="http://demo.lapprimerie.com/rush2016/img/icon/ios/icon_152.png"><!-- iOS 7+ iPad Retina -->
+    <link rel="apple-touch-icon" sizes="144x144" href="http://demo.lapprimerie.com/rush2016/img/icon/ios/icon_144.png"><!-- iOS 6 iPad Retina -->
+    <link rel="apple-touch-icon" sizes="120x120" href="http://demo.lapprimerie.com/rush2016/img/icon/ios/icon_120.png"><!-- iOS 7+ iPhone Retina -->
+    <link rel="apple-touch-icon" sizes="114x114" href="http://demo.lapprimerie.com/rush2016/img/icon/ios/icon_114.png"><!-- iOS 6 iPhone Retina -->
+    <link rel="apple-touch-icon" sizes="76x76" href="http://demo.lapprimerie.com/rush2016/img/icon/ios/icon_76.png"><!-- iOS 7+ iPad -->
+    <link rel="apple-touch-icon" sizes="72x72" href="http://demo.lapprimerie.com/rush2016/img/icon/ios/icon_72.png"><!-- iOS 6 iPad -->
+    <link rel="apple-touch-icon" sizes="57x57" href="http://demo.lapprimerie.com/rush2016/img/icon/ios/icon_57.png"><!-- iOS 6 iPhone -->
+</head>
+<body>
+    <!-- On créé la page home -->
+    <div data-role="page" id="home">
+        <!-- On ajoute un panel dans lequel on mettra les options réglables par le joueur -->
+        <div data-role="panel" data-display="overlay" id="menu">
+            <!-- Titre du panel -->
+            <ul data-role="listview">
+                <li data-icon="delete"><a href="#" data-rel="close">Options</a></li>
+            </ul>
+            <div style="height: 40px;"></div>
+            <!-- On créé un slider (input type="range") pour choisir le nombre de donuts -->
+            <label for="menuGravity">Gravité</label>
+            <input type="range" id="menuGravity" data-highlight="true" min="1" max="5" value="1" data-show-value="true" data-popup-enabled="true">
+            <br>
+            <!-- On créé un controlgroup (défini par jQueryMobile) dans lequel on place 3 boutons radio permettant de choisir la difficulté -->
+            <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+                <legend>Difficulté</legend>
+                <input type="radio" name="menuDifficulty" id="menuDifficulty1" value="1" checked="checked">
+                <label for="menuDifficulty1">Facile</label>
+                <input type="radio" name="menuDifficulty" id="menuDifficulty2" value="2">
+                <label for="menuDifficulty2">Moyen</label>
+                <input type="radio" name="menuDifficulty" id="menuDifficulty3" value="3">
+                <label for="menuDifficulty3">Difficile</label>
+            </fieldset>
+        </div>
+        <div data-role="header">
+            <h1>Don't Kill Kenny</h1>
+        </div>
+        <!-- On ajoute la div principale de la page -->
+        <div role="main" class="ui-content">
+            <div class="startMenu">
+                <!-- On ajoute les 2 boutons de la page. Le 1er pour aller vers la page game et le 2eme pour afficher le panel -->
+                <a href="#game" data-transition="flip" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Start</a><br>
+                <a href="#menu" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Options</a>
+            </div>
+            <!-- On a un pied de page dans lequel on affiche les options sélectionnées pour le jeu -->
+            <footer>
+                Gravité: <span class="infoGravity"></span> | Difficulté: <span class="infoDifficulty"></span>
+            </footer>
+        </div>
+    </div>
+    <!-- On créé la page game -->
+    <div data-role="page" id="game">
+        <!-- On créé un bouton de retour vers la page home -->
+        <a href="#home" data-rel="back" class="ui-btn ui-btn-left ui-alt-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l">Back</a>
+        <!-- On ajoute la div principale de la page (dans laquelle se trouvera le jeu) -->
+        <div data-role="main" class="ui-content">
+            <div class="safeZone"></div>
+        </div>
+    </div>
+    <!-- On ajoute une balise audio avec une id pour pouvoir l'appeler facilement depuis le JS -->
+    <audio id="audio-jingle">
+        <source src="http://demo.lapprimerie.com/rush2016/audio/jingle.mp3" type="audio/mpeg">
+    </audio>
+    <audio class="audio-dead">
+        <source src="http://demo.lapprimerie.com/rush2016/audio/dead.mp3" type="audio/mpeg">
+    </audio>
 </body>
 </html>
