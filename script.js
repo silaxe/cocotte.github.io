@@ -7,16 +7,20 @@ function handleOrientation(event) {
   var beta = Math.round(event.beta);
   var gamma = Math.round(event.gamma);
 
-  $('#beta').text("Inclinaison haut-bas :" + beta);
-  $('#gamma').text("Inclinaison gauche-droite :" + gamma);
+  $('#beta').text("Roulage :" + beta);
+  $('#gamma').text("Tangage :" + gamma);
 
   if((beta >= 15 && beta < 20) || (beta <= -15 && beta > -20))
   {
     $('#roulage').text('mini');
   }
-  else if(beta >= 20 || beta <= -20)
+  else if((beta >= 20 && beta < 30) || (beta <= -20 && beta > -30))
   {
     $('#roulage').text('medium');
+  }
+  else if(beta >= 30 || beta <= -30)
+  {
+    $('#roulage').text('hard');
   }
   else
   {
@@ -27,9 +31,13 @@ function handleOrientation(event) {
   {
     $('#tangage').text('mini');
   }
-  else if(gamma >= 15 || gamma <= -15)
+  else if((gamma >= 15 && gamma < 30) || (gamma <= -15 && gamma > -30))
   {
     $('#tangage').text('medium');
+  }
+  else if(gamma >= 30 || gamma <= -30)
+  {
+    $('#tangage').text('hard');
   }
   else
   {
