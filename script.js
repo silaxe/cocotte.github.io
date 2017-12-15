@@ -93,14 +93,15 @@ function handleOrientation(event) {
 
   if (inc_pression_roulage >= 2 || inc_pression_tangage >= 2) {
     $('#img_1').css("visibility","visible");
-
+    $('#son_mini').get(0).play();
   }
   if (inc_pression_roulage >= 4 || inc_pression_tangage >= 4) {
     $('#img_2').css("visibility","visible");
-
+    $('#son_medium').get(0).play();
   }
   if (inc_pression_roulage >= 6 || inc_pression_tangage >= 6) {
     $('#img_3').css("visibility","visible");
+    $('#son_hard').get(0).play();
   }
 }
 });
