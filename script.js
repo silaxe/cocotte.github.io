@@ -34,8 +34,6 @@ $(function(){
     function tapHandler(event){
       $( event.target ).css("background-color", "red");
       timerGlobal=setInterval(myTimer, 3000);
-
-
     }
   });
 
