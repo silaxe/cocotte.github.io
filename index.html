@@ -55,13 +55,11 @@
             <h1>Pschitt</h1>
         </div>
         <!-- On ajoute la div principale de la page -->
-        <div role="main" class="ui-content">
-            <div class="startMenu">
-              <img src="/assets/aatitlepage.png">
-              <br>
-                <!-- On ajoute les 2 boutons de la page. Le 1er pour aller vers la page game et le 2eme pour afficher le panel -->
-                <!-- <a href="#game" data-transition="flip" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Start</a><br> -->
-              <a align="center" href="#options" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Start</a>
+        <div role="main">
+            <div>
+              <img id="fond1" src="/assets/aatitlepagefond.png">
+              <img id="fond2" src="/assets/aacocottetitlepage.gif">
+              <a id="start" align="center" href="#options" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Start</a>
             </div>
             <!-- On a un pied de page dans lequel on affiche les options sélectionnées pour le jeu -->
         </div>
@@ -93,13 +91,31 @@
     <!-- On crée la page Rules -->
     <div data-role="panel" id="rules">
         <!-- Titre du panel -->
-        <ul data-role="listview">
-            <li data-icon="delete"><a href="rules.html" data-rel="close">Règles du jeu</a></li>
-        </ul>
-        <div style="height: 40px;"></div>
-        <p>
-        Les règles du jeux
-        <p>
+        <div data-role="header" data-theme="a">
+            <h1>Règles</h1>
+            </div>
+            <div role="main" class="ui-content">
+
+                <h3 class="ui-title">Objectif principal :</h3>
+            <p>Faites le plus de tours possibles ensemble et fais en sorte de ne pas voir la cocotte exploser dans tes mains.</p>
+
+                <h4 class="ui-subtitle">Attention à la pression!</h4>
+            <p>Si tu bouges trop la cocotte, elle explose.</p>
+
+                <h4 class="ui-subtitle">Actions :</h4>
+        <p><ul>
+            <li> Récupère et maintiens ton doigt sur la cocotte, </li>
+            <li> Dis "tic" ou "tac",</li>
+            <li> Carte Boost : Fais monter la pression à tout moment,</li>
+            <li> Carte Soupape : Fais baisser la pression 1 fois pendant le tour,</li>
+            <li> Passe délicatement la cocotte à ta gauche.</li>
+            </ul>
+        </p>
+
+            <p>Si tu ne dis pas "tic" ou "tac", le tour ne compte pas!</p>
+
+                <a href="#index" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">J'ai compris!</a>
+            </div>
     </div>
     <!-- On créé la page game -->
     <div data-role="page" id="game">

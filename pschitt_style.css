@@ -1,3 +1,21 @@
+#start {
+  position: relative;
+  top: 485px;
+  z-index:15;
+  float:center;
+}
+#fond1 {
+  position: absolute;
+  z-index:1;
+}
+#fond2 {
+  position: relative;
+  top: 485px;
+  width:750px;
+  height:auto;
+  z-index:0;
+}
+
 #home .startMenu {
     width: 100%;
     text-align: center;
