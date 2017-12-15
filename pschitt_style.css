@@ -24,33 +24,37 @@ footer p {
 
 #game .gameZone {
     position = relative;
-    background: url("/assets/aacocottetitlepage.gif");
-    background-position: 50% top;
+    background-color: #ffffff;
     width: 25%;
     height: 50%;
     opacity: 0.7;
     position: absolute;
     /* top: 50%;
     left: 50%; */
-    transform: translateX(-0%) translateY(-0%);
 }
 img.superpose {
    position: absolute;
    top: 25px;
    left: 30px;
 }
+
+
+
 #img_1 {
    z-index: 10;
-   width: 30%;
+   width: 30px;
+   height: 30px;
    visibility: hidden;
 }
 #img_2 {
    z-index: 11;
-   width: 30%;
+   width: 60px;
+   height: 60px;
    visibility: hidden;
 }
 #img_3 {
    z-index: 12;
-   width: 30%;
+   width: 80px;
+   height: 80px;
    visibility: hidden;
 }

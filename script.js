@@ -1,19 +1,44 @@
 // On définit nos variables
+// SI UTILISATEUR == 1 ==> FIN DE PARTIE
+var options = {
+    gravity: 2,
+    difficulty: 1
+};
+var arrDifficulties = ['Facile', 'Moyen', 'Difficile'];
 var pression = 0;
 var fuego = 0;
-var nombre_joueur;
+var nombre_joueur = 5;
+var loopInterval = 33;
+var timerGlobal ;
+var inc_pression_roulage = 1;
+var inc_pression_tangage = 1;
 
-$(function(){
-  $( "div.gameZone" ).bind( "tap", tapHandler );
-    function tapHandler(event){
-      fuego = fuego+1;
+function myTimer() {
+    pression = pression + Math.round((inc_pression_roulage+inc_pression_tangage)/2);
+    $("#timing").text(pression);
+    if (pression == 100){
+      location.href = "#bang_page";
+      pression = 0;
+      window.clearTimeout(timeoutVariable);
 
-      $( event.target ).css("background-color", "red");
+      //envoi de la page Bang -> décrément du nombre de joueurs
+
     }
-  });
+}
+
 
 $(document).ready(function() {
 window.addEventListener("deviceorientation", handleOrientation, true);
+$(function(){
+  $( "div.gameZone" ).bind( "tap", tapHandler );
+    function tapHandler(event){
+      // $( event.target ).css("background-color", "red");
+      timerGlobal=setInterval(myTimer, 3000);
+
+
+    }
+  });
+
 function handleOrientation(event) {
   //Définition des axes
   var beta = Math.round(event.beta);
@@ -25,59 +50,59 @@ function handleOrientation(event) {
   if((beta >= 15 && beta < 20) || (beta <= -15 && beta > -20))
   {
     $('#roulage').text('mini');
-    $('#img_1').css("visibility","visible");
-    $('#img_2').css("visibility","hidden");
-    $('#img_3').css("visibility","hidden");
+    inc_pression_roulage = 2;
   }
   else if((beta >= 20 && beta < 30) || (beta <= -20 && beta > -30))
   {
     $('#roulage').text('medium');
-    $('#img_1').css("visibility","hidden");
-    $('#img_2').css("visibility","visible");
-    $('#img_3').css("visibility","hidden");
+    inc_pression_roulage = 4;
   }
   else if(beta >= 30 || beta <= -30)
   {
     $('#roulage').text('hard');
-    $('#img_1').css("visibility","hidden");
-    $('#img_2').css("visibility","hidden");
-    $('#img_3').css("visibility","visible");
+    inc_pression_roulage = 6;
   }
   else
   {
     $('#roulage').text('None');
-    $('#img_1').css("visibility","hidden");
-    $('#img_2').css("visibility","hidden");
-    $('#img_3').css("visibility","hidden");
+    inc_pression_roulage = 1;
   }
 
   if((gamma >= 10 && gamma < 15) || (gamma <= -10 && gamma > -15))
   {
     $('#tangage').text('mini');
-    $('#img_1').css("visibility","visible");
-    $('#img_2').css("visibility","hidden");
-    $('#img_3').css("visibility","hidden");
+    inc_pression_tangage = 2;
   }
   else if((gamma >= 15 && gamma < 30) || (gamma <= -15 && gamma > -30))
   {
     $('#tangage').text('medium');
-    $('#img_1').css("visibility","hidden");
-    $('#img_2').css("visibility","visible");
-    $('#img_3').css("visibility","hidden");
+    inc_pression_tangage = 4;
   }
   else if(gamma >= 30 || gamma <= -30)
   {
     $('#tangage').text('hard');
-    $('#img_1').css("visibility","hidden");
-    $('#img_2').css("visibility","hidden");
-    $('#img_3').css("visibility","visible");
+    inc_pression_tangage = 6;
   }
   else
   {
     $('#tangage').text('None');
-    $('#img_1').css("visibility","hidden");
-    $('#img_2').css("visibility","hidden");
-    $('#img_3').css("visibility","hidden");
+    inc_pression_tangage = 1;
+  }
+
+  $('#img_1').css("visibility","hidden");
+  $('#img_2').css("visibility","hidden");
+  $('#img_3').css("visibility","hidden");
+
+  if (inc_pression_roulage >= 2 || inc_pression_tangage >= 2) {
+    $('#img_1').css("visibility","visible");
+
+  }
+  if (inc_pression_roulage >= 4 || inc_pression_tangage >= 4) {
+    $('#img_2').css("visibility","visible");
+
+  }
+  if (inc_pression_roulage >= 6 || inc_pression_tangage >= 6) {
+    $('#img_3').css("visibility","visible");
   }
 }
 });
