@@ -16,7 +16,7 @@
 }
 
 #options {
-  background-color: #ff7270;
+  background-color: #e8142e;
 }
 
 /* Hide the number input */
@@ -63,7 +63,16 @@
   background: url(assets/aacocottetitlepage.gif) no-repeat;
   background-size: 100%;
   position: absolute;
-  bottom: 120px;
+  bottom: 190px;
+}
+
+#options .alumette {
+  width: 100%;
+  height: 300px;
+  background: url(assets/allumette.gif) no-repeat;
+  background-size: 110%;
+  position: absolute;
+  bottom: 0px;
 }
 
 #home #menu .ui-slider input {
