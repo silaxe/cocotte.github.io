@@ -23,11 +23,12 @@
   background-color: #ff7270;
 }
 
-#rules {
+.rules {
   background-color: #cd6464;
   color: white;
+  padding-left: 15px;
+  padding-top: 15px;
 }
-
 #home .startMenu {
     width: 100%;
     text-align: center;
