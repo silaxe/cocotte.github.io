@@ -55,20 +55,13 @@
             <h1>Pschitt</h1>
         </div>
         <!-- On ajoute la div principale de la page -->
-        <div role="main" class="ui-content">
-            <div class="startMenu">
-              <img src="/assets/feu.jpg">
-                <!-- On ajoute les 2 boutons de la page. Le 1er pour aller vers la page game et le 2eme pour afficher le panel -->
-                <!-- <a href="#game" data-transition="flip" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Start</a><br> -->
-                <a href="#options" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Forward</a>
+        <div role="main">
+            <div>
+              <img id="fond1" src="/assets/aatitlepagefond.png">
+              <img id="fond2" src="/assets/aacocottetitlepage.gif">
+              <a id="start" align="center" href="#options"  class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-large">Démarrer</a>
             </div>
             <!-- On a un pied de page dans lequel on affiche les options sélectionnées pour le jeu -->
-            <footer>
-              <p>
-                Une application développée par les cocottes = Cath, Thom, Pat, Rol
-                à partir d'une idée originale de psebe c'est bon
-              </p>
-            </footer>
         </div>
     </div>
     <!-- On crée la page options -->
@@ -91,20 +84,39 @@
             <label for="menuDifficulty2">Moyen</label>
             <input type="radio" name="menuDifficulty" id="menuDifficulty3" value="3">
             <label for="menuDifficulty3">Difficile</label>
+            <br>
+            <img src="/assets/SABLIER BD.gif">
         </fieldset>
-        <a href="#rules" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Rules</a>
-        <a href="#game" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Play!</a>
+        <a href="#rules" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Comment jouer ?</a>
+        <a href="#game" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Jouer</a>
     </div>
     <!-- On crée la page Rules -->
     <div data-role="panel" id="rules">
         <!-- Titre du panel -->
-        <ul data-role="listview">
-            <li data-icon="delete"><a href="#options" data-rel="close">Rules</a></li>
-        </ul>
-        <div style="height: 40px;"></div>
-        <p>
-        Les regles du jeux
-        <p>
+        <div data-role="header" data-theme="a">
+            <h1>Règles</h1>
+            </div>
+            <div role="main" class="ui-content">
+
+                <h3 class="ui-title">Objectif principal :</h3>
+            <p>Faites le plus de tours possibles ensemble et fais en sorte de ne pas voir la cocotte exploser dans tes mains.</p>
+
+                <h4 class="ui-subtitle">Attention à la pression!</h4>
+            <p>Si tu bouges trop la cocotte, elle explose.</p>
+
+                <h4 class="ui-subtitle">Actions :</h4>
+        <p><ul>
+            <li> Récupère et maintiens ton doigt sur la cocotte, </li>
+            <li> Carte Boost : Fais monter la pression à tout moment,</li>
+            <li> Carte Soupape : Fais baisser la pression 1 fois pendant le tour,</li>
+            <li> Passe délicatement la cocotte à ta gauche.</li>
+            </ul>
+        </p>
+
+            <p>Si tu ne dis pas "tic" ou "tac", le tour ne compte pas!</p>
+
+                <a href="#index" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"  >J'ai compris!</a>
+            </div>
     </div>
     <!-- On créé la page game -->
     <div data-role="page" id="game">
