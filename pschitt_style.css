@@ -1,6 +1,7 @@
 #start {
-  position: relative;
-  top: 485px;
+  position: absolute;
+  top: 1000px;
+  left:330px;
   z-index:15;
   float:center;
 }
@@ -14,6 +15,15 @@
   width:750px;
   height:auto;
   z-index:0;
+}
+
+#options {
+  background-color: #cd6464;
+}
+
+#rules {
+  background-color: #cd6464;
+  color: white;
 }
 
 #home .startMenu {
