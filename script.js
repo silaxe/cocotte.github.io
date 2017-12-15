@@ -16,14 +16,12 @@ var inc_pression_tangage = 1;
 function myTimer() {
     pression = pression + Math.round((inc_pression_roulage+inc_pression_tangage)/2);
     $("#timing").text(pression);
-    if (pression == 100){
-      // location.href = "#bang_page";
-
+    if (pression >= 100){
+      $('.bang_div').css("visibility","visible");
+      $('#game .btnContinue').show();
       pression = 0;
-      window.clearTimeout(timeoutVariable);
-
+      clearInterval(timerGlobal);
       //envoi de la page Bang -> décrément du nombre de joueurs
-
     }
 }
 
@@ -33,7 +31,7 @@ window.addEventListener("deviceorientation", handleOrientation, true);
 
   $('#game').click(function() {
     $('.gameZone').addClass('fire');
-    timerGlobal=setInterval(myTimer, 3000);
+    timerGlobal=setInterval(myTimer, 500);
   });
 
 function handleOrientation(event) {
@@ -44,17 +42,17 @@ function handleOrientation(event) {
   $('#beta').text("Roulage :" + beta);
   $('#gamma').text("Tangage :" + gamma);
 
-  if((beta >= 15 && beta < 20) || (beta <= -15 && beta > -20))
+  if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
   {
     $('#roulage').text('mini');
     inc_pression_roulage = 2;
   }
-  else if((beta >= 20 && beta < 30) || (beta <= -20 && beta > -30))
+  else if((beta >= 10 && beta < 15) || (beta <= -10 && beta > -15))
   {
     $('#roulage').text('medium');
     inc_pression_roulage = 4;
   }
-  else if(beta >= 30 || beta <= -30)
+  else if(beta >= 15 || beta <= -15)
   {
     $('#roulage').text('hard');
     inc_pression_roulage = 6;

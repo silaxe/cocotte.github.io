@@ -85,7 +85,7 @@
   background: url("assets/FEU.gif") no-repeat;
   background-size: 100%;
 }
-/* $('#game .btnContinue').show(); */
+
 #game .btnContinue {
   position: absolute;
   bottom: 20px;
@@ -93,6 +93,9 @@
   left: 25%;
   box-sizing: border-box;
   display: none;
+}
+.bang_div{
+  visibility: hidden;
 }
 
 .circle {
@@ -104,14 +107,15 @@
 }
 
 .circle:nth-child(1) {
-   width: 30px;
-   height: 30px;
-}
-.circle:nth-child(2) {
    width: 60px;
    height: 60px;
+   
+}
+.circle:nth-child(2) {
+   width: 120px;
+   height: 120px;
 }
 .circle:nth-child(3) {
-   width: 80px;
-   height: 80px;
+   width: 240px;
+   height: 240px;
 }
