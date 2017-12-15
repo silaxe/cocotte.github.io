@@ -7,10 +7,10 @@ var arrDifficulties = ['Facile', 'Moyen', 'Difficile'];
 
 // Jeu
 
-  $(function(){
-    $( "div.safeZone" ).bind( "tap", tapHandler );
-      function tapHandler( event ){
-        console.log("taped")
-        $( event.target ).css("background-color", "red");
-      }
-    });
+$(function(){
+  $( "div.safeZone" ).bind( "tap", tapHandler );
+    function tapHandler( event ){
+      console.log("taped")
+      $( event.target ).css("background-color", "red");
+    }
+  });

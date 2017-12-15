@@ -22,29 +22,35 @@ footer p {
     bottom: 10px;
 }
 
-#game .ui-content {
-    padding: 0;
-    background: url('http://demo.lapprimerie.com/rush2016/img/lava.gif') repeat;
-}
-
 #game .gameZone {
-    width: 80%;
-    height: 92%;
-    background: #fff00f;
+    position = relative;
+    background: url("/assets/aacocottetitlepage.gif");
+    background-position: 50% top;
+    width: 25%;
+    height: 50%;
+    opacity: 0.7;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    /* top: 50%;
+    left: 50%; */
+    transform: translateX(-0%) translateY(-0%);
 }
-
-#game .kenny{
-    width: 82px;
-    height: 82px;
-    background: url('http://demo.lapprimerie.com/rush2016/img/kenny.gif') no-repeat center center;
-    background-size: 100% 100%;
-    position: absolute;
+img.superpose {
+   position: absolute;
+   top: 25px;
+   left: 30px;
 }
-
-#game .kenny.dead{
-    background-image: url('http://demo.lapprimerie.com/rush2016/img/kennydead.png');
+#img_1 {
+   z-index: 10;
+   width: 30%;
+   visibility: hidden;
+}
+#img_2 {
+   z-index: 11;
+   width: 30%;
+   visibility: hidden;
+}
+#img_3 {
+   z-index: 12;
+   width: 30%;
+   visibility: hidden;
 }
