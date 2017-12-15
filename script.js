@@ -24,7 +24,6 @@ function handleOrientation(event) {
 
   if((beta >= 15 && beta < 20) || (beta <= -15 && beta > -20))
   {
-
     $('#roulage').text('mini');
     $('#img_1').css("visibility","visible");
     $('#img_2').css("visibility","hidden");
