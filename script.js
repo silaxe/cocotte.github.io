@@ -4,7 +4,7 @@ var options = {
     gravity: 2,
     difficulty: 1
 };
-var arrDifficulties = ['Facile', 'Moyen', 'Difficile'];
+var Difficulties = ['Facile', 'Moyen', 'Difficile'];
 var pression = 0;
 var fuego = 0;
 var nombre_joueur = 5;
