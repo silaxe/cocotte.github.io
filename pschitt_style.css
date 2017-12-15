@@ -1,12 +1,4 @@
-#start {
-  position: absolute;
-  top: 950px;
-  left:200px;
-  z-index:15;
-  width: 300px;
-  height:50px;
-  font-size: 40px;
-}
+/*
 #fond1 {
   position: absolute;
   z-index:1;
@@ -17,24 +9,61 @@
   width:750px;
   height:auto;
   z-index:0;
+}*/
+
+* {
+  text-shadow: none !important;
 }
 
 #options {
   background-color: #ff7270;
 }
 
+/* Hide the number input */
+#options .full-width-slider input {
+  display: none;
+}
+#options .full-width-slider .ui-slider-track {
+  margin-left: 15px;
+}
+
 .rules {
   background-color: #cd6464;
   color: white;
-  padding-left: 15px;
-  padding-top: 15px;
 }
+#home {
+  height: 100%;
+}
+
 #home .startMenu {
     width: 100%;
     text-align: center;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+}
+
+#home .content {
+  height: 100%;
+  background: #cd6464 url(assets/aatitlepagefond.png) no-repeat;
+  background-size: 100%;
+}
+
+#home a {
+  position: absolute;
+  bottom: 20px;
+  left: 15%;
+  width: 70%;
+  box-sizing: border-box;
+}
+
+#home .cocotte {
+  width: 100%;
+  height: 200px;
+  background: url(assets/aacocottetitlepage.gif) no-repeat;
+  background-size: 100%;
+  position: absolute;
+  bottom: 120px;
 }
 
 #home #menu .ui-slider input {
@@ -45,44 +74,44 @@
     margin-left: 15px;
 }
 
-footer p {
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    background-color: #ff0000;
-    bottom: 10px;
-}
-
 #game .gameZone {
     position = relative;
-    background: url("/assets/FEU.gif");
-    width: 25%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
     opacity: 0.7;
-    position: absolute;
-    /* top: 50%;
-    left: 50%; */
+    position: relative;
 }
-img.superpose {
-   position: absolute;
-   top: 25px;
-   left: 30px;
+#game .gameZone.fire {
+  background: url("assets/FEU.gif") no-repeat;
+  background-size: 100%;
+}
+/* $('#game .btnContinue').show(); */
+#game .btnContinue {
+  position: absolute;
+  bottom: 20px;
+  width: 50%;
+  left: 25%;
+  box-sizing: border-box;
+  display: none;
 }
 
+.circle {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-
-#img_1 {
+.circle:nth-child(1) {
    width: 30px;
    height: 30px;
-   visibility: hidden;
 }
-#img_2 {
+.circle:nth-child(2) {
    width: 60px;
    height: 60px;
-   visibility: hidden;
 }
-#img_3 {
+.circle:nth-child(3) {
    width: 80px;
    height: 80px;
-   visibility: hidden;
 }

@@ -26,15 +26,6 @@
     <script src="http://demo.lapprimerie.com/rush2016/js/addtohomescreen.min.js"></script>
     <script src="script.js"></script>
 
-    <!-- Manifest qui référence les icones et les options de la webApp pour Android -->
-    <link rel="manifest" href="http://demo.lapprimerie.com/rush2016/manifest.json">
-    <!-- Fichier de config qui référence les icones et les options de la webApp pour Windows -->
-    <meta name="msapplication-config" content="http://demo.lapprimerie.com/rush2016/browserconfig.xml">
-    <!-- Configuration pour Windows 8 (browserconfig.xml a été introduit dans windows 8.1) -->
-    <meta name="msapplication-TileColor" content="#00aef0">
-    <meta name="msapplication-TileImage" content="http://demo.lapprimerie.com/rush2016/img/ms/icon_144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
     <!-- ICONES -->
     <!-- il faut mettre l'icone la plus grande en 1er car add2Home utilise toujours la première icone avec le rel="apple-touch-icon" -->
     <link rel="apple-touch-icon" sizes="180x180" href="http://demo.lapprimerie.com/rush2016/img/icon/ios/icon_180.png"><!-- iPhone 6 Plus -->
@@ -50,65 +41,54 @@
     <!-- On créé la page home -->
     <div data-role="page" id="home">
         <!-- On ajoute un panel dans lequel on mettra les options réglables par le joueur -->
-
-        <div data-role="header">
-            <h1>Pschitt</h1>
-        </div>
         <!-- On ajoute la div principale de la page -->
-        <div role="main">
-            <div>
-              <img id="fond1" src="/assets/aatitlepagefond.png">
-              <img id="fond2" src="/assets/aacocottetitlepage.gif">
-              <a id="start" align="center" href="#options" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-large">Démarrer</a>
-            </div>
-            <!-- On a un pied de page dans lequel on affiche les options sélectionnées pour le jeu -->
-            <footer>
-              <p>
-                Une application développée par les cocottes = Cath, Thom, Pat, Rol
-                à partir d'une idée originale de psebe c'est bon
-              </p>
-            </footer>
+        <div role="main" class="content">
+            <!--<img id="fond1" src="/assets/aatitlepagefond.png">-->
+            <div class="cocotte"></div>
+            <a href="#options" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-large" data-transition="flip">Démarrer</a>
         </div>
     </div>
     <!-- On crée la page options -->
     <div data-role="page" id="options">
         <!-- Titre du panel -->
-        <ul data-role="listview">
-            <li data-icon="delete"><a href="#" data-rel="close">Options</a></li>
-        </ul>
-        <div style="height: 40px;"></div>
-        <!-- On créé un slider (input type="range") pour choisir le nombre de donuts -->
-        <label for="menuGravity">Nombre de joueurs</label>
-        <input type="range" id="menuGravity" data-highlight="true" min="1" max="5" value="1" data-show-value="true" data-popup-enabled="true">
-        <br>
-        <!-- On créé un controlgroup (défini par jQueryMobile) dans lequel on place 3 boutons radio permettant de choisir la difficulté -->
-        <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
-            <legend>Difficulté</legend>
-            <input type="radio" name="menuDifficulty" id="menuDifficulty1" value="1" checked="checked">
-            <label for="menuDifficulty1">Facile</label>
-            <input type="radio" name="menuDifficulty" id="menuDifficulty2" value="2">
-            <label for="menuDifficulty2">Moyen</label>
-            <input type="radio" name="menuDifficulty" id="menuDifficulty3" value="3">
-            <label for="menuDifficulty3">Difficile</label>
-        </fieldset>
-        <a href="#rules" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Comment jouer ?</a>
-        <a href="#game" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Jouer !</a>
+        <div data-role="header" data-theme="a">
+            <a href="#home" data-rel="back" class="ui-btn ui-btn-left ui-alt-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l">Back</a>
+            <h1>Options</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <!-- On créé un slider (input type="range") pour choisir le nombre de donuts -->
+            <div class="full-width-slider">
+                <label for="menuGravity">Nombre de joueurs</label>
+                <input type="range" id="menuGravity" data-highlight="true" min="1" max="5" value="1" data-show-value="true" data-popup-enabled="true">
+            </div>
+            <br>
+            <!-- On créé un controlgroup (défini par jQueryMobile) dans lequel on place 3 boutons radio permettant de choisir la difficulté -->
+            <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+                <legend>Difficulté</legend>
+                <input type="radio" name="menuDifficulty" id="menuDifficulty1" value="1" checked="checked">
+                <label for="menuDifficulty1">Facile</label>
+                <input type="radio" name="menuDifficulty" id="menuDifficulty2" value="2">
+                <label for="menuDifficulty2">Moyen</label>
+                <input type="radio" name="menuDifficulty" id="menuDifficulty3" value="3">
+                <label for="menuDifficulty3">Difficile</label>
+            </fieldset>
+            <a href="#rules" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Comment jouer ?</a>
+            <a href="#game" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Jouer !</a>
+        </div>
     </div>
     <!-- On crée la page Rules -->
-    <div data-dialog="true" id="rules">
-
+    <div data-role="page" data-dialog="true" id="rules">
         <!-- Titre du panel -->
         <div data-role="header" data-theme="a">
             <h1>Règles</h1>
         </div>
-        <div role="main" class="rules">
-            <h3 class="ui-title">Objectif principal :</h3>
+        <div role="main" class="ui-content rules">
+            <h3>Objectif principal :</h3>
             <p>Faites le plus de tours possibles ensemble et fais en sorte de ne pas voir la cocotte exploser dans tes mains.</p>
 
-            <h4 class="ui-subtitle">Attention à la pression!</h4>
-            <p>Si tu bouges trop la cocotte, elle explose.</p>
+            <h4>Attention à la pression! Si tu bouges trop la cocotte, elle explose.</h4>
 
-            <h4 class="ui-subtitle">Actions :</h4>
+            <h4>Actions :</h4>
             <ul>
                 <li> Récupère et maintiens ton doigt sur la cocotte, </li>
                 <li> Dis "tic" ou "tac",</li>
@@ -117,7 +97,7 @@
                 <li> Passe délicatement la cocotte à ta gauche.</li>
             </ul>
             <p>Si tu ne dis pas "tic" ou "tac", le tour ne compte pas!</p>
-            <a href="#index" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">J'ai compris!</a>
+            <a href="#index" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-rel="back">J'ai compris!</a>
         </div>
     </div>
     <!-- On créé la page game -->
@@ -125,38 +105,22 @@
         <!-- On créé un bouton de retour vers la page home -->
         <a href="#home" data-rel="back" class="ui-btn ui-btn-left ui-alt-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l">Back</a>
         <!-- On ajoute la div principale de la page (dans laquelle se trouvera le jeu) -->
-        <div data-role="main" class="ui-content">
-          <div id="roulage"></div>
-          <div id="tangage"></div>
+        <div data-role="main" class="content">
+            <div id="roulage"></div>
+            <div id="tangage"></div>
 
-          <div class="gameZone">
-<<<<<<< HEAD
-            <img id="fond_game" src="/assets/FEU.gif">
-            <img id="img_1" class="superpose" src="/assets/cercle1.png"/>
-            <img id="img_2" class="superpose" src="/assets/cercle2.png"/>
-            <img id="img_3" class="superpose" src="/assets/cercle3.png"/>
-            <img id="cocotte_game" class="cocotte" src="/assets/CocotteFinale.png"/>
-          </div>
-          <div id="bang_div">
-
-            <img id="bang_img" class="superpose" src="BOUM_GIF.gif"/>
-            <a href="#index" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Continue</a>
-          </div>
-          <div id="timing"></div>
+            <div class="gameZone">
+                <img class="circle" src="/assets/cercle1.png"/>
+                <img class="circle" src="/assets/cercle2.png"/>
+                <img class="circle" src="/assets/cercle3.png"/>
+                <img id="cocotte_game" class="cocotte" src="/assets/CocotteFinale.png"/>
+            </div>
+            <div id="bang_div">
+                <img id="bang_img" class="superpose" src="BOUM_GIF.gif"/>
+            </div>
+            <a href="#index" class="btnContinue ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Continue</a>
+            <div id="timing"></div>
         </div>
-
-=======
-
-            <img id="img_1" class="superpose" src="/assets/cercle1.png"/>
-            <img id="img_2" class="superpose" src="/assets/cercle2.png"/>
-            <img id="img_3" class="superpose" src="/assets/cercle3.png"/>
-
-          </div>
-
-        </div>
-
-    </div>
->>>>>>> parent of c51affb... OK
     <!-- On ajoute une balise audio avec une id pour pouvoir l'appeler facilement depuis le JS -->
     <audio id="audio-jingle">
         <source src="http://demo.lapprimerie.com/rush2016/audio/jingle.mp3" type="audio/mpeg">

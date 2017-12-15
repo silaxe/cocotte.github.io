@@ -17,7 +17,8 @@ function myTimer() {
     pression = pression + Math.round((inc_pression_roulage+inc_pression_tangage)/2);
     $("#timing").text(pression);
     if (pression == 100){
-      location.href = "#bang_page";
+      // location.href = "#bang_page";
+
       pression = 0;
       window.clearTimeout(timeoutVariable);
 
@@ -29,12 +30,10 @@ function myTimer() {
 
 $(document).ready(function() {
 window.addEventListener("deviceorientation", handleOrientation, true);
-$(function(){
-  $( "div.gameZone" ).bind( "tap", tapHandler );
-    function tapHandler(event){
-      $( event.target ).css("background-color", "red");
-      timerGlobal=setInterval(myTimer, 3000);
-    }
+
+  $('#game').click(function() {
+    $('.gameZone').addClass('fire');
+    timerGlobal=setInterval(myTimer, 3000);
   });
 
 function handleOrientation(event) {
