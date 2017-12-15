@@ -88,15 +88,15 @@ function handleOrientation(event) {
   $('#img_2').css("visibility","hidden");
   $('#img_3').css("visibility","hidden");
 
-  if (inc_pression_roulage >= 2 || inc_pression_tangage >= 2) {
+  if (inc_pression_roulage >= 5 || inc_pression_tangage >= 5) {
     $('#img_1').css("visibility","visible");
     $('#son_mini').get(0).play();
   }
-  if (inc_pression_roulage >= 4 || inc_pression_tangage >= 4) {
+  if (inc_pression_roulage >= 8 || inc_pression_tangage >= 8) {
     $('#img_2').css("visibility","visible");
     $('#son_medium').get(0).play();
   }
-  if (inc_pression_roulage >= 6 || inc_pression_tangage >= 6) {
+  if (inc_pression_roulage >= 15 || inc_pression_tangage >= 15) {
     $('#img_3').css("visibility","visible");
     $('#son_hard').get(0).play();
   }
