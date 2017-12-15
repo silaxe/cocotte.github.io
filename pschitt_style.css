@@ -1,3 +1,4 @@
+
 #start {
   position: absolute;
   top: 950px;
@@ -8,6 +9,7 @@
   font-size: 40px;
 }
 #fond1 {
+  
   position: absolute;
   z-index:1;
 }

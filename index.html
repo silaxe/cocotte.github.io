@@ -86,7 +86,7 @@
             <label for="menuDifficulty3">Difficile</label>
         </fieldset>
         <a href="#rules" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Comment jouer ?</a>
-        <a href="#game" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Jouer !</a>
+        <a href="#game" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Jouer!</a>
     </div>
     <!-- On crée la page Rules -->
     <div data-dialog="true" id="rules">
@@ -122,17 +122,15 @@
         <div data-role="main" class="ui-content">
           <div id="roulage"></div>
           <div id="tangage"></div>
-
           <div class="gameZone">
-
             <img id="img_1" class="superpose" src="/assets/cercle1.png"/>
             <img id="img_2" class="superpose" src="/assets/cercle2.png"/>
             <img id="img_3" class="superpose" src="/assets/cercle3.png"/>
-
+            <audio id="audio-jingle"><source src="http://demo.lapprimerie.com/rush2016/audio/jingle.mp3" type="audio/mpeg"></audio>
+            <audio class="audio-dead"><source src="http://demo.lapprimerie.com/rush2016/audio/dead.mp3" type="audio/mpeg">
+            </audio>
           </div>
-
         </div>
-
     </div>
     <!-- On ajoute une balise audio avec une id pour pouvoir l'appeler facilement depuis le JS -->
     <audio id="audio-jingle">
