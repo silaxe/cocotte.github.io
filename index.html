@@ -62,6 +62,12 @@
               <a id="start" align="center" href="#options" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-large">Démarrer</a>
             </div>
             <!-- On a un pied de page dans lequel on affiche les options sélectionnées pour le jeu -->
+            <footer>
+              <p>
+                Une application développée par les cocottes = Cath, Thom, Pat, Rol
+                à partir d'une idée originale de psebe c'est bon
+              </p>
+            </footer>
         </div>
     </div>
     <!-- On crée la page options -->
@@ -123,14 +129,21 @@
           <div id="roulage"></div>
           <div id="tangage"></div>
           <div class="gameZone">
+            <img id="fond_game" src="/assets/FEU.gif">
             <img id="img_1" class="superpose" src="/assets/cercle1.png"/>
             <img id="img_2" class="superpose" src="/assets/cercle2.png"/>
             <img id="img_3" class="superpose" src="/assets/cercle3.png"/>
-            <audio id="audio-jingle"><source src="http://demo.lapprimerie.com/rush2016/audio/jingle.mp3" type="audio/mpeg"></audio>
-            <audio class="audio-dead"><source src="http://demo.lapprimerie.com/rush2016/audio/dead.mp3" type="audio/mpeg">
-            </audio>
+            <img id="cocotte_game" class="cocotte" src="/assets/CocotteFinale.png"/>
+
           </div>
         </div>
+          <div id="timing"></div>
+    </div>
+    <div data-role="page" id="bang_page">
+      <div id="bang_div">
+        <img id="img_1" class="superpose" src="/assets/BOUM_GIF.gif"/>
+
+      </div>
     </div>
     <!-- On ajoute une balise audio avec une id pour pouvoir l'appeler facilement depuis le JS -->
     <audio id="audio-jingle">

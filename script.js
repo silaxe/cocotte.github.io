@@ -32,10 +32,8 @@ window.addEventListener("deviceorientation", handleOrientation, true);
 $(function(){
   $( "div.gameZone" ).bind( "tap", tapHandler );
     function tapHandler(event){
-      // $( event.target ).css("background-color", "red");
+      $( event.target ).css("background-color", "red");
       timerGlobal=setInterval(myTimer, 3000);
-
-
     }
   });
 
