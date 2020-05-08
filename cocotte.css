@@ -16,7 +16,7 @@
 }
 
 #options {
-  background-color: #e8142e;
+  background-color: #cd6464;
 }
 
 /* Hide the number input */
@@ -45,7 +45,7 @@
 
 #home .content {
   height: 100%;
-  background: #cd6464 url(assets/aatitlepagefond.png) no-repeat;
+  background: #cd6464 ;
   background-size: 100%;
 }
 
@@ -60,7 +60,6 @@
 #home .cocotte {
   width: 100%;
   height: 200px;
-  background: url(https://cpd-rush2017.herokuapp.com/pschiiit/images/aacocottetitlepage.gif) no-repeat;
   background-size: 100%;
   position: absolute;
   bottom: 190px;
@@ -69,7 +68,6 @@
 #options .alumette {
   width: 100%;
   height: 300px;
-  background: url(https://cpd-rush2017.herokuapp.com/pschiiit/images/allumette.gif) no-repeat;
   background-size: 110%;
   /* position: absolute; */
   bottom: 0px;
@@ -91,7 +89,6 @@
     position: relative;
 }
 #game .gameZone.fire {
-  background: url("assets/feu.gif") no-repeat;
   background-size: 100%;
 }
 
