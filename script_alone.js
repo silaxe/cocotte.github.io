@@ -13,9 +13,11 @@ window.onload = function () {
       .then(response => {
         if (response === 'granted') {
           alert("oui");
-          window.addEventListener('deviceorientation',
-            () => { console.log('DeviceOrientation permissions is granted.') },
-            (e) => { throw e }
+          window.addEventListener('deviceorientation',function(e) {
+    window.getElementById('roulage').innerHTML = e.alpha ;
+
+    })
+
         )} else {
           console.log('DeviceOrientation permissions not granted.')
           alert("Non")
