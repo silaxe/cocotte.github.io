@@ -14,7 +14,6 @@ window.onload = function () {
         if (response === 'granted') {
           window.addEventListener('devicemotion',
             () => { console.log('DeviceMotion permissions granted.') },
-            banner.style.property = #ff0000;
             (e) => { throw e }
         )} else {
           console.log('DeviceMotion permissions not granted.')
