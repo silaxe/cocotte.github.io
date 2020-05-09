@@ -14,7 +14,7 @@ window.onload = function () {
         if (response === 'granted') {
           alert("oui");
           window.addEventListener('deviceorientation',function(e) {
-    window.getElementById('roulage').innerHTML = (e.alpha) ;
+    document.getElementById('roulage').innerHTML = Math.round(e.alpha) ;
 //document.getElementById('acceleration-including-gravity-x').innerHTML = Math.round(event.accelerationIncludingGravity.x);
           )} else {
           console.log('DeviceOrientation permissions not granted.')
