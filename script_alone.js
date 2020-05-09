@@ -16,7 +16,7 @@ window.onload = function () {
           window.addEventListener('devicemotion',
             () => { console.log('DeviceMotion permissions is granted.') },
             (e) => { throw e }
-
+      document.getElementById('roulage').innerHTML = Math.round(event.acceleration.x);
         )} else {
           console.log('DeviceMotion permissions not granted.')
           alert("Non")
@@ -26,4 +26,5 @@ window.onload = function () {
         console.error(e)
     })
   }
+//fonction pour interagir avec e ?
 }
