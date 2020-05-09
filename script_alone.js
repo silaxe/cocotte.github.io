@@ -12,6 +12,8 @@ window.onload = function () {
     window.DeviceMotionEvent.requestPermission()
       .then(response => {
         if (response === 'granted') {
+          const green = document.createElement('div')
+          green.innerHTML = `<div style="z-index: 1; position: absolute; width: 100%; background-color:#00000; color: #fff"><p style="padding: 10px">COui</p></div>`
           window.addEventListener('devicemotion',
             () => { console.log('DeviceMotion permissions is granted.') },
             (e) => { throw e }
