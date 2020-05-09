@@ -1,5 +1,4 @@
 window.onload = function () {
-
   // Check if is IOS 13 when page loads. Solution Aframe
   if ( window.DeviceMotionEvent && typeof window.DeviceMotionEvent.requestPermission === 'function' ){
       // Everything here is just a lazy banner. You can do the banner your way.
@@ -8,6 +7,7 @@ window.onload = function () {
       banner.onclick = ClickRequestDeviceMotionEvent // You NEED to bind the function into a onClick event. An artificial 'onClick' will NOT work.
       document.querySelector('body').appendChild(banner)
   }
+
   function ClickRequestDeviceMotionEvent () {
     window.DeviceMotionEvent.requestPermission()
       .then(response => {
@@ -21,7 +21,10 @@ window.onload = function () {
       })
       .catch(e => {
         console.error(e)
-      })
+    })
   }
-  
+
+  window.addEventListener('devicemotion', function(event) {
+    console.log(event.acceleration.x + ' m/s2');
+  });
 }
