@@ -13,7 +13,7 @@ window.onload = function () {
       .then(response => {
         if (response === 'granted') {
           alert("oui");
-          window.addEventListener('DeviceOrientation',
+          window.addEventListener('Deviceorientation',
             () => { console.log('DeviceOrientation permissions is granted.') },
             (e) => { throw e }
         )} else {
