@@ -9,21 +9,20 @@ window.onload = function () {
       banner.onclick = ClickRequestDeviceMotionEvent // You NEED to bind the function into a onClick event. An artificial 'onClick' will NOT work.
       document.querySelector('body').appendChild(banner)
   }
-}
+  function ClickRequestDeviceMotionEvent () {
+    window.DeviceMotionEvent.requestPermission()
+      .then(response => {
+        if (response === 'granted') {
+          window.addEventListener('devicemotion',
+            () => { console.log('DeviceMotion permissions granted.') },
+            (e) => { throw e }
+        )} else {
+          console.log('DeviceMotion permissions not granted.')
+        }
+      })
+      .catch(e => {
+        console.error(e)
+      })
+  }
 
-
-function ClickRequestDeviceMotionEvent () {
-  window.DeviceMotionEvent.requestPermission()
-    .then(response => {
-      if (response === 'granted') {
-        window.addEventListener('devicemotion',
-          () => { console.log('DeviceMotion permissions granted.') },
-          (e) => { throw e }
-      )} else {
-        console.log('DeviceMotion permissions not granted.')
-      }
-    })
-    .catch(e => {
-      console.error(e)
-    })
 }
