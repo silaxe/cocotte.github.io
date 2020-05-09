@@ -13,7 +13,7 @@ window.onload = function () {
       .then(response => {
         if (response === 'granted') {
           alert("oui");
-          window.addEventListener('devicemotion',
+          window.addEventListener('deviceorientation',
             () => { console.log('DeviceOrientation permissions is granted.') },
             (e) => { throw e }
       window.getElementById('roulage').innerHTML = Math.round(event.x);
