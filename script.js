@@ -14,6 +14,7 @@ window.onload = function () {
         if (response === 'granted') {
           window.addEventListener('devicemotion',
             () => { console.log('DeviceMotion permissions granted.') },
+             banner.style.property = #ff0000;
             (e) => { throw e }
         )} else {
           console.log('DeviceMotion permissions not granted.')
@@ -25,9 +26,7 @@ window.onload = function () {
   }
 
   window.addEventListener('devicemotion', function(event) {
-    var nb = document.getElementById("nb");
+    const nb = document.getElementById("nb");
     nb.innerHTML = (event.acceleration.x);
-    console.log(event.acceleration.x + ' m/s2');
-    console.log(event.acceleration.x + ' m/s2');
   });
 }
