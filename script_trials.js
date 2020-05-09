@@ -8,6 +8,7 @@ window.onload = function () {
   		DeviceMotionEvent.requestPermission()
   		.then(permissionState => {
   			if (permissionState === 'granted')
+        //rajouter suppression de la bannière si permission accordée
   			{
   				// DeviceMotionEvent.requestPermission() has been granted
   			}
@@ -16,4 +17,3 @@ window.onload = function () {
     }
   }
 }
-//
