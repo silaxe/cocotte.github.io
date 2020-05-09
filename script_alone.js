@@ -15,7 +15,6 @@ window.onload = function () {
           alert("oui");
           window.addEventListener('deviceorientation',
             () => { console.log('DeviceOrientation permissions is granted.') },
-            (e) => { throw e }
       window.getElementById('roulage').innerHTML = Math.round(event.x);
         )} else {
           console.log('DeviceOrientation permissions not granted.')
