@@ -16,7 +16,6 @@ window.onload = function () {
           window.addEventListener('devicemotion',
             () => { console.log('DeviceMotion permissions is granted.') },
             (e) => { throw e }
-      const nb = document.getElementById("roulage");
         )} else {
           console.log('DeviceMotion permissions not granted.')
           alert("Non")
