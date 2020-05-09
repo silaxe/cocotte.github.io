@@ -13,7 +13,7 @@ window.onload = function () {
   			}
           })
           .catch(console.error);
-         }
+    }
   }
-
+}
 //

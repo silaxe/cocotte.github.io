@@ -5,7 +5,6 @@
     <title>Cocotte</title>
     <!-- On définie le viewport (la fenêtre) pour donner ses dimention et signifier les possibilités de zoom de l'utilisateur (ici seul l'affiche normal est autorisé) -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
     <!-- Les 2 balises suivantes permettent d'indiquer au navigateur qu'il peut considérer le site en temps que Web app lorsque il est lancé depuis le bureau -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -14,16 +13,14 @@
     <!-- Nom de la webapp sur le bureau-->
     <meta name="apple-mobile-web-app-title" content="Cocotte">
     <meta name="mobile-web-app-title" content="Cocotte">
-    <!--
-        On appelle jQuery Mobile pour préparer la UI de notre webApp
+    <!--On appelle jQuery Mobile pour préparer la UI de notre webApp
         On appelle addtohomescreen.css et addtohomescreen.min.js pour donner un message d'information aux utilisateurs afin de leur indiquer que la webApp est enregistrable sur tablette et smartphone
     -->
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css">
     <link rel="stylesheet" href="cocotte.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <script src="script.js"></script>
-
+    <script src="script_trials.js"></script>
 </head>
 <body>
     <!-- On créé la page home -->
@@ -31,9 +28,8 @@
         <!-- On ajoute un panel dans lequel on mettra les options réglables par le joueur -->
         <!-- On ajoute la div principale de la page -->
         <div role="main" class="content">
-            <!--<img id="fond1" src="/assets/aatitlepagefond.png">-->
-            <div class="cocotte"></div>
-            <a href="#options" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-large">Démarrer</a>
+          <div class="cocotte"></div>
+          <a href="#options" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-large">Démarrer</a>
         </div>
     </div>
     <!-- On crée la page options -->
@@ -73,9 +69,7 @@
         <div role="main" class="ui-content rules">
             <h3>Objectif principal :</h3>
             <p>Faites le plus de tours possibles ensemble et fais en sorte de ne pas voir la cocotte exploser dans tes mains.</p>
-
             <h4>Attention à la pression! Si tu bouges trop la cocotte, elle explose.</h4>
-
             <h4>Actions :</h4>
             <ul>
                 <li> Récupère et maintiens ton doigt sur la cocotte, </li>
@@ -96,17 +90,13 @@
         <div data-role="main" class="content">
             <div id="roulage"></div>
             <div id="tangage"></div>
-
             <div class="gameZone">
                 <div id="timing"></div>
             </div>
-
             <div class="bang_div">
                 <a href="#game" class="btnContinue ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Continuer</a>
                 <!-- <img id="bang_img"  src="/assets/BOUM_GIF.gif"/> -->
             </div>
-
-
         </div>
     <!-- On ajoute une balise audio avec une id pour pouvoir l'appeler facilement depuis le JS -->
     <audio>
