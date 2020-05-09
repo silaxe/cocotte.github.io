@@ -24,4 +24,11 @@ window.onload = function () {
         console.error(e)
     })
   }
+
+  window.addEventListener('devicemotion', function(event) {
+    var nb = document.getElementById("nb");
+    nb.innerHTML = (event.acceleration.x);
+    console.log(event.acceleration.x + ' m/s2');
+    console.log(event.acceleration.x + ' m/s2');
+  });
 }
