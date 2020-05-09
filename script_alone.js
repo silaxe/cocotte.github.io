@@ -12,25 +12,18 @@ window.onload = function () {
     window.DeviceMotionEvent.requestPermission()
       .then(response => {
         if (response === 'granted') {
-          const green = document.createElement('div')
-          green.innerHTML = `<div style="z-index: 1; position: absolute; width: 100%; background-color:#00000; color: #fff"><p style="padding: 10px">COui</p></div>`
+          alert("oui");
           window.addEventListener('devicemotion',
             () => { console.log('DeviceMotion permissions is granted.') },
             (e) => { throw e }
 
         )} else {
           console.log('DeviceMotion permissions not granted.')
+          alert("Non")
         }
       })
       .catch(e => {
         console.error(e)
     })
   }
-
-  window.addEventListener('devicemotion', function(event) {
-    var nb = document.getElementById("nb");
-    nb.innerHTML = (event.acceleration.x);
-    console.log(event.acceleration.x + ' m/s2');
-    console.log(event.acceleration.x + ' m/s2');
-  });
 }
