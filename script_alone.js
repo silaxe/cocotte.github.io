@@ -13,7 +13,7 @@ window.onload = function () {
       .then(response => {
         if (response === 'granted') {
           window.addEventListener('deviceorientation',function(e) {
-    document.getElementById("banner").style.color = "#cd6464";
+    document.getElementById("banner").remove(); ;
     document.getElementById('alpha').innerHTML = Math.round(e.alpha);
     document.getElementById('beta').innerHTML = Math.round(e.beta) ;
     document.getElementById('gamma').innerHTML = Math.round(e.gamma) ;
