@@ -3,7 +3,7 @@ window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
       // Everything here is just a lazy banner. You can do the banner your way.
       const banner = document.createElement('div')
-      banner.innerHTML = `<div id="banner" style="z-index: 1; position: absolute; width: 100%; background-color:#000; color: #fff"><p style="padding: 10px">Click here to enable stuff</p></div>`
+      banner.innerHTML = `<div id="banner" style="z-index: 1; position: absolute; width: 100%; background-color:#000; color: #fff"><p style="padding: 10px">Click here to enable game</p></div>`
       banner.onclick = ClickRequestDeviceOrientationEvent // You NEED to bind the function into a onClick event. An artificial 'onClick' will NOT work.
       document.querySelector('body').appendChild(banner)
   }
