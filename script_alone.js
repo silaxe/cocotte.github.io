@@ -12,7 +12,7 @@ window.onload = function () {
     window.DeviceOrientationEvent.requestPermission()
       .then(response => {
         if (response === 'granted') {
-          document.getElementById("banner").style.backgroundColor = "#cd6464";
+          window.getElementById("banner").style.backgroundColor = "#cd6464";
           window.addEventListener('deviceorientation',function(e) {
     document.getElementById('alpha').innerHTML = Math.round(e.alpha);
     document.getElementById('beta').innerHTML = Math.round(e.beta) ;
