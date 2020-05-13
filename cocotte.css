@@ -87,6 +87,7 @@
     height: 100%;
     opacity: 0.7;
     position: relative;
+    vertical-align: bottom;,
 }
 #game .gameZone.fire {
   background-size: 100%;
