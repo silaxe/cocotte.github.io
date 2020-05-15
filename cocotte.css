@@ -1,18 +1,42 @@
-/*
-#fond1 {
-  position: absolute;
-  z-index:1;
-}
-#fond2 {
-  position: relative;
-  top: 485px;
-  width:750px;
-  height:auto;
-  z-index:0;
-}*/
-
 * {
   text-shadow: none !important;
+}
+
+.DeviceMotionRequestBanner {
+  z-index: 10;
+  background-color: #ef2d5e;
+  padding: 20px 20px;
+  color: #fff;
+  font-family: Fira Sans, Helvetica, Arial, sans-serif;
+  width: 430px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.DeviceMotionRequestBanner > h3 {
+  font-size: 28px;
+  margin: 0;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -.05rem;
+}
+
+.DeviceMotionRequestBanner > p {
+  font-size: 1.1rem;
+}
+
+.DeviceMotionRequestBanner > button {
+  background-color: #fff;
+  color: #000;
+  padding: 8px 30px;
+  text-transform: uppercase;
+  border: none;
+  right: 0;
+}
+
+.DeviceMotionRequestBanner > a {
+  color: #fff;
+  margin-left: 25px;
 }
 
 #options {
@@ -99,43 +123,6 @@
   left: 25%;
   box-sizing: border-box;
   display: none;
-}
-
-.DeviceMotionRequestBanner {
-  z-index: 10;
-  background-color: #ef2d5e;
-  padding: 20px 20px;
-  color: #fff;
-  font-family: Fira Sans, Helvetica, Arial, sans-serif;
-  width: 430px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-}
-
-.DeviceMotionRequestBanner > h3 {
-  font-size: 28px;
-  margin: 0;
-  font-size: 28px;
-  font-weight: 300;
-  line-height: 1.2;
-  letter-spacing: -.05rem;
-}
-
-.DeviceMotionRequestBanner > p {
-  font-size: 1.1rem;
-}
-
-.DeviceMotionRequestBanner > button {
-  background-color: #fff;
-  color: #000;
-  padding: 8px 30px;
-  text-transform: uppercase;
-  border: none;
-  right: 0;
-}
-
-.DeviceMotionRequestBanner > a {
-  color: #fff;
-  margin-left: 25px;
 }
 
 .bang_div{
