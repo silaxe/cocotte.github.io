@@ -14,9 +14,8 @@ window.onload = function () {
         if (response === 'granted') {
           window.addEventListener('deviceorientation',function(e) {
     document.getElementById('autorisation').style.display = 'none';
-    document.getElementById('alpha').innerHTML = Math.round(e.alpha);
-    document.getElementById('beta').innerHTML = Math.round(e.beta) ;
-    document.getElementById('gamma').innerHTML = Math.round(e.gamma) ;
+    document.getElementById('beta').innerHTML = Math.round('Roulis : '+e.beta);
+    document.getElementById('gamma').innerHTML = Math.round('Tangage : '+e.gamma) ;
   }
 //document.getElementById('acceleration-including-gravity-x').innerHTML = Math.round(event.accelerationIncludingGravity.x);
           )} else {
