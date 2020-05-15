@@ -11,7 +11,6 @@ window.onload = function () {
       .then(response => {
         if (response === 'granted') {
           window.addEventListener('deviceorientation',function(e) {
-    document.getElementById('audiotag').play;
     document.getElementById('autorisation').style.display = 'none';
     document.getElementById('beta').innerHTML = 'Roulis : '+(Math.round(e.beta));
     document.getElementById('gamma').innerHTML = 'Tangage : '+(Math.round(e.gamma)) ;
