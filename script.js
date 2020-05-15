@@ -23,5 +23,5 @@ window.onload = function () {
         console.error(e)
     })
   }
-//Fonction de calcul de la var pression à intégrér ici ? Doit pouvoir récupére var alpha…
+alert('Coucou');
 }
