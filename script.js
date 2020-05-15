@@ -1,10 +1,8 @@
 window.onload = function () {
-  // Check if is IOS 13 when page loads. Solution Aframe
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
-      // Everything here is just a lazy banner. You can do the banner your way.
       const banner = document.createElement('div')
-      banner.innerHTML = `<div id="autorisation" style="z-index: 1; position: absolute; width: 100%; background-color:#000; color: #fff"><p style="padding: 10px">Cliquez ici pour autoriser l'accès à votre capteur de mouvements.</p></div>`
-      banner.onclick = ClickRequestDeviceOrientationEvent // You NEED to bind the function into a onClick event. An artificial 'onClick' will NOT work.
+      banner.innerHTML = `<div id="autorisation" class="DeviceMotionRequestBanner"><p style="padding: 10px">Cliquez ici pour autoriser l'accès à votre capteur de mouvements.</p></div>`
+      banner.onclick = ClickRequestDeviceOrientationEvent
       document.querySelector('body').appendChild(banner)
   }
 
@@ -17,7 +15,6 @@ window.onload = function () {
     document.getElementById('beta').innerHTML = 'Roulis : '+(Math.round(e.beta));
     document.getElementById('gamma').innerHTML = 'Tangage : '+(Math.round(e.gamma)) ;
   }
-//document.getElementById('acceleration-including-gravity-x').innerHTML = Math.round(event.accelerationIncludingGravity.x);
           )} else {
           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
         }
@@ -26,5 +23,5 @@ window.onload = function () {
         console.error(e)
     })
   }
-//fonction pour interagir avec e ?
+//Fonction de calcul de la var pression à intégrér ici ? Doit pouvoir récupére var alpha…
 }
