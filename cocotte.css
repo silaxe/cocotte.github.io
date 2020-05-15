@@ -102,7 +102,7 @@
 }
 
 .DeviceMotionRequestBanner {
-  z-index: 1;
+  z-index: 10;
   background-color: #ef2d5e;
   padding: 20px 20px;
   color: #fff;
@@ -131,10 +131,6 @@
   text-transform: uppercase;
   border: none;
   right: 0;
-}
-
-.DeviceMotionRequestBanner > button:hover {
-  color: #ef2d5e;
 }
 
 .DeviceMotionRequestBanner > a {
