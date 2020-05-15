@@ -102,6 +102,7 @@
 }
 
 .DeviceMotionRequestBanner {
+  z-index: 1;
   background-color: #ef2d5e;
   padding: 20px 20px;
   color: #fff;
