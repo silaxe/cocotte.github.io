@@ -31,7 +31,7 @@ window.onload = function () {
   function calcul() {
     let i = 1;
     let num = document.getElementById('number');
-    function start() { setInterval(increase, 1000); }
+    function start() { setInterval(increase, 1); }
     function increase() {
           if (i < 100) {
             i++;
