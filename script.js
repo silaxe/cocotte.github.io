@@ -12,8 +12,8 @@ window.onload = function () {
         if (response === 'granted') {
           window.addEventListener('deviceorientation',function(e) {
     document.getElementById('autorisation').style.display = 'none';
-    var beta = Math.round(e.beta);
-    var gamma = Math.round(e.gamma);
+    var beta = (Math.round(e.beta));
+    var gamma = (Math.round(e.gamma));
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
   }
