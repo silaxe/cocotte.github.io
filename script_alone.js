@@ -1,3 +1,5 @@
+let beta, gamma;
+
 window.onload = function () {
   // Check if is IOS 13 when page loads. Solution Aframe
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
