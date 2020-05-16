@@ -31,7 +31,7 @@ window.onload = function () {
   function calcul() {
     let i = 1;
     let num = document.getElementById('number');
-    function start() { setInterval(increase, 1); }
+    function start() { setInterval(increase, 1000); }
     function increase() {
           if (i < 100) {
             i++;
@@ -44,7 +44,6 @@ window.onload = function () {
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
     document.getElementById('incRoulis').innerHTML = incRoulis;
     document.getElementById('incTangage').innerHTML = incTangage;
-    document.getElementById('interval').innerHTML = i;
 
     if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
     {
