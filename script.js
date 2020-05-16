@@ -32,7 +32,7 @@ window.onload = function () {
 
   function calcul() {
     let pression=beta+gamma;
-    let incTangage=0;
+    let incTangage;
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
     document.getElementById('incRoulis').innerHTML = incRoulis;
     document.getElementById('incTangage').innerHTML = incTangage;
