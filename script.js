@@ -29,8 +29,8 @@ window.onload = function () {
 }
 
   function calcul() {
-    vapeur=(incRoulis+incTangage);
-    pression=pression+vapeur;
+    vapeur=Math.round(incRoulis)+Math.round(incTangage);
+    pression=Math.round(pression)+Math.round(vapeur);
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
