@@ -17,7 +17,6 @@ window.onload = function () {
     beta=(Math.round(e.beta));
     gamma=(Math.round(e.gamma));
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
-    document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     //on passe les valeurs récupérées à la fonction calcul
     calcul();
       }
@@ -32,7 +31,8 @@ window.onload = function () {
 
   function calcul() {
     let pression=beta+gamma;
-    let incTangage;
+    document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
+
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
     document.getElementById('incRoulis').innerHTML = incRoulis;
     document.getElementById('incTangage').innerHTML = incTangage;
