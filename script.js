@@ -1,3 +1,5 @@
+var beta, gamma, pression = beta + gamma;
+
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
       const banner = document.createElement('div')
@@ -12,8 +14,8 @@ window.onload = function () {
         if (response === 'granted') {
           window.addEventListener('deviceorientation',function(e) {
     document.getElementById('autorisation').style.display = 'none';
-    var beta = (Math.round(e.beta));
-    var gamma = (Math.round(e.gamma));
+    beta = (Math.round(e.beta));
+    gamma = (Math.round(e.gamma));
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
   }
