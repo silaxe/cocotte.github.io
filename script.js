@@ -1,4 +1,4 @@
-let beta, gamma, incRoulis, incTangage, pression, vapeur;
+let beta, gamma, incRoulis, incTangage, pression=0, vapeur;
 
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
@@ -29,9 +29,8 @@ window.onload = function () {
 }
 
   function calcul() {
-let pression =0;
     vapeur=(incRoulis+incTangage);
-    pression+vapeur;
+    pression+=vapeur;
 
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
