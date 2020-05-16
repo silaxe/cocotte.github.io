@@ -29,6 +29,7 @@ window.onload = function () {
 }
 
   function calcul() {
+    setTimeout(start, 0);
     let i = 1;
     let num = document.getElementById('number');
     function start() { setInterval(increase, 1000); }
