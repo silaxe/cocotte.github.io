@@ -31,7 +31,7 @@ window.onload = function () {
   function calcul() {
     start();
     let i = 1;
-    let num = document.getElementById('number');
+    let num = document.getElementById('pression');
     function start() { setInterval(increase, 1000); }
     function increase() {
           if (i < 100) {
@@ -39,7 +39,7 @@ window.onload = function () {
             num.innerText = i;
           }
         }
-    pression=incRoulis+incTangage+i;
+    pression=incRoulis+incTangage;
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerText = ('Pression : '+pression);
