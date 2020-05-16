@@ -30,7 +30,7 @@ window.onload = function () {
 }
 
   function calcul() {
-    var pression=beta+gamma;
+    let pression=beta+gamma;
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
   }
 }
