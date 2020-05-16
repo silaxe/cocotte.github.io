@@ -1,3 +1,6 @@
+var beta ;
+var gamma ;
+
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
       const banner = document.createElement('div')
@@ -12,8 +15,10 @@ window.onload = function () {
         if (response === 'granted') {
           window.addEventListener('deviceorientation',function(e) {
     document.getElementById('autorisation').style.display = 'none';
-    document.getElementById('beta').innerHTML = 'Roulis : '+(Math.round(e.beta));
-    document.getElementById('gamma').innerHTML = 'Tangage : '+(Math.round(e.gamma)) ;
+    beta = (Math.round(e.beta);
+    gamma = (Math.round(e.gamma)
+    document.getElementById('beta').innerHTML = 'Roulis : '+beta);
+    document.getElementById('gamma').innerHTML = 'Tangage : '+(gamma) ;
   }
           )} else {
           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
@@ -23,5 +28,4 @@ window.onload = function () {
         console.error(e)
     })
   }
-alert('Coucou');
 }
