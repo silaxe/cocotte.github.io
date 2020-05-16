@@ -26,9 +26,9 @@ window.onload = function () {
       .catch(e => {
         console.error(e)
     })
-    
-    function calcul() {
+}
+
+  function calcul() {
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
-    }
   }
 }
