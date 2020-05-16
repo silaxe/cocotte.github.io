@@ -1,4 +1,4 @@
-let beta,gamma,pression,incRoulis,incTangage;
+let beta, gamma, pression, incRoulis, incTangage;
 
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
@@ -32,6 +32,7 @@ window.onload = function () {
 
   function calcul() {
     let pression=beta+gamma;
+    let incTangage=0;
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
     document.getElementById('incRoulis').innerHTML = incRoulis;
     document.getElementById('incTangage').innerHTML = incTangage;
@@ -55,19 +56,19 @@ window.onload = function () {
 
     if((gamma >= 10 && gamma < 15) || (gamma <= -10 && gamma > -15))
     {
-      inctangage = 2;
+      incTangage = 2;
     }
     else if((gamma >= 15 && gamma < 30) || (gamma <= -15 && gamma > -30))
     {
-      inctangage = 4;
+      incTangage = 4;
     }
     else if(gamma >= 30 || gamma <= -30)
     {
-      inctangage = 6;
+      incTangage = 6;
     }
     else
     {
-      inctangage = 1;
+      incTangage = 1;
     }
   }
 }
