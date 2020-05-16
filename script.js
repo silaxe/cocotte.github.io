@@ -29,6 +29,7 @@ window.onload = function () {
 }
 
   function calcul() {
+let pression =0;
     vapeur=(incRoulis+incTangage);
     pression+vapeur;
 
