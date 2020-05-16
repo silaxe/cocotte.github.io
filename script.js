@@ -24,7 +24,7 @@ window.onload = function () {
     })
   }
 
-function calcul() {
+function calcul(e) {
   beta=(Math.round(e.beta));
   gamma=(Math.round(e.gamma));
   document.getElementById('beta').innerHTML = ('Roulis : '+beta);
