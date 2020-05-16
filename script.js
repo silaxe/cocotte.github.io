@@ -37,36 +37,36 @@ window.onload = function () {
 
     if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
     {
-      inc_pression_roulis = 2;
+      incRoulis = 2;
     }
     else if((beta >= 10 && beta < 15) || (beta <= -10 && beta > -15))
     {
-      inc_pression_roulis = 4;
+      incRoulis = 4;
     }
     else if(beta >= 15 || beta <= -15)
     {
-      inc_pression_roulis = 6;
+      incRoulis = 6;
     }
     else
     {
-      inc_pression_roulis = 1;
+      incRoulis = 1;
     }
 
     if((gamma >= 10 && gamma < 15) || (gamma <= -10 && gamma > -15))
     {
-      inc_pression_tangage = 2;
+      inctangage = 2;
     }
     else if((gamma >= 15 && gamma < 30) || (gamma <= -15 && gamma > -30))
     {
-      inc_pression_tangage = 4;
+      inctangage = 4;
     }
     else if(gamma >= 30 || gamma <= -30)
     {
-      inc_pression_tangage = 6;
+      inctangage = 6;
     }
     else
     {
-      inc_pression_tangage = 1;
+      inctangage = 1;
     }
   }
 }
