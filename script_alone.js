@@ -42,7 +42,7 @@ window.onload = function () {
     pression=incRoulis+incTangage;
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
-    document.getElementById('pression').innerText = ('Pression : '+pression);
+    document.getElementById('pression').innerText = pression;
     document.getElementById('incRoulis').innerHTML = incRoulis;
     document.getElementById('incTangage').innerHTML = incTangage;
 
