@@ -1,4 +1,4 @@
-var beta, gamma;
+var beta, gamma,pression=(beta+gamma);
 
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
@@ -27,6 +27,5 @@ window.onload = function () {
         console.error(e)
     })
   }
-  var pression =(beta+gamma);
   document.getElementById('pression').innerHTML = ('Pression : '+pression);
 }
