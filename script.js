@@ -1,4 +1,6 @@
-let beta, gamma,pression=(beta+gamma);
+let beta;
+let gamma;
+let pression;
 
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
@@ -27,6 +29,7 @@ window.onload = function () {
 function calcul() {
   beta=(Math.round(e.beta));
   gamma=(Math.round(e.gamma));
+  pression=beta+gamma;
   document.getElementById('beta').innerHTML = ('Roulis : '+beta);
   document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
   document.getElementById('pression').innerHTML = ('Pression : '+pression);
