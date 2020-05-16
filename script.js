@@ -16,9 +16,9 @@ window.onload = function () {
           window.addEventListener('deviceorientation',function(e) {
     document.getElementById('autorisation').style.display = 'none';
     beta = (Math.round(e.beta);
-    gamma = (Math.round(e.gamma)
-    document.getElementById('beta').innerHTML = 'Roulis : '+beta);
-    document.getElementById('gamma').innerHTML = 'Tangage : '+(gamma) ;
+    gamma = (Math.round(e.gamma);
+    document.getElementById('beta').innerHTML = 'Roulis : '+beta;
+    document.getElementById('gamma').innerHTML = 'Tangage : '+gamma;
   }
           )} else {
           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
