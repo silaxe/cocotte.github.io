@@ -35,6 +35,7 @@ window.onload = function () {
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
     document.getElementById('incRoulis').innerHTML = incRoulis;
     document.getElementById('incTangage').innerHTML = incTangage;
+    pression = pression + Math.round((incRoulis+incTangage)/2);
 
     if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
     {
@@ -69,8 +70,6 @@ window.onload = function () {
     {
       incTangage = 1;
     }
-    pression+incRoulis+incTangage;
-
   }
 }
 
