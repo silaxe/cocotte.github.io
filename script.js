@@ -29,7 +29,7 @@ window.onload = function () {
 }
 
   function calcul() {
-    let pression=incRoulis+incTangage;
+    incRoulis+incTangage=pression;
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
