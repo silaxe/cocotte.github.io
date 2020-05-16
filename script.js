@@ -1,4 +1,4 @@
-let beta,gamma,pression;
+let beta,gamma,pression,incRoulis,incTangage;
 
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
@@ -18,6 +18,7 @@ window.onload = function () {
     gamma=(Math.round(e.gamma));
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
+    //on passe les valeurs récupérées à la fonction calcul
     calcul();
       }
           )} else {
@@ -32,11 +33,44 @@ window.onload = function () {
   function calcul() {
     let pression=beta+gamma;
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
+    document.getElementById('incRoulis').innerHTML = (incRoulis);
+
+    if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
+    {
+      inc_pression_roulis = 2;
+    }
+    else if((beta >= 10 && beta < 15) || (beta <= -10 && beta > -15))
+    {
+      inc_pression_roulis = 4;
+    }
+    else if(beta >= 15 || beta <= -15)
+    {
+      inc_pression_roulis = 6;
+    }
+    else
+    {
+      inc_pression_roulis = 1;
+    }
+
+    if((gamma >= 10 && gamma < 15) || (gamma <= -10 && gamma > -15))
+    {
+      inc_pression_tangage = 2;
+    }
+    else if((gamma >= 15 && gamma < 30) || (gamma <= -15 && gamma > -30))
+    {
+      inc_pression_tangage = 4;
+    }
+    else if(gamma >= 30 || gamma <= -30)
+    {
+      inc_pression_tangage = 6;
+    }
+    else
+    {
+      inc_pression_tangage = 1;
+    }
   }
 }
 
-//ou can very easily use this to re-use the value of the variable in another function.
-
+//you can very easily use this to re-use the value of the variable in another function.
 // Use this in source window.var1= oEvent.getSource().getBindingContext();
-
 // Get value of var1 in destination var var2= window.var1;
