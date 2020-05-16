@@ -1,4 +1,4 @@
-let beta, gamma,pression=(beta+gamma);
+let beta, gamma,pression;
 
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
@@ -18,6 +18,7 @@ window.onload = function () {
     gamma=(Math.round(e.gamma));
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
+    calcul();
       }
           )} else {
           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
@@ -32,3 +33,9 @@ window.onload = function () {
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
   }
 }
+
+//ou can very easily use this to re-use the value of the variable in another function.
+
+// Use this in source window.var1= oEvent.getSource().getBindingContext();
+
+// Get value of var1 in destination var var2= window.var1;
