@@ -50,7 +50,7 @@ window.onload = function () {
     else if(beta >= 15 || beta <= -15)
     {
       incRoulis = 6;
-      pression+=6;
+      pression+=600;
 
     }
     else
