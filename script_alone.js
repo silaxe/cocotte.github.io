@@ -14,9 +14,9 @@ window.onload = function () {
         if (response === 'granted') {
           window.addEventListener('deviceorientation',function(e) {
     document.getElementById('auto').style.display = 'none';
-    document.getElementById('alpha').innerHTML = Math.round(e.alpha);
-    document.getElementById('beta').innerHTML = Math.round(e.beta) ;
-    document.getElementById('gamma').innerHTML = Math.round(e.gamma) ;
+    beta = Math.round(e.beta);
+    gamma = Math.round(e.gamma);
+    calcul();
   }
 //document.getElementById('acceleration-including-gravity-x').innerHTML = Math.round(event.accelerationIncludingGravity.x);
           )} else {
@@ -29,4 +29,50 @@ window.onload = function () {
     })
   }
 //fonction pour interagir avec e ?
+function calcul() {
+  let i = 1;
+  let interval = setInterval(increment, 1000);
+  function increment(){i = i % 360 + 1;}
+  pression=incRoulis+incTangage;
+  document.getElementById('beta').innerHTML = ('Roulis : '+beta);
+  document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
+  document.getElementById('pression').innerHTML = ('Pressurisé : '+pression);
+  document.getElementById('incRoulis').innerHTML = incRoulis;
+  document.getElementById('incTangage').innerHTML = incTangage;
+  document.getElementById('interval').innerHTML = ('Intervalle : '+interval);
+
+  if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
+  {
+    incRoulis = 2;
+  }
+  else if((beta >= 10 && beta < 15) || (beta <= -10 && beta > -15))
+  {
+    incRoulis = 4;
+  }
+  else if(beta >= 15 || beta <= -15)
+  {
+    incRoulis = 6;
+  }
+  else
+  {
+    incRoulis = 1;
+  }
+
+  if((gamma >= 10 && gamma < 15) || (gamma <= -10 && gamma > -15))
+  {
+    incTangage = 2;
+  }
+  else if((gamma >= 15 && gamma < 30) || (gamma <= -15 && gamma > -30))
+  {
+    incTangage = 4;
+  }
+  else if(gamma >= 30 || gamma <= -30)
+  {
+    incTangage = 6;
+  }
+  else
+  {
+    incTangage = 1;
+  }
+}
 }
