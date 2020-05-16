@@ -1,4 +1,4 @@
-let beta, gamma, pression=0, incRoulis, incTangage, vapeur;
+let beta, gamma, pression, incRoulis, incTangage, vapeur;
 
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
@@ -30,7 +30,6 @@ window.onload = function () {
 
   function calcul() {
     //il faut trouver un moyen d'incrémenter la pression, pression+pression ?
-    pression+incRoulis+incTangage;
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
@@ -70,6 +69,8 @@ window.onload = function () {
     {
       incTangage = 1;
     }
+    pression+incRoulis+incTangage;
+
   }
 }
 
