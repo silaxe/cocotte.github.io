@@ -29,7 +29,7 @@ window.onload = function () {
 }
 
   function calcul() {
-    setTimeout(start, 0);
+    start();
     let i = 1;
     let num = document.getElementById('number');
     function start() { setInterval(increase, 1000); }
@@ -39,7 +39,7 @@ window.onload = function () {
             num.innerText = i;
           }
         }
-    pression=incRoulis+incTangage+num;
+    pression=incRoulis+incTangage+i;
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerText = ('Pression : '+pression);
