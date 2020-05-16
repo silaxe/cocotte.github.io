@@ -1,5 +1,6 @@
-var beta ;
-var gamma ;
+const beta ;
+const gamma ;
+const pression = beta+gamma;
 
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
