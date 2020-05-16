@@ -1,4 +1,4 @@
-let beta, gamma, incRoulis, incTangage, vapeur;
+let beta, gamma, incRoulis, incTangage, pression,vapeur;
 
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
