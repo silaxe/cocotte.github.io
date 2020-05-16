@@ -33,7 +33,7 @@ window.onload = function () {
     pression+incRoulis+incTangage;
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
-    document.getElementById('pression').innerHTML = ('Pressurisé : '+pression);
+    document.getElementById('pression').innerHTML = ('Pression : '+pression);
     document.getElementById('incRoulis').innerHTML = incRoulis;
     document.getElementById('incTangage').innerHTML = incTangage;
 
