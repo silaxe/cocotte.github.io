@@ -44,7 +44,6 @@ window.onload = function () {
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
     document.getElementById('incRoulis').innerHTML = incRoulis;
     document.getElementById('incTangage').innerHTML = incTangage;
-    document.getElementById('interval').innerHTML = number;
 
     if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
     {
