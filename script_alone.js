@@ -31,17 +31,17 @@ window.onload = function () {
   function calcul() {
     start();
     let i = 1;
-    let num = document.getElementById('pression');
+    let num = document.getElementById('number');
     function start() { setInterval(increase, 1000); }
     function increase() {
           if (i < 100) {
             i++;
-            num.innerText = i;
+            num.innerText = i+incRoulis+incTangage;
           }
         }
     pression=incRoulis+incTangage;
-    document.getElementById('beta').innerHTML = ('Roulis : '+beta);
-    document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
+    document.getElementById('beta').innerHTML = beta;
+    document.getElementById('gamma').innerHTML = gamma;
     document.getElementById('pression').innerHTML = pression;
     document.getElementById('incRoulis').innerHTML = incRoulis;
     document.getElementById('incTangage').innerHTML = incTangage;
