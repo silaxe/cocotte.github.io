@@ -26,6 +26,6 @@ window.onload = function () {
       .catch(e => {
         console.error(e)
     })
+    document.getElementById('pression').innerHTML = ('Pression : '+pression);
   }
-  document.getElementById('pression').innerHTML = ('Pression : '+pression);
 }
