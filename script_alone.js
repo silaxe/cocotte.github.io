@@ -14,8 +14,8 @@ window.onload = function () {
         if (response === 'granted') {
           window.addEventListener('deviceorientation',function(e) {
     document.getElementById('auto').style.display = 'none';
-    beta = Math.round(e.beta);
-    gamma = Math.round(e.gamma);
+    beta = (Math.round(e.beta));
+    gamma = (Math.round(e.gamma));
     calcul();
   }
 //document.getElementById('acceleration-including-gravity-x').innerHTML = Math.round(event.accelerationIncludingGravity.x);
