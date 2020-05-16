@@ -14,9 +14,9 @@ window.onload = function () {
         if (response === 'granted') {
           window.addEventListener('deviceorientation',function(e) {
     document.getElementById('auto').style.display = 'none';
-    beta = (Math.round(e.beta));
-    gamma = (Math.round(e.gamma));
-    calcul();
+    document.getElementById('beta').innerHTML = Math.round(e.beta);
+    document.getElementById('gamma').innerHTML = Math.round(e.gamma);
+  //  calcul();
   }
 //document.getElementById('acceleration-including-gravity-x').innerHTML = Math.round(event.accelerationIncludingGravity.x);
           )} else {
@@ -29,17 +29,17 @@ window.onload = function () {
     })
   }
 //fonction pour interagir avec e ?
-function calcul() {
-  let i = 1;
-  let interval = setInterval(increment, 1000);
-  function increment(){i = i % 360 + 1;}
-  pression=incRoulis+incTangage;
-  document.getElementById('beta').innerHTML = ('Roulis : '+beta);
-  document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
-  document.getElementById('pression').innerHTML = ('Pressurisé : '+pression);
-  document.getElementById('incRoulis').innerHTML = incRoulis;
-  document.getElementById('incTangage').innerHTML = incTangage;
-  document.getElementById('interval').innerHTML = ('Intervalle : '+interval);
+//  function calcul() {
+//  let i = 1;
+//  let interval = setInterval(increment, 1000);
+//  function increment(){i = i % 360 + 1;}
+//  pression=incRoulis+incTangage;
+//  document.getElementById('beta').innerHTML = ('Roulis : '+beta);
+//  document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
+//  document.getElementById('pression').innerHTML = ('Pressurisé : '+pression);
+//  document.getElementById('incRoulis').innerHTML = incRoulis;
+//  document.getElementById('incTangage').innerHTML = incTangage;
+//  document.getElementById('interval').innerHTML = ('Intervalle : '+interval);
 
   if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
   {
