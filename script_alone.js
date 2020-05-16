@@ -29,10 +29,13 @@ window.onload = function () {
 }
 
   function calcul() {
-    pression=incRoulis+incTangage;
+    let i = 1;
+    let interval = setInterval(increment, 1000);
+    function increment(){i = i % 360 + 1;}
+    pression=incRoulis+incTangage+interval;
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
-    document.getElementById('pression').innerHTML = ('Pressurisé : '+pression);
+    document.getElementById('pression').innerHTML = ('Pression : '+pression);
     document.getElementById('incRoulis').innerHTML = incRoulis;
     document.getElementById('incTangage').innerHTML = incTangage;
 
