@@ -22,13 +22,13 @@ window.onload = function () {
       .catch(e => {
         console.error(e)
     })
-  }
 
-function calcul(e) {
-  beta=(Math.round(e.beta));
-  gamma=(Math.round(e.gamma));
-  document.getElementById('beta').innerHTML = ('Roulis : '+beta);
-  document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
-  document.getElementById('pression').innerHTML = ('Pression : '+pression);
+    function calcul() {
+      beta=(Math.round(e.beta));
+      gamma=(Math.round(e.gamma));
+      document.getElementById('beta').innerHTML = ('Roulis : '+beta);
+      document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
+      document.getElementById('pression').innerHTML = ('Pression : '+pression);
+    }
   }
 }
