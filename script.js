@@ -33,7 +33,8 @@ window.onload = function () {
   function calcul() {
     let pression=beta+gamma;
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
-    document.getElementById('incRoulis').innerHTML = (incRoulis);
+    document.getElementById('incRoulis').innerHTML = incRoulis;
+    document.getElementById('incTangage').innerHTML = incTangage;
 
     if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
     {
@@ -71,6 +72,7 @@ window.onload = function () {
   }
 }
 
+//Solution pour récupérer les paramètres de jeu depuis la fenêtre Option
 //you can very easily use this to re-use the value of the variable in another function.
 // Use this in source window.var1= oEvent.getSource().getBindingContext();
 // Get value of var1 in destination var var2= window.var1;
