@@ -17,7 +17,6 @@ window.onload = function () {
 //  let i = 1;
 //  let interval = setInterval(increment, 1000);
 //  function increment(){i = i % 360 + 1;}
-    document.getElementById('alpha').innerHTML = Math.round(e.alpha);
     document.getElementById('beta').innerHTML = Math.round(e.beta) ;
     document.getElementById('gamma').innerHTML = Math.round(e.gamma) ;
   }
