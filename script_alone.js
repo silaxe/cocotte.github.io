@@ -1,4 +1,4 @@
-let beta, gamma, pression, incRoulis, incTangage, vapeur;
+let beta, gamma, pression, incRoulis, incTangage, interval;
 
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
@@ -32,12 +32,13 @@ window.onload = function () {
     let i = 1;
     let interval = setInterval(increment, 1000);
     function increment(){i = i % 360 + 1;}
-    pression=incRoulis+incTangage+interval;
+    pression=incRoulis+incTangage;
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
     document.getElementById('incRoulis').innerHTML = incRoulis;
     document.getElementById('incTangage').innerHTML = incTangage;
+    document.getElementById('interval').innerHTML = interval;
 
     if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
     {
