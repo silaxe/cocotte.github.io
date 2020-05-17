@@ -1,4 +1,4 @@
-// On définie nos variables
+// On définit nos variables
 var options = {
     gravity: 2,
     difficulty: 1
@@ -63,7 +63,7 @@ function refreshInfo() {
     $('.infoDifficulty').html(arrDifficulties[options.difficulty - 1]);
 }
 
-//Fonction permettant de mettre à jour le menu option en fonction des options par défaut définies dans la variables options (on l'appelle au chargement de l'app)
+//Fonction permettant de mettre à jour le menu option en fonction des options par défaut définits dans la variables options (on l'appelle au chargement de l'app)
 //Grace à cette fonction on a juste à modifier la varible options et le menu sera automatiquement mis à jour
 function refreshOptions() {
     $('#menuGravity').val(options.gravity).change();
@@ -73,11 +73,11 @@ function refreshOptions() {
 /***** Fonctions de la page game *****/
 function initializeGame(){
     $('#game div[data-role="main"]')
-        //On définie la hauteur du bloc "main" de la page game pour qu'elle corresponde à la hauteur de la fenetre
+        //On définit la hauteur du bloc "main" de la page game pour qu'elle corresponde à la hauteur de la fenetre
         .css({height : window.innerHeight})
         .append('<div class="kenny"></div>')
 
-    //On définie la position "left" de kenny pour le centrer
+    //On définit la position "left" de kenny pour le centrer
     kenny = $('.kenny');
     kenny.offset({
         left: (window.innerWidth / 2) - (kenny.width() / 2),
