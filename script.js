@@ -74,8 +74,7 @@ myTimer();
 
 function myTimer() {
 if (pression >= 500){
-  //    document.getElementById('retour').style.display = 'normal';
-  alert("coucou");
+  document.getElementById('retour').style.display = 'normal';
   pression = 0;
   clearInterval(timerGlobal);
 //Envoi de la page Bang -> décrément du nombre de joueurs
