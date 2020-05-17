@@ -36,6 +36,7 @@ if (pression >= 500){
   clearInterval(timerGlobal);
 //Envoi de la page Bang -> décrément du nombre de joueurs
     }
+  }
 
   function calcul() {
 
@@ -79,9 +80,6 @@ if (pression >= 500){
     }
   }
   myTimer();
-
-
-  }
 }
 /*if (pression >= 100){
 
