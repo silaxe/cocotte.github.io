@@ -33,7 +33,7 @@ window.onload = function () {
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
-    document.getElementById('incRoulis').innerHTML = incRoulis;
+    document.getElementById('incRoulis').innerHTML = ("n'affichera rien"+incRoulis;
     document.getElementById('incTangage').innerHTML = incTangage;
 
     if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
@@ -74,7 +74,7 @@ myTimer();
 
 function myTimer() {
 if (pression >= 500){
-  document.getElementById('retour').style.visibility = 'visible';
+//  document.getElementById('retour').style.visibility = 'visible';
   pression = 0;
   clearInterval(timerGlobal);
 //Envoi de la page Bang -> décrément du nombre de joueurs
