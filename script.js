@@ -34,7 +34,7 @@ window.onload = function () {
 
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
-    document.getElementById('pression').innerHTML = ('Pression+ : '+pression);
+    document.getElementById('pression').innerHTML = ('Pression : '+pression);
     document.getElementById('incRoulis').innerHTML = incRoulis;
     document.getElementById('incTangage').innerHTML = incTangage;
 
@@ -71,8 +71,9 @@ window.onload = function () {
       pression+=0;
     }
   }
+  myTimer();
 
-  function myTimer(pression) {
+  function myTimer() {
   if (pression >= 500){
     document.getElementById('retour').style.display = 'normal';
     pression = 0;
