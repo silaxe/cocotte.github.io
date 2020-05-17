@@ -7,7 +7,7 @@ window.onload = function () {
       banner.onclick = ClickRequestDeviceOrientationEvent
       document.querySelector('body').appendChild(banner)
   }
-
+}
   function ClickRequestDeviceOrientationEvent () {
     window.DeviceOrientationEvent.requestPermission()
       .then(response => {
@@ -70,7 +70,7 @@ window.onload = function () {
     }
 myTimer();
   }
-}
+
 /*
 function myTimer() {
   if (pression >= 500){
