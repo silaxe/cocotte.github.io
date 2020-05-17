@@ -7,7 +7,7 @@ window.onload = function () {
       banner.onclick = ClickRequestDeviceOrientationEvent
       document.querySelector('body').appendChild(banner)
   }
-}
+
   function ClickRequestDeviceOrientationEvent () {
     window.DeviceOrientationEvent.requestPermission()
       .then(response => {
@@ -71,15 +71,20 @@ window.onload = function () {
 myTimer();
   }
 
-/*
 function myTimer() {
   if (pression >= 500){
-  alert("1");
-  //document.getElementById('retour').style.visibility = 'visible';
+    //    document.getElementById('retour').style.display = 'normal';
+    alert("coucou");
     pression = 0;
     clearInterval(timerGlobal);
   //Envoi de la page Bang -> décrément du nombre de joueurs
+      }
     }
+}
+/*
+
+
+
   }
 if (pression >= 100){
   pression = 0;
