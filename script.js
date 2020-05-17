@@ -28,14 +28,7 @@ window.onload = function () {
     })
 }
 
-function myTimer() {
-if (pression >= 500){
-  document.getElementById('retour').style.display = 'normal';
-  pression = 0;
-  clearInterval(timerGlobal);
-//Envoi de la page Bang -> décrément du nombre de joueurs
-    }
-}
+
 
   function calcul() {
 
@@ -77,6 +70,15 @@ if (pression >= 500){
     {
       pression+=0;
     }
+  }
+
+  function myTimer() {
+  if (pression >= 500){
+    document.getElementById('retour').style.display = 'normal';
+    pression = 0;
+    clearInterval(timerGlobal);
+  //Envoi de la page Bang -> décrément du nombre de joueurs
+      }
   }
 }
 /*if (pression >= 100){
