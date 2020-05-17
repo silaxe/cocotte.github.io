@@ -72,7 +72,7 @@ window.onload = function () {
     }
   }
 
-  function myTimer() {
+  function myTimer(pression) {
   if (pression >= 500){
     document.getElementById('retour').style.display = 'normal';
     pression = 0;
