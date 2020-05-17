@@ -28,15 +28,6 @@ window.onload = function () {
     })
 }
 
-function myTimer() {
-if (pression >= 500){
-  alert("coucou");
-  pression = 0;
-  clearInterval(timerGlobal);
-//Envoi de la page Bang -> décrément du nombre de joueurs
-    }
-}
-
   function calcul() {
 
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
@@ -77,6 +68,15 @@ if (pression >= 500){
     {
       pression+=0;
     }
+    myTimer();
+  }
+}
+
+function myTimer() {
+if (pression >= 500){
+  alert("coucou");
+  pression = 0;
+  clearInterval(timerGlobal);
   }
 }
 /*if (pression >= 100){
