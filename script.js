@@ -38,46 +38,40 @@ window.onload = function () {
 
     if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
     {
-      incRoulis = 2;
       pression+=2;
     }
     else if((beta >= 10 && beta < 15) || (beta <= -10 && beta > -15))
     {
-      incRoulis = 4;
       pression+=4;
-
     }
     else if(beta >= 15 || beta <= -15)
     {
-      incRoulis = 6;
       pression+=6;
-
     }
     else
     {
-      incRoulis = 1;
+      pression+=1;
     }
-
     if((gamma >= 10 && gamma < 15) || (gamma <= -10 && gamma > -15))
     {
-      incTangage = 2;
+      pression+=2;
     }
     else if((gamma >= 15 && gamma < 30) || (gamma <= -15 && gamma > -30))
     {
-      incTangage = 4;
+      pression+=4;
     }
     else if(gamma >= 30 || gamma <= -30)
     {
-      incTangage = 6;
+      pression+=6;
     }
     else
     {
-      incTangage = 1;
+      pression+=1;
     }
   }
 }
 /*if (pression >= 100){
-  
+
   pression = 0;
   clearInterval(timerGlobal);*/
 //Solution pour récupérer les paramètres de jeu depuis la fenêtre Option
