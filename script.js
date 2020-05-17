@@ -79,7 +79,6 @@ if (pression >= 500){
       pression+=0;
     }
   }
-  myTimer();
 }
 /*if (pression >= 100){
 
