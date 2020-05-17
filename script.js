@@ -28,6 +28,16 @@ window.onload = function () {
     })
 }
 
+function myTimer() {
+  if (pression >= 500){
+    //    document.getElementById('retour').style.display = 'normal';
+    alert("coucou");
+    pression = 0;
+    clearInterval(timerGlobal);
+  //Envoi de la page Bang -> décrément du nombre de joueurs
+      }
+    }
+
   function calcul() {
 
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
@@ -71,15 +81,7 @@ window.onload = function () {
 myTimer();
   }
 
-function myTimer() {
-  if (pression >= 500){
-    //    document.getElementById('retour').style.display = 'normal';
-    alert("coucou");
-    pression = 0;
-    clearInterval(timerGlobal);
-  //Envoi de la page Bang -> décrément du nombre de joueurs
-      }
-    }
+
 }
 /*
 
