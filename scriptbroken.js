@@ -3,8 +3,8 @@ let beta, gamma, incRoulis, incTangage, pression=0, vapeur;
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
       const banner = document.createElement('div')
-      banner.innerHTML = `<div id="autorisation" style="z-index: 1; position: absolute; width: 100%; background-color:#000; color: #fff"><p style="padding: 10px">Cliquez ici pour autoriser l'accès à votre capteur de mouvements.</p></div>`
-      banner.onclick = ClickRequestDeviceOrientationEvent //
+      banner.innerHTML = `<div style="z-index: 1; position: absolute; width: 100%; background-color:#000; color: #fff"><p style="padding: 10px">Cliquez ici pour autoriser l'accès à votre capteur de mouvements.</p></div>`
+      banner.onclick = ClickRequestDeviceOrientationEvent
       document.querySelector('body').appendChild(banner)
   }
 
@@ -16,7 +16,7 @@ window.onload = function () {
     document.getElementById('autorisation').style.display = 'none';
     beta=(Math.round(e.beta));
     gamma=(Math.round(e.gamma));
-    //on passe les valeurs récupérées à la fonction calcul
+    //On passe les valeurs récupérées à la fonction calcul
     calcul();
       }
           )} else {
@@ -29,20 +29,21 @@ window.onload = function () {
 }
 
 function myTimer() {
-if (pression >= 500){
-  alert("coucou");
-  pression = 0;
-  clearInterval(timerGlobal);
-//Envoi de la page Bang -> décrément du nombre de joueurs
+    if (pression >= 500){
+      //    document.getElementById('retour').style.display = 'normal';
+      alert("coucou");
+      pression = 0;
+      clearInterval(timerGlobal);
+    //Envoi de la page Bang -> décrément du nombre de joueurs
     }
-}
+  }
 
-  function calcul() {
+function calcul() {
 
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
-    document.getElementById('pression').innerHTML = ('Pression+ : '+pression);
-    document.getElementById('incRoulis').innerHTML = incRoulis;
+    document.getElementById('pression').innerHTML = ('Pression : '+pression);
+    document.getElementById('incRoulis').innerHTML = ("n'affichera rien"+incRoulis;
     document.getElementById('incTangage').innerHTML = incTangage;
 
     if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
@@ -79,11 +80,3 @@ if (pression >= 500){
     }
   }
 }
-/*if (pression >= 100){
-
-  pression = 0;
-  clearInterval(timerGlobal);*/
-//Solution pour récupérer les paramètres de jeu depuis la fenêtre Option
-//you can very easily use this to re-use the value of the variable in another function.
-// Use this in source window.var1= oEvent.getSource().getBindingContext();
-// Get value of var1 in destination var var2= window.var1;
