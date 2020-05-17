@@ -3,7 +3,7 @@ let beta, gamma, incRoulis, incTangage, pression=0, vapeur;
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
       const banner = document.createElement('div')
-      banner.innerHTML = `<div id="autorisation" style="z-index: 1; position: absolute; width: 100%; background-color:#000; color: #fff"><p style="padding: 10px">Cliquez ici pour autoriser l'accès à votre capteur de mouvements.</p></div>`
+      banner.innerHTML = `<div style="z-index: 1; position: absolute; width: 100%; background-color:#000; color: #fff"><p style="padding: 10px">Cliquez ici pour autoriser l'accès à votre capteur de mouvements.</p></div>`
       banner.onclick = ClickRequestDeviceOrientationEvent
       document.querySelector('body').appendChild(banner)
   }
