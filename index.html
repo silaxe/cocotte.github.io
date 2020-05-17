@@ -85,11 +85,10 @@
     <!-- On créé la page game dans laquelle on appelle script.js spécifiquement pour le jeu -->
     <div data-role="page" id="game">
         <!-- On créé un bouton de retour vers la page home -->
-        <a href="#home" data-rel="back" class="ui-btn ui-btn-left ui-alt-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l">Back</a>
         <a href="/options" class="btnContinue">Game over</a>
         <!-- On ajoute la div principale de la page (dans laquelle se trouvera le jeu) -->
         <div data-role="main" class="content">
-            <div class="gameZone" allow="autoplay">
+            <div class="gameZone">
             <script src="script.js"></script>
             <div id="beta">Roulis : capteur de mouvement non autorisé</div>
             <div id="gamma">Tangage : capteur de mouvement non autorisé</div>
@@ -100,6 +99,8 @@
        <!--
     <audio>
         <source id="son_medium" src="" type="audio/mpeg">
+        <a href="#home" data-rel="back" class="ui-btn ui-btn-left ui-alt-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l">Back</a>
+
     </audio>
     <audio>
         <source id="son_hard" src="" type="audio/mpeg">
