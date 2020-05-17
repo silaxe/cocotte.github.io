@@ -16,7 +16,7 @@ window.onload = function () {
     document.getElementById('autorisation').style.display = 'none';
     beta=(Math.round(e.beta));
     gamma=(Math.round(e.gamma));
-    //on passe les valeurs récupérées à la fonction calcul
+    //On passe les valeurs récupérées à la fonction calcul
     calcul();
       }
           )} else {
@@ -71,17 +71,17 @@ window.onload = function () {
 myTimer();
   }
 }
-
+/*
 function myTimer() {
   if (pression >= 500){
   alert("1");
-  //  document.getElementById('retour').style.visibility = 'visible';
+  //document.getElementById('retour').style.visibility = 'visible';
     pression = 0;
     clearInterval(timerGlobal);
   //Envoi de la page Bang -> décrément du nombre de joueurs
     }
   }
-/*if (pression >= 100){
+if (pression >= 100){
   pression = 0;
   clearInterval(timerGlobal);*/
 //Solution pour récupérer les paramètres de jeu depuis la fenêtre Option
