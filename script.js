@@ -78,19 +78,6 @@ function myTimer() {
       pression = 0;
       clearInterval(timerGlobal);
     //Envoi de la page Bang -> décrément du nombre de joueurs
-        }
-      }
-
-}
-/*
-
-
-
+    }
   }
-if (pression >= 100){
-  pression = 0;
-  clearInterval(timerGlobal);*/
-//Solution pour récupérer les paramètres de jeu depuis la fenêtre Option
-//you can very easily use this to re-use the value of the variable in another function.
-// Use this in source window.var1= oEvent.getSource().getBindingContext();
-// Get value of var1 in destination var var2= window.var1;
+}
