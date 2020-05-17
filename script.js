@@ -74,6 +74,7 @@ myTimer();
 
 function myTimer() {
 if (pression >= 500){
+alert("1");
 //  document.getElementById('retour').style.visibility = 'visible';
   pression = 0;
   clearInterval(timerGlobal);
