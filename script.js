@@ -74,14 +74,13 @@ myTimer();
 
 function myTimer() {
 if (pression >= 500){
-  document.getElementById('retour').style.display = 'normal';
+  document.getElementById('retour').style.visibility = 'visible';
   pression = 0;
   clearInterval(timerGlobal);
 //Envoi de la page Bang -> décrément du nombre de joueurs
     }
   }
 /*if (pression >= 100){
-
   pression = 0;
   clearInterval(timerGlobal);*/
 //Solution pour récupérer les paramètres de jeu depuis la fenêtre Option
