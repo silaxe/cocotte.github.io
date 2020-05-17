@@ -28,7 +28,6 @@ window.onload = function () {
     })
 }
 
-
 function myTimer() {
     if (pression >= 500){
       //    document.getElementById('retour').style.display = 'normal';
@@ -79,6 +78,5 @@ function calcul() {
     {
       pression+=0;
     }
-myTimer();
   }
 }
