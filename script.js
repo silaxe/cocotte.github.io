@@ -74,9 +74,11 @@ window.onload = function () {
 
 function myTimer() {
 if (pression >= 500){
-  alert("coucou");
+  const boutonretour = document.createElement('div')
+  boutonretour.innerHTML = `<div style="z-index: 1; position: absolute; width: 100%; background-color:#00000; color: red"><a href="https://silaxe.github.io/#options"><p style="padding: 10px">Game Over</p></a></div>`
+  document.querySelector('body').appendChild(boutonretour)
   pression = 0;
-  clearInterval(timerGlobal);
+  //clearInterval(timerGlobal);
   }
 }
 /*if (pression >= 100){
