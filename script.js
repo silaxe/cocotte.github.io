@@ -4,7 +4,7 @@ window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
       const banner = document.createElement('div')
       banner.innerHTML = `<div id="autorisation" style="z-index: 1; position: absolute; width: 100%; background-color:#000; color: #fff"><p style="padding: 10px">Cliquez ici pour autoriser l'accès à votre capteur de mouvements.</p></div>`
-      banner.onclick = ClickRequestDeviceOrientationEvent //
+      banner.onclick = ClickRequestDeviceOrientationEvent
       document.querySelector('body').appendChild(banner)
   }
 
@@ -73,11 +73,14 @@ window.onload = function () {
 }
 
 function myTimer() {
+
 if (pression >= 500){
   const boutonretour = document.createElement('div')
   boutonretour.innerHTML = `<div style="z-index: 1; position: absolute; width: 100%; background-color:#00000; color: red"><a href="https://silaxe.github.io/#options"><p style="padding: 10px">Game Over</p></a></div>`
   document.querySelector('body').appendChild(boutonretour)
   pression = 0;
+  boutonretour.onclick = document.getElementById('div').style.display = 'none';
+
   //clearInterval(timerGlobal);
   }
 }
