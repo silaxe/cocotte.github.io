@@ -29,7 +29,6 @@ window.onload = function () {
 }
 
   function calcul() {
-
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerHTML = ('Pression+ : '+pression);
@@ -73,21 +72,14 @@ window.onload = function () {
 }
 
 function myTimer() {
-
-if (pression >= 500){
+  if (pression >= 500){
   const boutonretour = document.createElement('div')
   boutonretour.innerHTML = `<div style="z-index: 1; position: absolute; width: 100%; background-color:#00000; color: red"><a href="https://silaxe.github.io/#options"><p style="padding: 10px">Game Over</p></a></div>`
   document.querySelector('body').appendChild(boutonretour)
   pression = 0;
-  boutonretour.onclick = document.getElementById('div').style.display = 'none';
-
-  //clearInterval(timerGlobal);
+  boutonretour.onclick = document.querySelector('div').style.display = 'none';
   }
 }
-/*if (pression >= 100){
-
-  pression = 0;
-  clearInterval(timerGlobal);*/
 //Solution pour récupérer les paramètres de jeu depuis la fenêtre Option
 //you can very easily use this to re-use the value of the variable in another function.
 // Use this in source window.var1= oEvent.getSource().getBindingContext();
