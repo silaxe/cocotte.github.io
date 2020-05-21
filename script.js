@@ -7,6 +7,7 @@ window.onload = function () {
       banner.onclick = ClickRequestDeviceOrientationEvent
       document.querySelector('body').appendChild(banner)
   }
+}
 
   function ClickRequestDeviceOrientationEvent () {
     window.DeviceOrientationEvent.requestPermission()
@@ -67,14 +68,14 @@ window.onload = function () {
     }
     displayPression();
   }
-}
+
 
 function displayPression() {
-  if (pression===500){
+  if (pression=500){
     alert("500")
   }
   else if (pression =1000) {
-  pression = 0;
+  pression=0;
 
   }
 }
