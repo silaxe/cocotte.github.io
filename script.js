@@ -38,7 +38,7 @@ function increasePression() {
 
     if (gameover) {
       return
-    }
+    } else {
 
     if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
     {
@@ -73,6 +73,7 @@ function increasePression() {
       pression+=0;
     }
     playWithPression();
+    }
 }
 
 function playWithPression() {
