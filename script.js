@@ -71,8 +71,8 @@ window.onload = function () {
 
 function myTimer() {
   if (pression >= 500){
-  pression = 0;
-  document.getElementById('retour').style.display = normal;
+  pression = 0
+  document.getElementById('retour').style.display
   }
 }
 
