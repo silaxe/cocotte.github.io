@@ -70,11 +70,14 @@ function increasePression() {
 }
 
 function displayPression() {
-  if (pression >= 500 && pression <=1000){
+  if (pression >= 0 && pression <=500){
     document.getElementById('pression').style.color = "green";
   }
-  else if (pression >= 1000 && pression <=1500) {
+  else if (pression >= 500 && pression <=1000) {
     document.getElementById('pression').style.color = "red";
+  }
+  else if (pression > 1000) {
+    document.getElementById('variable').innerHTML = `<div id="autorisation" style="z-index: 1; position: absolute; width: 100%; background-color:#fffff; color: #fff"><p style="padding: 10px">Game over</p>`
   }
 }
 
