@@ -133,6 +133,7 @@ display: none;
   visibility: hidden;
   background-color: #fff;
   border-color: #cd6464;
+  border-radius: 3px;
   padding: 20px 20px;
   z-index:1;
   width: 80%;
