@@ -84,8 +84,8 @@ function playWithPression() {
     document.getElementById('pression').style.color = "red";
   }
   else if (pression > 1000) {
-    gameover = true;
     document.getElementsById('gameover').style.visibility = 'visible';
+    gameover = true;
   }
 }
 
