@@ -66,7 +66,15 @@ function increasePression() {
     {
       pression+=0;
     }
+    gameLoop();
     playWithPression();
+}
+
+function gameLoop {
+  if (pression > 1000)
+  document.getElementById('gameover').style.visibility = "visible";
+  pression=0;
+  return;
 }
 
 function playWithPression() {
@@ -77,10 +85,9 @@ function playWithPression() {
     document.getElementById('pression').style.color = "red";
   }
   else if (pression > 1000) {
-    document.getElementById('gameover').style.visibility = "visible";
+
   }
 }
-
 
 //Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
 //you can very easily use this to re-use the value of the variable in another function.
