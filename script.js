@@ -17,7 +17,7 @@ function ClickRequestDeviceOrientationEvent () {
     document.getElementById('autorisation').style.display = 'none';
     beta=(Math.round(e.beta));
     gamma=(Math.round(e.gamma));
-    //on passe les valeurs récupérées à la fonction calcul
+    //on passe les valeurs récupérées à la fonction de calcul de la pression
     increasePression();
       }
           )} else {
@@ -29,10 +29,16 @@ function ClickRequestDeviceOrientationEvent () {
   })
 }
 
+
+
 function increasePression() {
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
+
+    if (gameover) {
+      return
+    }
 
     if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
     {
@@ -76,8 +82,9 @@ function playWithPression() {
   else if (pression >= 500 && pression <=1000) {
     document.getElementById('pression').style.color = "red";
   }
-  else if (pression > 600) {
-    document.getElementById('pression').style.color = "blue";
+  else if (pression > 1000) {
+    gameover = true;
+    document.getElementsByClassName('gameover').style.visibility = 'visible';
   }
 }
 
