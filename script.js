@@ -79,16 +79,16 @@ function myTimer() {
   {
 
   }
-  else if(pression >= 1500)
+  else if(pression>=1500)
   {
-    pression = 0;
+    pression=0
     return
     //gameover
   }
 }
 
 
-//Solution pour récupérer les paramètres de jeu depuis la fenêtre Option
+//Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
 //you can very easily use this to re-use the value of the variable in another function.
 // Use this in source window.var1= oEvent.getSource().getBindingContext();
 // Get value of var1 in destination var var2= window.var1;
