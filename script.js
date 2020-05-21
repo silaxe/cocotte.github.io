@@ -71,10 +71,11 @@ function increasePression() {
 }
 
 function gameLoop {
-  if (pression > 1000)
+  if (pression > 1000) {
   document.getElementById('gameover').style.visibility = "visible";
   pression=0;
   return;
+}
 }
 
 function playWithPression() {
