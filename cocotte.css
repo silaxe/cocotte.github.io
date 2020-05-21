@@ -105,6 +105,10 @@
     margin-left: 15px;
 }
 
+#retour {
+display: none;
+}
+
 #game .gameZone {
     margin-top: 10em;
     width: 100%;
@@ -125,9 +129,7 @@
   display: none;
 }
 
-#id {
-display: none; 
-}
+
 
 .bang_div{
   visibility: hidden;
