@@ -70,7 +70,7 @@ window.onload = function () {
 }
 
 function myTimer() {
-  if (pression >= 500){//appeler à nouveau jQuery pour l'ui ?
+  if (pression >= 500){
   pression = 0;
   }
 }
