@@ -37,7 +37,7 @@ function increasePression() {
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
 
     function gameLoop() {
-      if (pression > 1000) {
+      if (pression < 1000) {
 
     if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
     {
@@ -78,7 +78,6 @@ function increasePression() {
     }
   }
 }
-
 
 function playWithPression() {
   if (pression >= 0 && pression <=500){
