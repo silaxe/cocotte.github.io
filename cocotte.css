@@ -125,6 +125,10 @@
   display: none;
 }
 
+#id {
+display: none; 
+}
+
 .bang_div{
   visibility: hidden;
 }

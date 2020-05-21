@@ -72,9 +72,8 @@ window.onload = function () {
 }
 
 function myTimer() {
-  if (pression >= 500){
+  if (pression >= 500){//appeler à nouveau jQuery pour l'ui ?
   const boutonretour = document.createElement('div')
-  boutonretour.innerHTML = `<div id="1" style="z-index: 1; position: absolute; width: 100%; background-color:#00000; color: red"><a href="https://silaxe.github.io/#options"><p style="padding: 10px">Game Over</p></a></div>`
   pression = 0;
   }
 }

@@ -85,8 +85,7 @@
     <!-- On créé la page game dans laquelle on appelle script.js spécifiquement pour le jeu -->
     <div data-role="page" id="game">
         <!-- On créé un bouton de retour vers la page home -->
-        <a href="#home" data-rel="back" class="ui-btn ui-btn-left ui-alt-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l">Back</a>
-        <!--<a href="#options" class="btnContinue ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Continuer</a>-->
+        <a id="gameover" href="#home" data-rel="back" class="ui-btn ui-btn-left ui-alt-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l">Back</a>
         <!-- On ajoute la div principale de la page (dans laquelle se trouvera le jeu) -->
         <div data-role="main" class="content">
             <div class="gameZone" allow="autoplay">
@@ -98,12 +97,5 @@
             <div id="incTangage">incTangage</div>
             <a id="retour" href="#game" class="btnContinue ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Game over</a>
         </div>
-       <!--
-    <audio>
-        <source id="son_medium" src="" type="audio/mpeg">
-    </audio>
-    <audio>
-        <source id="son_hard" src="" type="audio/mpeg">
-    </audio> -->
 </body>
 </html>
