@@ -30,7 +30,7 @@ function ClickRequestDeviceOrientationEvent () {
 }
 
 
-
+//summon uniquement quand on est dans la game, voire summon uniquement le .js ?
 function increasePression() {
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
@@ -85,6 +85,7 @@ function playWithPression() {
   }
   else if (pression > 1000) {
     document.getElementById('gameover').style.visibility = 'visible';
+    //remplacer par un onclick pour remettre à 0 le jeu et revenir à options au clic
     gameover = true;
   }
 }
