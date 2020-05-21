@@ -31,9 +31,7 @@ window.onload = function () {
   function calcul() {
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
-    document.getElementById('pression').innerHTML = ('Pression+ : '+pression);
-    document.getElementById('incRoulis').innerHTML = incRoulis;
-    document.getElementById('incTangage').innerHTML = incTangage;
+    document.getElementById('pression').innerHTML = ('Pression : '+pression);
 
     if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
     {
