@@ -16,8 +16,8 @@ window.onload = function () {
     document.getElementById('autorisation').style.display = 'none';
     beta=(Math.round(e.beta));
     gamma=(Math.round(e.gamma));
-    //on passe les valeurs récupérées à la fonction calcul
-    calcul();
+    //on passe les valeurs récupérées à la fonction increasePression
+    increasePression();
       }
           )} else {
           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
@@ -28,7 +28,7 @@ window.onload = function () {
     })
 }
 
-  function calcul() {
+  function increasePression() {
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
