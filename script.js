@@ -35,9 +35,9 @@ function increasePression() {
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
     if (pression>=500)
     {
-      alert(pression)
-      return
 
+      return
+      alert(pression)
     }else{
 
     if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
