@@ -9,7 +9,7 @@ window.onload = function () {
   }
 }
 
-  function ClickRequestDeviceOrientationEvent () {
+function ClickRequestDeviceOrientationEvent () {
     window.DeviceOrientationEvent.requestPermission()
       .then(response => {
         if (response === 'granted') {
@@ -17,7 +17,7 @@ window.onload = function () {
     document.getElementById('autorisation').style.display = 'none';
     beta=(Math.round(e.beta));
     gamma=(Math.round(e.gamma));
-    //on passe les valeurs récupérées à la fonction increasePression
+    //on passe les valeurs récupérées à la fonction calcul
     increasePression();
       }
           )} else {
@@ -29,7 +29,7 @@ window.onload = function () {
     })
 }
 
-  function increasePression() {
+function increasePression() {
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
@@ -69,18 +69,11 @@ window.onload = function () {
     displayPression();
   }
 
-
 function displayPression() {
-  if (pression=1500){
-
-    pression=0;
-  }
-  else if (pression =500) {
-    alert("500")
-
+  if (pression > 500){
+  pression = 0;
   }
 }
-
 
 
 //Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
