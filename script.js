@@ -73,7 +73,7 @@ function increasePression() {
 
 while (gameLoop) {
   if (pression < 1000) {
-  increasePression();
+  playWithPression();
 } else {
   document.getElementById('gameover').style.visibility = "visible";
   gameLoop = false;
