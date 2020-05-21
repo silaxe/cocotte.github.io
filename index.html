@@ -85,13 +85,14 @@
     <!-- On créé la page game dans laquelle on appelle script.js spécifiquement pour le jeu -->
     <div data-role="page" id="game">
         <!-- On créé un bouton de retour vers la page home-->
+        <script src="script.js"></script>
+
         <a id="retour" href="#game" class="btnContinue ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Game over</a>
         <div data-role="main" class="content">
             <div class="gameZone">
             <div id="beta">Roulis : capteur de mouvement non autorisé</div>
             <div id="gamma">Tangage : capteur de mouvement non autorisé</div>
             <div id="pression">Pression : elle ne va faire que monter jusqu'à 500 !</div>
-            <script src="script.js"></script>
         </div>
 </body>
 </html>
