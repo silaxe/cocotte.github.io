@@ -131,18 +131,15 @@ display: none;
 
 #gameover {
   visibility: hidden;
-  background-color: #cd6464;
+  background-color: #fff;
+  border-color: #cd6464;
   padding: 20px 20px;
-  color: white;
   z-index:1;
-  position: absolute;
   width: 80%;
-  margin:auto;
+  margin: 0 auto;
   text-align: center;
 }
 
-.bang_div{
-}
 
 .circle {
   visibility: hidden;
