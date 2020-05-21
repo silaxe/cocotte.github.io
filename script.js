@@ -66,10 +66,10 @@ function increasePression() {
     {
       pression+=0;
     }
-    displayPression();
+    playWithPression();
 }
 
-function displayPression() {
+function playWithPression() {
   if (pression >= 0 && pression <=500){
     document.getElementById('pression').style.color = "blue";
   }
