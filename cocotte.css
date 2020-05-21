@@ -131,12 +131,13 @@ display: none;
 
 #gameover {
   visibility: hidden;
-  background-color: #ef2d5e;
+  background-color: #cd6464;
   padding: 20px 20px;
-  color: #fff;
+  color: white;
   z-index:1;
   position: absolute;
   width: 80%;
+  margin-left: 10%;
   text-align: center;
 }
 
