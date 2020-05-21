@@ -73,7 +73,6 @@ window.onload = function () {
 
 function myTimer() {
   if (pression >= 500){//appeler à nouveau jQuery pour l'ui ?
-  const boutonretour = document.createElement('div')
   pression = 0;
   }
 }
