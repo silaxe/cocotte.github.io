@@ -71,10 +71,10 @@ function increasePression() {
 
 function displayPression() {
   if (pression >= 500 && pression <=1000){
-    document.getElementById('gamma').style.color = green;
+    document.getElementById('gamma').style.color = "green";
   }
   else if (pression >= 1000 && pression <=1500) {
-    document.getElementById('gamma').style.color = red;
+    document.getElementById('gamma').style.color = ("red");
   }
 }
 
