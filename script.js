@@ -54,7 +54,7 @@ function increasePression() {
     }
     else
     {
-      pression+=1;
+      pression+=0;
     }
     if((gamma >= 10 && gamma < 15) || (gamma <= -10 && gamma > -15))
     {
@@ -70,7 +70,7 @@ function increasePression() {
     }
     else
     {
-      pression+=1;
+      pression+=0;
     }
     playWithPression();
     }
