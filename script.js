@@ -34,12 +34,6 @@ function increasePression() {
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
 
-    if (pression=500)
-    {
-      return
-
-    }else{
-
     if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
     {
       pression+=2;
@@ -73,15 +67,11 @@ function increasePression() {
       pression+=0;
     }
     displayPression();
-  }
 }
 
 function displayPression() {
-  if (pression >= 0 && pression < 200) {
-
-  }
-  else if(pression >= 200 && pression < 500) {
-    alert("200500")
+  if (pression=0){
+  pression= 0;
   }
 }
 
