@@ -29,14 +29,7 @@ function ClickRequestDeviceOrientationEvent () {
   })
 }
 
-function gameLoop() {
-  if (pression <= 1000) {
-    increasePression();
-} else {
-  document.getElementById('gameover').style.visibility = "visible";
-  pression=0;
-  }
-}
+
 
 function increasePression() {
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
@@ -75,7 +68,16 @@ function increasePression() {
     {
       pression+=0;
     }
-    playWithPression();
+    gameLoop();
+}
+
+function gameLoop() {
+  if (pression <= 1000) {
+    increasePression();
+} else {
+  document.getElementById('gameover').style.visibility = "visible";
+  pression=0;
+  }
 }
 
 function playWithPression() {
