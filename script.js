@@ -71,11 +71,12 @@ window.onload = function () {
 
 
 function displayPression() {
-  if (pression=500){
-    alert("500")
+  if (pression=1500){
+
+    pression=0;
   }
-  else if (pression =1000) {
-  pression=0;
+  else if (pression =500) {
+    alert("500")
 
   }
 }
