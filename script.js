@@ -71,7 +71,7 @@ function increasePression() {
 
 function displayPression() {
   if (pression >= 0 && pression <=500){
-    document.getElementById('pression').style.color = "green";
+    document.getElementById('pression').style.color = "blue";
   }
   else if (pression >= 500 && pression <=1000) {
     document.getElementById('pression').style.color = "red";
