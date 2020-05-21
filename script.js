@@ -85,7 +85,7 @@ function playWithPression() {
   }
   else if (pression > 1000) {
     gameover = true;
-    document.getElementsByClassName('gameover').style.visibility = 'visible';
+    document.getElementsById('gameover').style.visibility = 'visible';
   }
 }
 
