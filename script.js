@@ -74,7 +74,7 @@ function displayPression() {
     document.getElementById('gamma').style.color = "green";
   }
   else if (pression >= 1000 && pression <=1500) {
-    document.getElementById('gamma').style.color = "red";
+    document.getElementById('pression').style.color = "red";
   }
 }
 
