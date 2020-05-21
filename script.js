@@ -1,4 +1,4 @@
-let beta, gamma,gameLoop=true, pression=0;
+let beta, gamma, gameLoop = true, pression=0;
 
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
@@ -36,9 +36,6 @@ function increasePression() {
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
 
-    while (gameLoop) {
-      if (pression < 1000) {
-
     if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
     {
       pression+=2;
@@ -71,12 +68,15 @@ function increasePression() {
     {
       pression+=0;
     }
-    playWithPression();
-  }
-  else {
-      document.getElementById('gameover').style.visibility = "visible";
-      gameLoop =false;
-    }
+    gameLoop();
+}
+
+while (gameLoop) {
+  if (pression >= 1000) {
+  increasePression();
+} else {
+  document.getElementById('gameover').style.visibility = "visible";
+  gameLoop = false;
   }
 }
 
