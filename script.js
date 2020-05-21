@@ -29,6 +29,15 @@ function ClickRequestDeviceOrientationEvent () {
   })
 }
 
+function gameLoop() {
+  if (pression <= 1000) {
+    increasePression();
+} else {
+  document.getElementById('gameover').style.visibility = "visible";
+  pression=0;
+  }
+}
+
 function increasePression() {
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
@@ -66,16 +75,7 @@ function increasePression() {
     {
       pression+=0;
     }
-    gameLoop();
-}
-
-function gameLoop() {
-  if (pression > 1000) {
-  document.getElementById('gameover').style.visibility = "visible";
-  pression=0;
-} else {
-  increasePression();
-  }
+    playWithPression();
 }
 
 function playWithPression() {
