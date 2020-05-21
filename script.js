@@ -22,11 +22,11 @@ function ClickRequestDeviceOrientationEvent () {
       }
           )} else {
           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
-        }
-      })
+      }
+  })
       .catch(e => {
         console.error(e)
-    })
+  })
 }
 
 function increasePression() {
@@ -67,11 +67,12 @@ function increasePression() {
       pression+=0;
     }
     displayPression();
-  }
+}
 
 function displayPression() {
-  if (pression > 500){
-  pression = 0;
+  if (pression>500){
+  pression=0;
+  return
   }
 }
 
