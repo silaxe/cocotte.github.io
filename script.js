@@ -37,7 +37,6 @@ function increasePression() {
     {
 
       return
-      alert(pression)
     }else{
 
     if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
@@ -76,12 +75,14 @@ function increasePression() {
   }
 }
 
-/*function displayPression() {
-  if (pression>500){
-  pression=0;
+function displayPression() {
+  if (pression >= 0 && pression < 200) {
+  }
+  else if(pression >= 200 && pression < 500) {
+    alert("200500")
   }
 }
-*/
+
 
 //Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
 //you can very easily use this to re-use the value of the variable in another function.
