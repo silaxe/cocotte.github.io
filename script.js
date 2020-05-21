@@ -36,6 +36,9 @@ function increasePression() {
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
 
+    function gameLoop() {
+      if (pression > 1000) {
+
     if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
     {
       pression+=2;
@@ -68,14 +71,14 @@ function increasePression() {
     {
       pression+=0;
     }
-    gameLoop();
+    playWithPression();
+  }
+  else {
+      document.getElementById('gameover').style.visibility = "visible";
+    }
+  }
 }
 
-function gameLoop() {
-  if (pression >= 1000) {
-    document.getElementById('gameover').style.visibility = "visible";
-  } 
-}
 
 function playWithPression() {
   if (pression >= 0 && pression <=500){
