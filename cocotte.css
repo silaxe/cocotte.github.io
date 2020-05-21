@@ -129,10 +129,16 @@ display: none;
   display: none;
 }
 
-
+#variable {
+  visibility: hidden;
+  z-index:1;
+  position: absolute;
+  width: 100%;
+  background-color:#ffff;
+  color: #fff;
+}
 
 .bang_div{
-  visibility: hidden;
 }
 
 .circle {
