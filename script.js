@@ -71,6 +71,7 @@ function increasePression() {
 function displayPression() {
   if (pression >= 500){
   pression = 0;
+  
   }
 }
 
