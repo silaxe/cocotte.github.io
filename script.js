@@ -33,9 +33,11 @@ function increasePression() {
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
-    if (pression>500)
+    if (pression>=500)
     {
+      alert(pression)
       return
+
     }else{
 
     if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
