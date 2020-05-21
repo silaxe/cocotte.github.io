@@ -72,7 +72,7 @@ function increasePression() {
 }
 
 while (gameLoop) {
-  if (pression >= 1000) {
+  if (pression < 1000) {
   increasePression();
 } else {
   document.getElementById('gameover').style.visibility = "visible";
@@ -82,13 +82,13 @@ while (gameLoop) {
 
 function playWithPression() {
   if (pression >= 0 && pression <=500){
-    document.getElementById('pression').style.color = "blue";
+    document.getElementById('pression').style.color = "yellow";
   }
   else if (pression >= 500 && pression <=1000) {
     document.getElementById('pression').style.color = "red";
   }
   else if (pression > 600) {
-    document.getElementById('pression').style.color = "yellow";
+    document.getElementById('pression').style.color = "blue";
   }
 }
 
