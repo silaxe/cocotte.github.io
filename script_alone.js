@@ -40,11 +40,6 @@ window.onload = function () {
           }
         }
 
-document.getElementById('beta').innerHTML = beta;
-document.getElementById('gamma').innerHTML = gamma;
-document.getElementById('incRoulis').innerHTML = incRoulis;
-document.getElementById('incTangage').innerHTML = incTangage;
-
     if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
     {
       incRoulis = 2;
@@ -79,11 +74,11 @@ document.getElementById('incTangage').innerHTML = incTangage;
       incTangage = 1;
     }
   }
-  function incrementValue()
-  {
-      var value = parseInt(document.getElementById('boost').value, 10);
-      value = isNaN(value) ? 0 : value;
-      value++;
-      document.getElementById('boost').value = value;
-  }
+//  function incrementValue()
+//  {
+//      var value = parseInt(document.getElementById('boost').value, 10);
+//      value = isNaN(value) ? 0 : value;
+//      value++;
+//      document.getElementById('boost').value = value;
+//  }
 }
