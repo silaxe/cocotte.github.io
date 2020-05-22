@@ -79,11 +79,11 @@ document.getElementById('incTangage').innerHTML = incTangage;
       incTangage = 1;
     }
   }
-//  function incrementValue()
-//  {
-//      var value = parseInt(document.getElementById('boost').value, 10);
-//      value = isNaN(value) ? 0 : value;
-//      value++;
-//      document.getElementById('boost').value = value;
-//  }
+  function incrementValue()
+  {
+      var value = parseInt(document.getElementById('boost').value, 10);
+      value = isNaN(value) ? 0 : value;
+      value++;
+      document.getElementById('boost').value = value;
+  }
 }
