@@ -1,4 +1,4 @@
-let beta, gamma, pression, incRoulis, incTangage, interval;
+let beta, gamma, incRoulis, incTangage, interval;
 
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
@@ -36,10 +36,10 @@ window.onload = function () {
     function increase() {
           if (i < 100) {
             i++;
-            num.innerText = i+pression;
+            num.innerText = i+incRoulis+incTangage;
           }
         }
-    pression=incRoulis+incTangage;
+
 //    document.getElementById('beta').innerHTML = beta;
 //    document.getElementById('gamma').innerHTML = gamma;
 //    document.getElementById('pression').innerHTML = pression;
