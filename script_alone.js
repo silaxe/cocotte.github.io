@@ -40,11 +40,10 @@ window.onload = function () {
           }
         }
 
-//    document.getElementById('beta').innerHTML = beta;
-//    document.getElementById('gamma').innerHTML = gamma;
-//    document.getElementById('pression').innerHTML = pression;
-//    document.getElementById('incRoulis').innerHTML = incRoulis;
-//    document.getElementById('incTangage').innerHTML = incTangage;
+document.getElementById('beta').innerHTML = beta;
+document.getElementById('gamma').innerHTML = gamma;
+document.getElementById('incRoulis').innerHTML = incRoulis;
+document.getElementById('incTangage').innerHTML = incTangage;
 
     if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
     {
