@@ -1,5 +1,13 @@
 let beta, gamma, incRoulis, incTangage, interval;
 
+function incrementValue()
+{
+    var value = parseInt(document.getElementById('boost').value, 10);
+    value = isNaN(value) ? 0 : value;
+    value++;
+    document.getElementById('boost').value = value;
+}
+
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
       const banner = document.createElement('div')
@@ -26,14 +34,6 @@ window.onload = function () {
       .catch(e => {
         console.error(e)
     })
-}
-
-function incrementValue()
-{
-    var value = parseInt(document.getElementById('boost').value, 10);
-    value = isNaN(value) ? 0 : value;
-    value++;
-    document.getElementById('boost').value = value;
 }
 
   function calcul() {
