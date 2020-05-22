@@ -36,15 +36,15 @@ window.onload = function () {
     function increase() {
           if (i < 100) {
             i++;
-            num.innerText = i+incRoulis+incTangage;
+            num.innerText = i+pression;
           }
         }
     pression=incRoulis+incTangage;
-    document.getElementById('beta').innerHTML = beta;
-    document.getElementById('gamma').innerHTML = gamma;
-    document.getElementById('pression').innerHTML = pression;
-    document.getElementById('incRoulis').innerHTML = incRoulis;
-    document.getElementById('incTangage').innerHTML = incTangage;
+//    document.getElementById('beta').innerHTML = beta;
+//    document.getElementById('gamma').innerHTML = gamma;
+//    document.getElementById('pression').innerHTML = pression;
+//    document.getElementById('incRoulis').innerHTML = incRoulis;
+//    document.getElementById('incTangage').innerHTML = incTangage;
 
     if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
     {
@@ -79,5 +79,12 @@ window.onload = function () {
     {
       incTangage = 1;
     }
+  }
+  function incrementValue()
+  {
+      var value = parseInt(document.getElementById('boost').value, 10);
+      value = isNaN(value) ? 0 : value;
+      value++;
+      document.getElementById('boost').value = value;
   }
 }
