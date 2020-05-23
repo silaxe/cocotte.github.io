@@ -1,4 +1,4 @@
-let beta, gamma, pression=0, gameover=false;
+let beta, gamma, gameover=false;
 
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
@@ -41,6 +41,7 @@ function increasePression() {
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
+    let pression=0;
 
     if (gameover) {
       return
@@ -60,7 +61,7 @@ function increasePression() {
     }
     else
     {
-      pression+=0;
+      pression+=0.1;
     }
     if((gamma >= 10 && gamma < 15) || (gamma <= -10 && gamma > -15))
     {
@@ -76,7 +77,7 @@ function increasePression() {
     }
     else
     {
-      pression+=0;
+      pression+=0.1;
     }
     playWithPression();
     }
