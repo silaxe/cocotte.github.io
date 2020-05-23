@@ -5,6 +5,7 @@ window.onload = function () {
       const banner = document.createElement('div')
       banner.innerHTML = `<div id="autorisation" style="z-index: 1; position: absolute; width: 100%; background-color:#000; color: #fff"><p style="padding: 10px">Cliquez ici pour autoriser l'accès à votre capteur de mouvements.</p></div>`
       banner.onclick = ClickRequestDeviceOrientationEvent
+      //possible lancer fonction sans arguments (jaune)
       document.querySelector('body').appendChild(banner)
   }
 }
@@ -73,20 +74,21 @@ function increasePression(beta, gamma) {
     {
       pression+=1;
     }
-
-    if (pression >= 0 && pression <=500){
-      document.getElementById('pression').style.color = "cyan";
-    }
-    else if (pression >= 500 && pression <=1000) {
-      document.getElementById('pression').style.color = "red";
-    }
-    else if (pression > 1000) {
-      document.getElementById('gameover').style.visibility = 'visible';
-      gameover = true;
-    }
   }
 }
 
+function play () {
+if (pression >= 0 && pression <=500){
+  document.getElementById('pression').style.color = "cyan";
+}
+else if (pression >= 500 && pression <=1000) {
+  document.getElementById('pression').style.color = "red";
+}
+else if (pression > 1000) {
+  document.getElementById('gameover').style.visibility = 'visible';
+  gameover = true;
+  }
+}
 
 
 //Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
