@@ -28,11 +28,11 @@ function ClickRequestDeviceOrientationEvent () {
         console.error(e)
   })
 }
+
 //pour que la fonction increasePression ne marche que quand on est dans le jeu
 function inGame () {
   if (document.getElementById('start').clicked == true) {
     increasePression();
-    pression=0;
     }
 }
 
@@ -41,6 +41,8 @@ function increasePression() {
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
+    pression=0;
+
 
     if (gameover) {
       return
