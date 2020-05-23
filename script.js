@@ -15,8 +15,7 @@ function ClickRequestDeviceOrientationEvent () {
         if (response === 'granted') {
           window.addEventListener('deviceorientation',function(e) {
     document.getElementById('autorisation').style.display = 'none';
-    beta=(Math.round(e.beta));
-    gamma=(Math.round(e.gamma));
+
     //si je lance increasePression dès l'acceptation impossible de la controler apres
       }
           )} else {
@@ -32,11 +31,13 @@ function ClickRequestDeviceOrientationEvent () {
 //prévoir remise à zéro de la pression en lançant la partie
 //récupération des paramètres
 function increasePression(beta, gamma) {
-    document.getElementById('beta').innerHTML = ('Rouliss : '+beta);
+
+    document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
 
     if (gameover) {
+      pression=0;
       return
     } else {
 
@@ -72,22 +73,21 @@ function increasePression(beta, gamma) {
     {
       pression+=1;
     }
-    playWithPression();
+
+    if (pression >= 0 && pression <=500){
+      document.getElementById('pression').style.color = "cyan";
     }
+    else if (pression >= 500 && pression <=1000) {
+      document.getElementById('pression').style.color = "red";
+    }
+    else if (pression > 1000) {
+      document.getElementById('gameover').style.visibility = 'visible';
+      gameover = true;
+    }
+  }
 }
 
-function playWithPression() {
-  if (pression >= 0 && pression <=500){
-    document.getElementById('pression').style.color = "cyan";
-  }
-  else if (pression >= 500 && pression <=1000) {
-    document.getElementById('pression').style.color = "red";
-  }
-  else if (pression > 1000) {
-    document.getElementById('gameover').style.visibility = 'visible';
-    gameover = true;
-  }
-}
+
 
 //Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
 //you can very easily use this to re-use the value of the variable in another function.
