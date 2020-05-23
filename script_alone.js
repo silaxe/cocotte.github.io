@@ -1,4 +1,12 @@
-let beta, gamma, pression, incRoulis, incTangage, interval;
+let beta, gamma, incRoulis, incTangage, interval;
+
+function incrementValue()
+{
+    var value = parseInt(document.getElementById('boost').value, 10);
+    value = isNaN(value) ? 0 : value;
+    value++;
+    document.getElementById('boost').value = value;
+}
 
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
@@ -39,12 +47,6 @@ window.onload = function () {
             num.innerText = i+incRoulis+incTangage;
           }
         }
-    pression=incRoulis+incTangage;
-    document.getElementById('beta').innerHTML = beta;
-    document.getElementById('gamma').innerHTML = gamma;
-    document.getElementById('pression').innerHTML = pression;
-    document.getElementById('incRoulis').innerHTML = incRoulis;
-    document.getElementById('incTangage').innerHTML = incTangage;
 
     if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
     {
