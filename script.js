@@ -33,8 +33,8 @@ function ClickRequestDeviceOrientationEvent () {
 //passer betta gamma en paramètres pour les manip indépendamment de ClickRequestDeviceOrientationEvent?
 //prévoir remise à zéro de la pression en lançant la partie
 //récupération des paramètres
-function increasePression(beta, gamma) {
-  
+function increasePression() {
+
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
