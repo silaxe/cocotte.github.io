@@ -28,7 +28,10 @@ function ClickRequestDeviceOrientationEvent () {
         console.error(e)
   })
 }
-
+//pour que la fonction increasePression ne marche que quand on est dans le jeu
+function inGame () {
+  document.getElementById('start').onclick = increasePression;
+}
 
 //summon uniquement quand on est dans la game, voire summon uniquement le .js ?
 function increasePression() {
@@ -78,7 +81,7 @@ function increasePression() {
 
 function playWithPression() {
   if (pression >= 0 && pression <=500){
-    document.getElementById('pression').style.color = "yellow";
+    document.getElementById('pression').style.color = "cyan";
   }
   else if (pression >= 500 && pression <=1000) {
     document.getElementById('pression').style.color = "red";
