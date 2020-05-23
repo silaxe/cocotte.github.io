@@ -16,6 +16,8 @@ function ClickRequestDeviceOrientationEvent () {
         if (response === 'granted') {
           window.addEventListener('deviceorientation',function(e) {
     document.getElementById('autorisation').style.display = 'none';
+    beta=(Math.round(e.beta));
+    gamma=(Math.round(e.gamma));
     increasePression();
     //si je lance increasePression dès l'acceptation impossible de la controler apres
       }
@@ -80,10 +82,10 @@ function increasePression(beta, gamma) {
 function play () {
 if (pression >= 0 && pression <=500){
   document.getElementById('pression').style.color = "cyan";
-}
+  }
 else if (pression >= 500 && pression <=1000) {
   document.getElementById('pression').style.color = "red";
-}
+  }
 else if (pression > 1000) {
   document.getElementById('gameover').style.visibility = 'visible';
   gameover = true;
