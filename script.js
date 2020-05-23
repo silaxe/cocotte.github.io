@@ -32,7 +32,7 @@ function ClickRequestDeviceOrientationEvent () {
 //prévoir remise à zéro de la pression en lançant la partie
 //récupération des paramètres
 function increasePression(beta, gamma) {
-    document.getElementById('beta').innerHTML = ('Roulis : '+beta);
+    document.getElementById('beta').innerHTML = ('Rouliss : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
 
