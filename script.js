@@ -18,7 +18,6 @@ function ClickRequestDeviceOrientationEvent () {
     beta=(Math.round(e.beta));
     gamma=(Math.round(e.gamma));
     //si je lance increasePression dès l'acceptation impossible de la controler apres
-    increasePression();
       }
           )} else {
           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
