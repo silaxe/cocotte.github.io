@@ -38,7 +38,6 @@ function increasePression(beta, gamma) {
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
 
     if (gameover) {
-      pression=0;
       return
     } else {
 
@@ -90,7 +89,6 @@ else if (pression > 1000) {
   gameover = true;
   }
 }
-
 
 //Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
 //you can very easily use this to re-use the value of the variable in another function.
