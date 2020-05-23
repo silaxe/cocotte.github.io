@@ -27,11 +27,6 @@ function ClickRequestDeviceOrientationEvent () {
   })
 }
 
-//pour que la fonction increasePression ne marche que quand on est dans le jeu
-function inGame () {
-  (document.getElementById('start').clicked == true) = increasePression();
-}
-
 //summon uniquement quand on est dans la game, voire summon uniquement le .js ?
 function increasePression() {
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
@@ -91,9 +86,6 @@ function playWithPression() {
   }
 }
 
-function refreshOptions () {
-  pression=0;
-}
 //Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
 //you can very easily use this to re-use the value of the variable in another function.
 // Use this in source window.var1= oEvent.getSource().getBindingContext();
