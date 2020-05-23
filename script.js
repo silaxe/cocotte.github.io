@@ -1,4 +1,4 @@
-let beta, gamma, pression, gameover=false;
+let beta, gamma, pression=0, gameover=false;
 
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
@@ -32,7 +32,7 @@ function ClickRequestDeviceOrientationEvent () {
 //pour que la fonction increasePression ne marche que quand on est dans le jeu
 function inGame () {
   if (document.getElementById('start').clicked == true) {
-    increasePression();
+    alert("coucou");
     }
 }
 
@@ -93,8 +93,6 @@ function playWithPression() {
     document.getElementById('gameover').style.visibility = 'visible';
     //remplacer par un onclick pour remettre à 0 le jeu et revenir à options au clic
     gameover = true;
-    pression=0;
-
   }
 }
 
