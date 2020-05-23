@@ -34,7 +34,7 @@ function ClickRequestDeviceOrientationEvent () {
 //prévoir remise à zéro de la pression en lançant la partie
 //récupération des paramètres
 function increasePression(beta, gamma) {
-
+  
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
@@ -87,7 +87,7 @@ else if (pression >= 500 && pression <=1000) {
   document.getElementById('pression').style.color = "red";
   }
 else if (pression > 1000) {
-  document.getElementById('gameover').style.visibility = 'visible';
+  document.getElementById('gameover').style.visibility = "visible";
   gameover = true;
   }
 }
