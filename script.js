@@ -1,4 +1,4 @@
-let beta, gamma, pression=0, gameover=false;
+let beta, gamma, pression, gameover=false;
 
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
@@ -30,7 +30,10 @@ function ClickRequestDeviceOrientationEvent () {
 }
 //pour que la fonction increasePression ne marche que quand on est dans le jeu
 function inGame () {
-  document.getElementById('start').onclick = increasePression;
+  if (document.getElementById('start').clicked == true) {
+    increasePression();
+    pression=0;
+    }
 }
 
 //summon uniquement quand on est dans la game, voire summon uniquement le .js ?
