@@ -41,7 +41,6 @@ function increasePression() {
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
-    pression=0;
 
     if (gameover) {
       return
@@ -94,6 +93,8 @@ function playWithPression() {
     document.getElementById('gameover').style.visibility = 'visible';
     //remplacer par un onclick pour remettre à 0 le jeu et revenir à options au clic
     gameover = true;
+    pression=0;
+
   }
 }
 
