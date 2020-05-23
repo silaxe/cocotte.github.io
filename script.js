@@ -29,12 +29,12 @@ function ClickRequestDeviceOrientationEvent () {
   })
 }
 
-/*pour que la fonction increasePression ne marche que quand on est dans le jeu
+//pour que la fonction increasePression ne marche que quand on est dans le jeu
 function inGame () {
   if (document.getElementById('start').clicked == true) {
-    alert("coucou");
+  refreshOptions();
     }
-}*/
+}
 
 //summon uniquement quand on est dans la game, voire summon uniquement le .js ?
 function increasePression() {
@@ -60,7 +60,7 @@ function increasePression() {
     }
     else
     {
-      pression+=0.1;
+      pression+=1;
     }
     if((gamma >= 10 && gamma < 15) || (gamma <= -10 && gamma > -15))
     {
@@ -76,7 +76,7 @@ function increasePression() {
     }
     else
     {
-      pression+=0.1;
+      pression+=1;
     }
     playWithPression();
     }
@@ -91,9 +91,7 @@ function playWithPression() {
   }
   else if (pression > 1000) {
     document.getElementById('gameover').style.visibility = 'visible';
-    //remplacer par un onclick pour remettre à 0 le jeu et revenir à options au clic
     gameover = true;
-    refreshOptions();
   }
 }
 
