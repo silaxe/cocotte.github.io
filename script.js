@@ -74,6 +74,7 @@ function increasePression(beta, gamma) {
     {
       pression+=1;
     }
+    play();
   }
 }
 
