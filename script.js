@@ -17,8 +17,6 @@ function ClickRequestDeviceOrientationEvent () {
     document.getElementById('autorisation').style.display = 'none';
     beta=(Math.round(e.beta));
     gamma=(Math.round(e.gamma));
-    //on passe les valeurs récupérées à la fonction de calcul de la pression
-    increasePression();
       }
           )} else {
           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
