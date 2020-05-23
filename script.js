@@ -29,12 +29,12 @@ function ClickRequestDeviceOrientationEvent () {
   })
 }
 
-//pour que la fonction increasePression ne marche que quand on est dans le jeu
+/*pour que la fonction increasePression ne marche que quand on est dans le jeu
 function inGame () {
   if (document.getElementById('start').clicked == true) {
     alert("coucou");
     }
-}
+}*/
 
 //summon uniquement quand on est dans la game, voire summon uniquement le .js ?
 function increasePression() {
@@ -93,9 +93,13 @@ function playWithPression() {
     document.getElementById('gameover').style.visibility = 'visible';
     //remplacer par un onclick pour remettre à 0 le jeu et revenir à options au clic
     gameover = true;
+    refreshOptions();
   }
 }
 
+function refreshOptions () {
+  pression=0;
+}
 //Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
 //you can very easily use this to re-use the value of the variable in another function.
 // Use this in source window.var1= oEvent.getSource().getBindingContext();
