@@ -1,4 +1,4 @@
-let beta, gamma, pression, gameover=false;
+let beta, gamma, pression=0, gameover=false;
 
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
@@ -38,7 +38,6 @@ function increasePression() {
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
-    pression=0;
 
     if (gameover) {
       return
