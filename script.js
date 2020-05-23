@@ -15,6 +15,10 @@ function ClickRequestDeviceOrientationEvent () {
         if (response === 'granted') {
           window.addEventListener('deviceorientation',function(e) {
     document.getElementById('autorisation').style.display = 'none';
+    beta=(Math.round(e.beta));
+    gamma=(Math.round(e.gamma));
+    //si je lance increasePression dès l'acceptation impossible de la controler apres
+    increasePression();
       }
           )} else {
           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
@@ -28,7 +32,7 @@ function ClickRequestDeviceOrientationEvent () {
 //passer betta gamma en paramètres pour les manip indépendamment de ClickRequestDeviceOrientationEvent?
 //prévoir remise à zéro de la pression en lançant la partie
 //récupération des paramètres
-function increasePression(beta=(Math.round(e.beta)), gamma=(Math.round(e.gamma))) {
+function increasePression(beta, gamma) {
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
