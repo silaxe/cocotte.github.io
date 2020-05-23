@@ -15,7 +15,7 @@ function ClickRequestDeviceOrientationEvent () {
         if (response === 'granted') {
           window.addEventListener('deviceorientation',function(e) {
     document.getElementById('autorisation').style.display = 'none';
-
+    increasePression();
     //si je lance increasePression dès l'acceptation impossible de la controler apres
       }
           )} else {
