@@ -86,7 +86,7 @@ if (pression >= 0 && pression <=500){
 
 else if (pression >= 500 && pression <=10000) {
   document.getElementById('pression').style.color = "red";
-  playAudio();
+  document.getElementById('audio').play();
   }
 
 else if (pression > 10000) {
@@ -95,7 +95,7 @@ else if (pression > 10000) {
   }
 }
 
-function playAudio(){
+/*function playAudio(){
     var audio = new Audio('assets/son_hard.wav');
     audio.play();
 }
