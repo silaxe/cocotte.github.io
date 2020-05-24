@@ -97,7 +97,7 @@ else if (pression > 10000) {
 
 function playAudio(){
     var audio = new Audio('assets/son_hard.wav');
-    audio.play();
+    audio.play;
 }
 
 /*document.addEventListener('mousedown',onMouseDown);
