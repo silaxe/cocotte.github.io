@@ -1,4 +1,4 @@
-let beta, gamma, pression=0, gameover=false, audio = document.getElementById('audio');
+let beta, gamma, pression=0, gameover=false;
 
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
