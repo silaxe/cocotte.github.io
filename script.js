@@ -1,4 +1,4 @@
-let beta, gamma, pression=0, gameover=false;
+let beta, gamma, pression=0, gameover=false, audio = document.getElementById('audio');
 
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
@@ -86,7 +86,6 @@ if (pression >= 0 && pression <=500){
 
 else if (pression >= 500 && pression <=10000) {
   document.getElementById('pression').style.color = "red";
-  let audio = document.getElementById('audio');
   audio.play();
   }
 
