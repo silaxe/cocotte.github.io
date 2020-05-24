@@ -19,6 +19,8 @@ function ClickRequestDeviceOrientationEvent () {
     beta=(Math.round(e.beta));
     gamma=(Math.round(e.gamma));
     increasePression();
+    playGame();
+
     //si je lance increasePression dès l'acceptation impossible de la controler apres
       }
           )} else {
@@ -40,7 +42,7 @@ function increasePression() {
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
 
     if (gameover) {
-      return
+      return;
     } else {
 
     if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
@@ -75,7 +77,6 @@ function increasePression() {
     {
       pression+=1;
     }
-    playGame();
   }
 }
 
@@ -86,7 +87,7 @@ if (pression >= 0 && pression <=500){
 
 else if (pression >= 500 && pression <=10000) {
   document.getElementById('pression').style.color = "red";
-  document.getElementById('audio').play;
+
   }
 
 else if (pression > 10000) {
@@ -95,7 +96,7 @@ else if (pression > 10000) {
   }
 }
 
-/*function playAudio(){
+function playAudio(){
     var audio = new Audio('assets/son_hard.wav');
     audio.play();
 }
