@@ -84,13 +84,13 @@ if (pression >= 0 && pression <=500){
   document.getElementById('pression').style.color = "cyan";
   }
 
-else if (pression >= 500 && pression <=1000) {
+else if (pression >= 500 && pression <=10000) {
   document.getElementById('pression').style.color = "red";
   var audio = new Audio('assets/son_hard.wav');
   audio.play();
   }
 
-else if (pression > 1000) {
+else if (pression > 10000) {
   document.getElementById('gameover').style.visibility = "visible";
   gameover = true;
   }
