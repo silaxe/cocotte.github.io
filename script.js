@@ -75,24 +75,29 @@ function increasePression() {
     {
       pression+=1;
     }
-    play();
+    playGame();
   }
 }
 
-function play () {
+function playGame () {
 if (pression >= 0 && pression <=500){
   document.getElementById('pression').style.color = "cyan";
   }
 
 else if (pression >= 500 && pression <=10000) {
   document.getElementById('pression').style.color = "red";
-  audio.play;
+  playAudio();
   }
 
 else if (pression > 10000) {
   document.getElementById('gameover').style.visibility = "visible";
   gameover = true;
   }
+}
+
+function playAudio(){
+    var audio = new Audio('assets/son_hard.wav');
+    audio.play();
 }
 
 /*document.addEventListener('mousedown',onMouseDown);
