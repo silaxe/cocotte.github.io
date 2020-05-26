@@ -13,10 +13,8 @@ function ClickRequestDeviceOrientationEvent () {
     window.DeviceOrientationEvent.requestPermission()
       .then(response => {
         if (response === 'granted') {
-          window.addEventListener('deviceorientation',function(e) {
-    document.getElementById('autorisation').style.display = 'none';
-    beta=(Math.round(e.beta));
-    gamma=(Math.round(e.gamma));
+          window.addEventListener('deviceorientation',function (e) {
+            document.getElementById('autorisation').style.display = 'none';
       }
           )} else {
           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
@@ -26,7 +24,12 @@ function ClickRequestDeviceOrientationEvent () {
         console.error(e)
   })
 }
-increasePression();
+
+function listen () {
+  beta=(Math.round(e.beta));
+  gamma=(Math.round(e.gamma));
+  increasePression();
+}
 //prévoir remise à zéro de la pression en lançant la partie
 function increasePression() {
 
