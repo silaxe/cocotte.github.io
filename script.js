@@ -95,6 +95,7 @@ else if (pression > 10000) {
   gameover = true;
   }
 }
+
 /*
 function playAudio(){
     var audio = new Audio('assets/son_hard.wav');
