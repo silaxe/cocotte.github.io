@@ -5,12 +5,11 @@ window.onload = function () {
       const banner = document.createElement('div')
       banner.innerHTML = `<div id="autorisation" style="z-index: 1; position: absolute; width: 100%; background-color:#000; color: #fff"><p style="padding: 10px">Cliquez ici pour autoriser l'accès à votre capteur de mouvements.</p></div>`
       banner.onclick = ClickRequestDeviceOrientationEvent
-      //possible lancer fonction sans arguments (jaune)
       document.querySelector('body').appendChild(banner)
   }
 }
 
-function ClickRequestDeviceOrientationEvent () {
+function ClickRequestDeviceOrientationEvent() {
     window.DeviceOrientationEvent.requestPermission()
       .then(response => {
         if (response === 'granted') {
@@ -18,6 +17,7 @@ function ClickRequestDeviceOrientationEvent () {
     document.getElementById('autorisation').style.display = 'none';
     beta=(Math.round(e.beta));
     gamma=(Math.round(e.gamma));
+    increasePression()
       }
           )} else {
           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
@@ -86,7 +86,7 @@ else if (pression > 10000) {
 }
 
 
-/*
+
 function start () {
   if (gameover) {
     return;
@@ -94,6 +94,8 @@ function start () {
     playGame();
   }
 }
+
+/*
 
 function playAudio(){
     var audio = new Audio('assets/son_hard.wav');
@@ -109,4 +111,5 @@ Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
 you can very easily use this to re-use the value of the variable in another function.
 Use this in source window.var1= oEvent.getSource().getBindingContext();
 Get value of var1 in destination var var2= window.var1;
-}*/
+}
+*/
