@@ -1,4 +1,4 @@
-let beta, gamma, pression=0, gameover=false;
+let beta, gamma, pression=0, gameover=false, playable=false;
 
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
@@ -15,8 +15,10 @@ function ClickRequestDeviceOrientationEvent () {
         if (response === 'granted') {
           window.addEventListener('deviceorientation',function (e) {
             document.getElementById('autorisation').style.display = 'none';
-            listen();
-      }
+            beta=(Math.round(e.beta));
+            gamma=(Math.round(e.gamma));
+            playable = true;
+              }
           )} else {
           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
       }
@@ -26,10 +28,10 @@ function ClickRequestDeviceOrientationEvent () {
   })
 }
 
-function listen (e) {
-  beta=(Math.round(e.beta));
-  gamma=(Math.round(e.gamma));
-  increasePression();
+function playable () {
+  if (playable) {
+    increasePression();
+  }
 }
 //prévoir remise à zéro de la pression en lançant la partie
 function increasePression() {
