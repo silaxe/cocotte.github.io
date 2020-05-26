@@ -19,7 +19,6 @@ function ClickRequestDeviceOrientationEvent () {
     beta=(Math.round(e.beta));
     gamma=(Math.round(e.gamma));
     increasePression();
-    playGame();
 
     //si je lance increasePression dès l'acceptation impossible de la controler apres
       }
@@ -77,6 +76,8 @@ function increasePression() {
     {
       pression+=1;
     }
+    playGame();
+
   }
 }
 
