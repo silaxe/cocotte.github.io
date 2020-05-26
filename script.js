@@ -15,6 +15,7 @@ function ClickRequestDeviceOrientationEvent () {
         if (response === 'granted') {
           window.addEventListener('deviceorientation',function (e) {
             document.getElementById('autorisation').style.display = 'none';
+            listen();
       }
           )} else {
           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
