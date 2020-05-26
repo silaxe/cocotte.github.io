@@ -87,7 +87,7 @@ if (pression >= 0 && pression <=500){
 
 else if (pression >= 500 && pression <=10000) {
   document.getElementById('pression').style.color = "red";
-
+  playAudio();
   }
 
 else if (pression > 10000) {
