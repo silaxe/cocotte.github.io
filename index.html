@@ -34,7 +34,7 @@
         </div>
     </div>
     <!-- On crée la page options -->
-    <div data-role="page" id="options">
+    <div id="options" data-role="page" class="content">
         <!-- Titre du panel -->
         <div data-role="header" data-theme="a">
             <a href="#home" data-rel="back" class="ui-btn ui-btn-left ui-alt-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l">Back</a>
@@ -62,12 +62,12 @@
         </div>
     </div>
     <!-- On crée la page Rules -->
-    <div id="rules" data-role="page" data-dialog="true">
+    <div id="rules" data-role="page" class="content">
         <div data-role="header" data-theme="a">
           <a href="#options" data-rel="back" class="ui-btn ui-btn-left ui-alt-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l">Back</a>
           <h1>Règles</h1>
         </div>
-        <div role="page" class="ui-content rules">
+        <div role="main" class="content">
             <h3>Objectif principal :</h3>
             <p>Faites le plus de tours possibles ensemble et fais en sorte de ne pas voir la cocotte exploser dans tes mains.</p>
             <h4>Attention à la pression! Si tu bouges trop la cocotte, elle explose.</h4>
@@ -78,7 +78,7 @@
     <div data-role="page" id="game">
         <!-- On appelle le script du jeu -->
         <script src="script.js"></script>
-        <div data-role="main" class="content">
+        <div data-role="main" class="gameZone">
             <div class="gameZone">
             <div id="beta">Roulis : capteur de mouvement non autorisé</div>
             <div id="gamma">Tangage : capteur de mouvement non autorisé</div>

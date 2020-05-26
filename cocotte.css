@@ -2,6 +2,10 @@
   text-shadow: none !important;
 }
 
+.content {
+  background-color: #cd6464;
+}
+
 .DeviceMotionRequestBanner {
   z-index: 10;
   background-color: #ef2d5e;
@@ -39,9 +43,7 @@
   margin-left: 25px;
 }
 
-#options {
-  background-color: #cd6464;
-}
+
 
 /* Hide the number input */
 #options .full-width-slider input {
@@ -51,10 +53,6 @@
   margin-left: 15px;
 }
 
-.rules {
-  background-color: #cd6464;
-  color: white;
-}
 #home {
   height: 100%;
 }
@@ -69,7 +67,6 @@
 
 #home .content {
   height: 100%;
-  background: #cd6464 ;
   background-size: 100%;
 }
 
