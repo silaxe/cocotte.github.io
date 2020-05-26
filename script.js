@@ -76,12 +76,10 @@ function increasePression() {
     {
       pression+=1;
     }
-    playGame();
-
   }
 }
 
-function playGame () {
+function playGame (pression) {
 if (pression >= 0 && pression <=500){
   document.getElementById('pression').style.color = "cyan";
   }
