@@ -29,14 +29,6 @@ function ClickRequestDeviceOrientationEvent () {
   })
 }
 
-function start () {
-if (gameover) {
-  return;
-} else {
-  increasePression();
-}
-}
-
 //prévoir remise à zéro de la pression en lançant la partie
 function increasePression() {
 
@@ -44,6 +36,9 @@ function increasePression() {
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
 
+    if (gameover) {
+      return;
+    } else {
 
     if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
     {
@@ -94,7 +89,6 @@ else if (pression > 10000) {
   gameover = true;
   }
 }
-
 
 /*
 function playAudio(){
