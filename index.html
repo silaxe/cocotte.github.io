@@ -14,12 +14,13 @@
     <meta name="apple-mobile-web-app-title" content="Cocotte">
     <meta name="mobile-web-app-title" content="Cocotte">
     <!--On appelle jQuery Mobile pour préparer la UI de notre webApp
-        On appelle addtohomescreen.css et addtohomescreen.min.js pour donner un message d'information aux utilisateurs afin de leur indiquer que la webApp est enregistrable sur tablette et smartphone
+        On appelle addtohomescreen.css et addtohomescreen.min.js
+        pour donner un message d'information aux utilisateurs afin de leur
+        indiquer que la webApp est enregistrable sur tablette et smartphone
     -->
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css">
     <link rel="stylesheet" href="cocotte.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <!-- On créé la page home -->
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
@@ -30,8 +31,6 @@
         <div role="main" class="content">
           <div class="cocotte"></div>
           <a href="#options" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-large">Démarrer</a>
-          <a href="#homebis" class="ui-icon-alert ">Bis</a>
-
         </div>
     </div>
     <!-- On crée la page options -->
@@ -45,7 +44,7 @@
             <!-- On créé un slider (input type="range") pour choisir le nombre de donuts -->
             <div class="full-width-slider">
                 <label for="menuGravity">Nombre de joueurs</label>
-                <input type="range" id="menuGravity" data-highlight="true" min="1" max="5" value="1" data-show-value="true" data-popup-enabled="true">
+                <input type="range" data-highlight="true" min="2" max="10" value="2" data-show-value="true" data-popup-enabled="true">
             </div>
             <br>
             <!-- On créé un controlgroup (défini par jQueryMobile) dans lequel on place 3 boutons radio permettant de choisir la difficulté -->
@@ -56,17 +55,17 @@
                 <input type="radio" name="menuDifficulty" id="menuDifficulty2" value="2">
                 <label for="menuDifficulty2">Moyen</label>
                 <input type="radio" name="menuDifficulty" id="menuDifficulty3" value="3">
-                <label for="menuDifficulty3">Vraiment difficile</label>
+                <label for="menuDifficulty3">Difficile</label>
             </fieldset>
             <a href="#rules" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Comment jouer ?</a>
             <a id="start" href="#game" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Jouer !</a>
         </div>
     </div>
     <!-- On crée la page Rules -->
-    <div data-role="page" data-dialog="true" id="rules">
-        <!-- Titre du panel -->
+    <div id="rules" data-role="a" data-dialog="true">
         <div data-role="header" data-theme="a">
-            <h1>Règles</h1>
+          <a href="#options" data-rel="back" class="ui-btn ui-btn-left ui-alt-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l">Back</a>
+          <h1>Règles</h1>
         </div>
         <div role="main" class="ui-content rules">
             <h3>Objectif principal :</h3>
@@ -77,7 +76,7 @@
     </div>
     <!-- On créé la page game dans laquelle on appelle script.js spécifiquement pour le jeu -->
     <div data-role="page" id="game">
-        <!-- On créé un bouton de retour vers la page home-->
+        <!-- On appelle le script du jeu -->
         <script src="script.js"></script>
         <div data-role="main" class="content">
             <div class="gameZone">
