@@ -28,10 +28,7 @@ function ClickRequestDeviceOrientationEvent () {
   })
 }
 
-
-
-
-//prévoir remise à zéro de la pression en lançant la partie
+//Prévoir remise à zéro de la pression en lançant la partie
 function increasePression() {
 
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
