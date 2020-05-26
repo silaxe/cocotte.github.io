@@ -5,7 +5,6 @@ window.onload = function () {
       const banner = document.createElement('div')
       banner.innerHTML = `<div id="autorisation" style="z-index: 1; position: absolute; width: 100%; background-color:#000; color: #fff"><p style="padding: 10px">Cliquez ici pour autoriser l'accès à votre capteur de mouvements.</p></div>`
       banner.onclick = ClickRequestDeviceOrientationEvent
-      //possible lancer fonction sans arguments (jaune)
       document.querySelector('body').appendChild(banner)
   }
 }
@@ -20,7 +19,6 @@ function ClickRequestDeviceOrientationEvent () {
     gamma=(Math.round(e.gamma));
     increasePression();
 
-    //si je lance increasePression dès l'acceptation impossible de la controler apres
       }
           )} else {
           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
@@ -31,18 +29,21 @@ function ClickRequestDeviceOrientationEvent () {
   })
 }
 
-//passer betta gamma en paramètres pour les manip indépendamment de ClickRequestDeviceOrientationEvent?
+function start () {
+if (gameover) {
+  return;
+} else {
+  playGame();
+}
+}
+
 //prévoir remise à zéro de la pression en lançant la partie
-//récupération des paramètres
 function increasePression() {
 
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
 
-    if (gameover) {
-      return;
-    } else {
 
     if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
     {
@@ -76,8 +77,6 @@ function increasePression() {
     {
       pression+=1;
     }
-    playGame();
-
   }
 }
 
@@ -88,7 +87,6 @@ if (pression >= 0 && pression <=500){
 
 else if (pression >= 500 && pression <=10000) {
   document.getElementById('pression').style.color = "red";
-  playAudio();
   }
 
 else if (pression > 10000) {
@@ -96,6 +94,7 @@ else if (pression > 10000) {
   gameover = true;
   }
 }
+
 
 /*
 function playAudio(){
@@ -105,6 +104,7 @@ function playAudio(){
 
 document.addEventListener('mousedown',onMouseDown);
 function onMouseDown(event){
+UTILISER POUR LANCER JEU À L'ARRIVEE DANS LA FENETRE
     var audio = new Audio('assets/son_hard.wav');
     audio.play();
 }*/
