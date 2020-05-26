@@ -26,7 +26,7 @@ function ClickRequestDeviceOrientationEvent () {
         console.error(e)
   })
 }
-
+increasePression();
 //prévoir remise à zéro de la pression en lançant la partie
 function increasePression() {
 
@@ -87,6 +87,7 @@ else if (pression > 10000) {
   gameover = true;
   }
 }
+playGame ();
 
 /*
 function playAudio(){
