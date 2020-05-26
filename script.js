@@ -33,7 +33,7 @@ function start () {
 if (gameover) {
   return;
 } else {
-  playGame();
+  increasePression();
 }
 }
 
