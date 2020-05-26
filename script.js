@@ -76,8 +76,6 @@ function increasePression() {
     {
       pression+=1;
     }
-    playGame();
-
   }
 
 }
@@ -97,6 +95,8 @@ else if (pression > 10000) {
   }
 }
 increasePression();
+playGame();
+
 
 /*function playAudio(){
     var audio = new Audio('assets/son_hard.wav');
