@@ -29,13 +29,7 @@ function ClickRequestDeviceOrientationEvent () {
 }
 
 
-function start () {
-  if (gameover) {
-    return;
-  } else {
-    playGame();
-  }
-}
+
 
 //prévoir remise à zéro de la pression en lançant la partie
 function increasePression() {
@@ -79,7 +73,7 @@ function increasePression() {
   }
 }
 
-function playGame (pression) {
+function playGame () {
 if (pression >= 0 && pression <=500){
   document.getElementById('pression').style.color = "cyan";
   }
@@ -95,7 +89,16 @@ else if (pression > 10000) {
 }
 
 
-/*function playAudio(){
+/*
+function start () {
+  if (gameover) {
+    return;
+  } else {
+    playGame();
+  }
+}
+
+function playAudio(){
     var audio = new Audio('assets/son_hard.wav');
     audio.play();
 }
