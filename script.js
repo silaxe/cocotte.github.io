@@ -28,6 +28,15 @@ function ClickRequestDeviceOrientationEvent () {
   })
 }
 
+
+function start () {
+  if (gameover) {
+    return;
+  } else {
+    increasePression();
+  }
+}
+
 //prévoir remise à zéro de la pression en lançant la partie
 function increasePression() {
 
@@ -87,13 +96,6 @@ else if (pression > 10000) {
   }
 }
 
-function start () {
-  if (gameover) {
-    return;
-  } else {
-    increasePression();
-  }
-}
 
 /*function playAudio(){
     var audio = new Audio('assets/son_hard.wav');
