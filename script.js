@@ -67,6 +67,8 @@ function increasePression() {
     {
       pression+=1;
     }
+    playGame();
+
   }
 }
 
@@ -86,11 +88,10 @@ else if (pression > 10000) {
 }
 
 function start () {
-if (gameover) {
-  return;
-} else {
-increasePression();
-playGame();
+  if (gameover) {
+    return;
+  } else {
+    increasePression();
   }
 }
 
