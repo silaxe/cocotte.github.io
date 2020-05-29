@@ -30,10 +30,13 @@ function ClickRequestDeviceOrientationEvent () {
   })
 }
 
-document.getElementById("start").addEventListener("click", function(event) {
-        alert("coucou");
-        event.preventDefault();
-   }
+function start() {
+  document.getElementById("start").addEventListener("click", function(event) {
+  alert("coucou");
+  event.preventDefault();
+})
+ }
+
 
 function increasePression() {
 
