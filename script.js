@@ -27,6 +27,7 @@ function ClickRequestDeviceOrientationEvent () {
   })
 }
 
+increasePression();
 function increasePression() {
 
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
