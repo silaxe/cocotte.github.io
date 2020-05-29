@@ -1,4 +1,4 @@
-let beta, gamma, pression, gameover=false;
+let beta, gamma, pression=0, gameover=false;
 
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
@@ -30,7 +30,7 @@ function ClickRequestDeviceOrientationEvent () {
   })
 }
 
-document.getElementById("start").addEventListener("click", function(event) {
+document.getElementById("start").addEventListener("click", function() {
   playGame();
 });
 
