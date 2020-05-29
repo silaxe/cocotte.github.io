@@ -53,6 +53,7 @@ function increasePression() {
     else if((beta >= 10 && beta < 15) || (beta <= -10 && beta > -15))
     {
       pression+=4;
+      alert(beta);
     }
     else if(beta >= 15 || beta <= -15)
     {
