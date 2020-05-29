@@ -1,4 +1,4 @@
-let beta, gamma, pression=0, gameover=false, playable=false;
+let beta, gamma, pression=0, gameover=false;
 
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
@@ -17,7 +17,6 @@ function ClickRequestDeviceOrientationEvent () {
             document.getElementById('autorisation').style.display = 'none';
             beta=(Math.round(e.beta));
             gamma=(Math.round(e.gamma));
-            playable = true;
               }
           )} else {
           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
@@ -28,13 +27,6 @@ function ClickRequestDeviceOrientationEvent () {
   })
 }
 
-function playable () {
-  if (playable) {
-    increasePression();
-    playGame();
-  }
-}
-//prévoir remise à zéro de la pression en lançant la partie
 function increasePression() {
 
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
