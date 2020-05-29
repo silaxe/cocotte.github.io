@@ -1,4 +1,4 @@
-var beta, gamma, pression, gameover=false;
+let beta, gamma, pression, gameover=false;
 
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
@@ -53,7 +53,6 @@ function increasePression() {
     else if((beta >= 10 && beta < 15) || (beta <= -10 && beta > -15))
     {
       pression+=4;
-      alert(beta);
     }
     else if(beta >= 15 || beta <= -15)
     {
