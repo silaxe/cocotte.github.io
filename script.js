@@ -30,6 +30,14 @@ function ClickRequestDeviceOrientationEvent () {
   })
 }
 
+function start () {
+document.getElementById('game').addEventListener('mousedown',onMouseDown);
+  function onMouseDown(event){
+    alert("coucou");
+  }
+}
+
+
 function increasePression() {
 
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
@@ -39,6 +47,7 @@ function increasePression() {
     if (gameover) {
       return;
     } else {
+
 
     if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
     {
@@ -84,7 +93,7 @@ else if (pression >= 500 && pression <=10000) {
   document.getElementById('pression').style.color = "red";
   }
 
-else if (pression > 10000) {
+else if (pression > 2000) {
   document.getElementById('gameover').style.visibility = "visible";
   gameover = true;
   }
@@ -94,13 +103,7 @@ else if (pression > 10000) {
 function playAudio(){
     var audio = new Audio('assets/son_hard.wav');
     audio.play();
-}
 
-document.addEventListener('mousedown',onMouseDown);
-function onMouseDown(event){
-UTILISER POUR LANCER JEU À L'ARRIVEE DANS LA FENETRE
-    var audio = new Audio('assets/son_hard.wav');
-    audio.play();
 }*/
 
 //Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
