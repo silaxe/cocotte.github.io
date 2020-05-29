@@ -80,11 +80,11 @@ function increasePression() {
 
 function playGame () {
 
-if (pression >= 0 && pression <=500){
+if (pression >= 0 && pression <= 500){
   document.getElementById('pression').style.color = "cyan";
   }
 
-else if (pression >= 500 && pression <=10000) {
+else if (pression >= 500 && pression <= 2000) {
   document.getElementById('pression').style.color = "red";
   }
 
