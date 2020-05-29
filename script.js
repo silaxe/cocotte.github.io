@@ -30,7 +30,6 @@ function ClickRequestDeviceOrientationEvent () {
 }
 
 document.getElementById("start").addEventListener("click", function(event) {
-  pression = 0;
   increasePression();
   playGame();
 });
