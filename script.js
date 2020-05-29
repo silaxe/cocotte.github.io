@@ -17,6 +17,7 @@ function ClickRequestDeviceOrientationEvent () {
             document.getElementById('autorisation').style.display = 'none';
             beta=(Math.round(e.beta));
             gamma=(Math.round(e.gamma));
+            increasePression();
 
 
               }
@@ -30,7 +31,6 @@ function ClickRequestDeviceOrientationEvent () {
 }
 
 document.getElementById("start").addEventListener("click", function(event) {
-  increasePression();
   playGame();
 });
 
