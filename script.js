@@ -84,7 +84,7 @@ if (pression >= 0 && pression <= 500){
   document.getElementById('pression').style.color = "cyan";
   }
 
-else if (pression >= 500 && pression <= 2000) {
+else if (pression >= 500 && pression <= 1000) {
   document.getElementById('pression').style.color = "red";
   }
 
