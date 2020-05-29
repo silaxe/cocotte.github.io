@@ -19,7 +19,6 @@ function ClickRequestDeviceOrientationEvent () {
             gamma=(Math.round(e.gamma));
             increasePression();
 
-
               }
           )} else {
           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
@@ -90,6 +89,8 @@ else if (pression >= 500 && pression <=10000) {
   }
 
 else if (pression > 2000) {
+  document.getElementById('pression').style.color = "cyan";
+
   document.getElementById('gameover').style.visibility = "visible";
   gameover = true;
   }
