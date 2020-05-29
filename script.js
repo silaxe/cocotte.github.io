@@ -2,9 +2,9 @@ let beta, gamma, pression=0, gameover=false, playable=false;
 
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
-      const banner = document.createElement('div')
-      banner.innerHTML = `<div id="autorisation" style="z-index: 1; position: absolute; width: 100%; background-color:#000; color: #fff"><p style="padding: 10px">Cliquez ici pour autoriser l'accès à votre capteur de mouvements.</p></div>`
-      banner.onclick = ClickRequestDeviceOrientationEvent
+      const banner = document.createElement('div');
+      banner.innerHTML = `<div id="autorisation" style="z-index: 1; position: absolute; width: 100%; background-color:#000; color: #fff"><p style="padding: 10px">Cliquez ici pour autoriser l'accès à votre capteur de mouvements.</p></div>`;
+      banner.onclick = ClickRequestDeviceOrientationEvent;
       document.querySelector('body').appendChild(banner)
   }
 }
@@ -31,6 +31,7 @@ function ClickRequestDeviceOrientationEvent () {
 function playable () {
   if (playable) {
     increasePression();
+    playGame();
   }
 }
 //prévoir remise à zéro de la pression en lançant la partie
@@ -93,7 +94,6 @@ else if (pression > 10000) {
   gameover = true;
   }
 }
-playGame ();
 
 /*
 function playAudio(){
