@@ -31,8 +31,8 @@ function ClickRequestDeviceOrientationEvent () {
 }
 
 function start () {
-document.getElementById('start').addEventListener('click',contenu);
-  function contenu(event){
+document.getElementById('start').onclick = contenu();
+  function contenu () {
     alert("coucou");
   }
 }
