@@ -1,4 +1,4 @@
-var beta, gamma, pression=0, gameover=false;
+var beta, gamma, pression, gameover=false;
 
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
@@ -17,8 +17,7 @@ function ClickRequestDeviceOrientationEvent () {
             document.getElementById('autorisation').style.display = 'none';
             beta=(Math.round(e.beta));
             gamma=(Math.round(e.gamma));
-            increasePression();
-            playGame();
+
 
               }
           )} else {
@@ -30,12 +29,11 @@ function ClickRequestDeviceOrientationEvent () {
   })
 }
 
-  document.getElementById("start").addEventListener("click", function(event) {
-  alert("coucou");
-  event.preventDefault();
-  })
-
-
+document.getElementById("start").addEventListener("click", function(event) {
+  pression = 0;
+  increasePression();
+  playGame();
+});
 
 function increasePression() {
 
