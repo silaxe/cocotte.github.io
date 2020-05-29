@@ -18,6 +18,7 @@ function ClickRequestDeviceOrientationEvent () {
             beta=(Math.round(e.beta));
             gamma=(Math.round(e.gamma));
             increasePression();
+            playGame();
 
               }
           )} else {
@@ -71,7 +72,6 @@ function increasePression() {
     {
       pression+=1;
     }
-    playGame();
   }
 }
 
