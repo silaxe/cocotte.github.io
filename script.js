@@ -31,8 +31,8 @@ function ClickRequestDeviceOrientationEvent () {
 }
 
 function start () {
-document.getElementById('game').addEventListener('mousedown',onMouseDown);
-  function onMouseDown(event){
+document.getElementById('start').addEventListener('click',contenu);
+  function contenu(event){
     alert("coucou");
   }
 }
