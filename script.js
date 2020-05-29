@@ -31,7 +31,7 @@ function ClickRequestDeviceOrientationEvent () {
 }
 
 document.getElementById("start").addEventListener("click", function() {
-  pression=0;
+  pression=1000;
   playGame();
 });
 
@@ -44,44 +44,43 @@ function increasePression() {
     if (gameover) {
       return;
     } else {
-
-
-    if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
-    {
-      pression+=2;
-    }
-    else if((beta >= 10 && beta < 15) || (beta <= -10 && beta > -15))
-    {
-      pression+=4;
-    }
-    else if(beta >= 15 || beta <= -15)
-    {
-      pression+=6;
-    }
-    else
-    {
-      pression+=1;
-    }
-    if((gamma >= 10 && gamma < 15) || (gamma <= -10 && gamma > -15))
-    {
-      pression+=2;
-    }
-    else if((gamma >= 15 && gamma < 30) || (gamma <= -15 && gamma > -30))
-    {
-      pression+=4;
-    }
-    else if(gamma >= 30 || gamma <= -30)
-    {
-      pression+=6;
-    }
-    else
-    {
-      pression+=1;
-    }
+      if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
+      {
+        pression+=2;
+      }
+      else if((beta >= 10 && beta < 15) || (beta <= -10 && beta > -15))
+      {
+        pression+=4;
+      }
+      else if(beta >= 15 || beta <= -15)
+      {
+        pression+=6;
+      }
+      else
+      {
+        pression+=1;
+      }
+      if((gamma >= 10 && gamma < 15) || (gamma <= -10 && gamma > -15))
+      {
+        pression+=2;
+      }
+      else if((gamma >= 15 && gamma < 30) || (gamma <= -15 && gamma > -30))
+      {
+        pression+=4;
+      }
+      else if(gamma >= 30 || gamma <= -30)
+      {
+        pression+=6;
+      }
+      else
+      {
+        pression+=1;
+      }
   }
 }
 
 function playGame () {
+
 if (pression >= 0 && pression <=500){
   document.getElementById('pression').style.color = "cyan";
   }
