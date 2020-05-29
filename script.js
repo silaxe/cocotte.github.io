@@ -31,7 +31,7 @@ function ClickRequestDeviceOrientationEvent () {
 
 function increasePression() {
 
-    document.getElementById('beta').innerHTML = ('Roulis : '+beta);
+    document.getElementById('beta').innerHTML = ('Roulais : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
 
@@ -73,7 +73,6 @@ function increasePression() {
     }
   }
 }
-playGame();
 
 function playGame () {
 if (pression >= 0 && pression <=500){
@@ -89,6 +88,8 @@ else if (pression > 10000) {
   gameover = true;
   }
 }
+playGame();
+
 /*
 function playAudio(){
     var audio = new Audio('assets/son_hard.wav');
