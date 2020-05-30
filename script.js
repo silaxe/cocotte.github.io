@@ -31,7 +31,13 @@ function ClickRequestDeviceOrientationEvent () {
 }
 
 document.getElementById("start").addEventListener("click", function() {
-  });
+  refreshInfo();
+});
+
+
+function refreshInfo() {
+  pression=0;
+}
 
 function increasePression() {
 
