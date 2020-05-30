@@ -18,7 +18,6 @@ function ClickRequestDeviceOrientationEvent () {
             document.getElementById('autorisation').style.display = 'none';
             beta=(Math.round(e.beta));
             gamma=(Math.round(e.gamma));
-            increasePression();
 
               }
           )} else {
@@ -86,6 +85,8 @@ function increasePression() {
 }
 
 function playGame () {
+  increasePression();
+
 
   if (pression >= 0 && pression < 500){
     document.getElementById('pression').style.color = "brown";
@@ -96,7 +97,7 @@ function playGame () {
     }
 
   else if (pression > 2000) {
-    document.getElementById('pression').style.color = "yellow";
+    document.getElementById('pression').style.color = "purple";
     document.getElementById('gameover').style.visibility = "visible";
     gameover = true;
     }
