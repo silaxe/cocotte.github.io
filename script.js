@@ -50,10 +50,10 @@ function increasePression() {
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
 
     if (gameover) {
-      return;
       document.getElementById('pression').style.color = "purple";
       document.getElementById('gameover').style.visibility = "visible";
       pression = 0;
+      return;
     } else {
       if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
       {
