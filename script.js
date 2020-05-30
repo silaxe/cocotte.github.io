@@ -3,7 +3,7 @@ let beta, gamma, pression=0, gameover=false;
 window.onload = function () {
   if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
       const banner = document.createElement('div');
-      banner.innerHTML = `<div id="autorisation" style="z-index: 1; position: absolute; width: 100%; background-color:#000; color: #fff"><p style="padding: 10px">V1 Cliquez ici pour autoriser l'accès à votre capteur de mouvements.</p></div>`;
+      banner.innerHTML = `<div id="autorisation" style="z-index: 1; position: absolute; width: 100%; background-color:#000; color: #fff"><p style="padding: 10px">V2 Cliquez ici pour autoriser l'accès à votre capteur de mouvements.</p></div>`;
       banner.onclick = clickRequestDeviceOrientationEvent;
       document.querySelector('body').appendChild(banner)
   }
@@ -51,6 +51,9 @@ function increasePression() {
 
     if (gameover) {
       return;
+      document.getElementById('pression').style.color = "purple";
+      document.getElementById('gameover').style.visibility = "visible";
+      pression = 0;
     } else {
       if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
       {
@@ -99,8 +102,6 @@ function changeColor () {
     }
 
   else if (pression > 2000) {
-    document.getElementById('pression').style.color = "purple";
-    document.getElementById('gameover').style.visibility = "visible";
     gameover = true;
     }
   }
