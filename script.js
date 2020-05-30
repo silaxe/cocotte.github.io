@@ -37,6 +37,7 @@ document.getElementById("start").addEventListener("click", function() {
 
 function refreshInfo() {
   pression=0;
+  increasePression();
 }
 
 function increasePression() {
