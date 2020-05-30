@@ -85,8 +85,6 @@ function increasePression() {
 }
 
 function playGame () {
-  increasePression();
-
 
   if (pression >= 0 && pression < 500){
     document.getElementById('pression').style.color = "brown";
