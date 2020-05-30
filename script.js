@@ -35,7 +35,7 @@ document.getElementById("start").addEventListener("click", function() {
 
 function increasePression() {
 
-    document.getElementById('beta').innerHTML = ('Roulais : '+beta);
+    document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
 
@@ -79,7 +79,7 @@ function increasePression() {
 
 function playGame () {
 
-  pression=300;
+  pression=700;
 
 
 if (pression >= 0 && pression < 500){
