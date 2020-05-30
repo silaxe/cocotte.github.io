@@ -29,8 +29,8 @@ function ClickRequestDeviceOrientationEvent () {
   })
 }
 
-
 document.getElementById("start").addEventListener("click", function() {
+  });
 
 function increasePression() {
   pression=0;
@@ -94,7 +94,7 @@ else if (pression > 2000) {
   gameover = true;
   }
 }
-});
+
 
 /*
 function playAudio(){
