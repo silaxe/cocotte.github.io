@@ -80,7 +80,7 @@ function increasePression() {
 
 function playGame () {
 
-if (pression >= 0 && pression <= 500){
+if (pression >= 0 && pression < 500){
   document.getElementById('pression').style.color = "cyan";
   }
 
@@ -89,7 +89,7 @@ else if (pression >= 500 && pression <= 2000) {
   }
 
 else if (pression > 2000) {
-  document.getElementById('pression').style.color = "cyan";
+  document.getElementById('pression').style.color = "yellow";
   document.getElementById('gameover').style.visibility = "visible";
   gameover = true;
   }
@@ -99,10 +99,10 @@ else if (pression > 2000) {
 function playAudio(){
     var audio = new Audio('assets/son_hard.wav');
     audio.play();
+}
 
-}*/
-
-//Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
-//you can very easily use this to re-use the value of the variable in another function.
-// Use this in source window.var1= oEvent.getSource().getBindingContext();
-// Get value of var1 in destination var var2= window.var1;
+Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
+you can very easily use this to re-use the value of the variable in another function.
+Use this in source window.var1= oEvent.getSource().getBindingContext();
+Get value of var1 in destination var var2= window.var1;
+*/
