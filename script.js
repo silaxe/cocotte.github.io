@@ -18,7 +18,7 @@ function ClickRequestDeviceOrientationEvent () {
             document.getElementById('autorisation').style.display = 'none';
             beta=(Math.round(e.beta));
             gamma=(Math.round(e.gamma));
-
+            increasePression();
               }
           )} else {
           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
@@ -36,7 +36,6 @@ document.getElementById("start").addEventListener("click", function() {
 
 function refreshInfo() {
   pression=0;
-  increasePression();
 }
 
 function increasePression() {
