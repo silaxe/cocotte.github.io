@@ -29,9 +29,10 @@ function ClickRequestDeviceOrientationEvent () {
   })
 }
 
-document.getElementById("start").addEventListener("click", function() {
-});
 
+document.getElementById("start").addEventListener("click", function() {
+
+pression=0;
 function increasePression() {
 
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
@@ -93,6 +94,7 @@ else if (pression > 2000) {
   gameover = true;
   }
 }
+});
 
 /*
 function playAudio(){
