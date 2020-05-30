@@ -30,7 +30,6 @@ function ClickRequestDeviceOrientationEvent () {
 }
 
 document.getElementById("start").addEventListener("click", function() {
-  pression=300;
   playGame();
 });
 
@@ -79,6 +78,9 @@ function increasePression() {
 }
 
 function playGame () {
+
+  pression=300;
+
 
 if (pression >= 0 && pression < 500){
   document.getElementById('pression').style.color = "cyan";
