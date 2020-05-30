@@ -10,7 +10,8 @@ window.onload = function () {
 }
 
 function ClickRequestDeviceOrientationEvent () {
-    window.DeviceOrientationEvent.requestPermission()
+
+  window.DeviceOrientationEvent.requestPermission()
       .then(response => {
         if (response === 'granted') {
           window.addEventListener('deviceorientation',function (e) {
@@ -79,21 +80,20 @@ function increasePression() {
 
 function playGame () {
 
-if (pression >= 0 && pression < 500){
-  document.getElementById('pression').style.color = "brown";
-  }
+  if (pression >= 0 && pression < 500){
+    document.getElementById('pression').style.color = "brown";
+    }
 
-else if (pression >= 500 && pression <= 2000) {
-  document.getElementById('pression').style.color = "red";
-  }
+  else if (pression >= 500 && pression <= 2000) {
+    document.getElementById('pression').style.color = "red";
+    }
 
-else if (pression > 2000) {
-  document.getElementById('pression').style.color = "yellow";
-  document.getElementById('gameover').style.visibility = "visible";
-  gameover = true;
+  else if (pression > 2000) {
+    document.getElementById('pression').style.color = "yellow";
+    document.getElementById('gameover').style.visibility = "visible";
+    gameover = true;
+    }
   }
-}
-
 
 /*
 function playAudio(){
