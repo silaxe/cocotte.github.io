@@ -110,6 +110,7 @@ function changeSound() {
     audio.play();
 }
 
+/*
 Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
 you can very easily use this to re-use the value of the variable in another function.
 Use this in source window.var1= oEvent.getSource().getBindingContext();
