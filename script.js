@@ -9,6 +9,7 @@ window.onload = function () {
   }
 }
 
+
 function ClickRequestDeviceOrientationEvent () {
 
   window.DeviceOrientationEvent.requestPermission()
@@ -19,6 +20,8 @@ function ClickRequestDeviceOrientationEvent () {
             beta=(Math.round(e.beta));
             gamma=(Math.round(e.gamma));
             increasePression();
+            playGame ();
+
               }
           )} else {
           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
@@ -29,6 +32,7 @@ function ClickRequestDeviceOrientationEvent () {
   })
 }
 
+
 document.getElementById("start").addEventListener("click", function() {
   refreshInfo();
 });
@@ -37,6 +41,7 @@ document.getElementById("start").addEventListener("click", function() {
 function refreshInfo() {
   pression=0;
 }
+
 
 function increasePression() {
 
@@ -79,9 +84,9 @@ function increasePression() {
       {
         pression+=1;
       }
-      playGame ();
   }
 }
+
 
 function playGame () {
 
