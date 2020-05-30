@@ -32,8 +32,8 @@ function ClickRequestDeviceOrientationEvent () {
 
 document.getElementById("start").addEventListener("click", function() {
 
-pression=0;
 function increasePression() {
+  pression=0;
 
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
