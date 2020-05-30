@@ -88,7 +88,7 @@ else if (pression >= 500 && pression <= 1000) {
   document.getElementById('pression').style.color = "red";
   }
 
-else if (pression > 2000) {
+else {
   document.getElementById('pression').style.color = "cyan";
 
   document.getElementById('gameover').style.visibility = "visible";
