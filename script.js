@@ -1,28 +1,30 @@
 let beta, gamma, pression=0, gameover=false;
 
-window.onload = function () {
-  if ( window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function' ){
+//window.onload = function () {
+function bannerAuthorisation() {
+   if (window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function'){
       const banner = document.createElement('div');
       banner.innerHTML = `<div id="autorisation" style="z-index: 1; position: absolute; width: 100%; background-color:#000; color: #fff"><p style="padding: 10px">Cliquez ici pour autoriser l'accès à votre capteur de mouvements.</p></div>`;
-      banner.onclick = ClickRequestDeviceOrientationEvent;
+      banner.onclick = clickRequestDeviceOrientationEvent();
       document.querySelector('body').appendChild(banner)
-  }
 }
+  }
+ //}
 
-
-function ClickRequestDeviceOrientationEvent () {
+function clickRequestDeviceOrientationEvent() {
 
   window.DeviceOrientationEvent.requestPermission()
       .then(response => {
         if (response === 'granted') {
+
           window.addEventListener('deviceorientation',function (e) {
             document.getElementById('autorisation').style.display = 'none';
             beta=(Math.round(e.beta));
             gamma=(Math.round(e.gamma));
             increasePression();
-            playGame ();
-
-              }
+            changeColor();
+            //window.location.href=#game;
+                          }
           )} else {
           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
       }
@@ -33,15 +35,16 @@ function ClickRequestDeviceOrientationEvent () {
 }
 
 
-document.getElementById("start").addEventListener("click", function() {
-  refreshInfo();
-});
+// document.getElementById("start").addEventListener("click", function() {
+// refreshInfo();
+// });
 
 
-function refreshInfo() {
-  pression=0;
-}
+// function refreshInfo() {
+//  pression=0;
+//}
 
+function resetPression() {}
 
 function increasePression() {
 
@@ -51,7 +54,8 @@ function increasePression() {
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
 
     if (gameover) {
-      return;
+      document.getElementById('pression').style.color = "purple";
+      document.getElementById('gameover').style.visibility = "visible";
     } else {
       if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
       {
@@ -89,7 +93,7 @@ function increasePression() {
 }
 
 
-function playGame () {
+function changeColor () {
 
   if (pression >= 0 && pression < 500){
     document.getElementById('pression').style.color = "brown";
@@ -100,18 +104,16 @@ function playGame () {
     }
 
   else if (pression > 2000) {
-    document.getElementById('pression').style.color = "purple";
-    document.getElementById('gameover').style.visibility = "visible";
     gameover = true;
     }
   }
 
-/*
-function playAudio(){
+function changeSound() {
     var audio = new Audio('assets/son_hard.wav');
     audio.play();
 }
 
+/*
 Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
 you can very easily use this to re-use the value of the variable in another function.
 Use this in source window.var1= oEvent.getSource().getBindingContext();
