@@ -18,10 +18,11 @@
         pour donner un message d'information aux utilisateurs afin de leur
         indiquer que la webApp est enregistrable sur tablette et smartphone
     -->
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css">
+    <!-- <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css"> -->
     <link rel="stylesheet" href="cocotte.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
+    <!-- <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+    <script src="script.js"></script>
 </head>
 <body>
     <!-- On créé la page home -->
@@ -74,10 +75,10 @@
             <a href="#index" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-rel="back">J'ai compris!</a>
         </div>
     </div>
-    <!-- On créé la page game dans laquelle on appelle script.js spécifiquement pour le jeu -->
+    <!-- On créé la page game dans laquelle on appelle script.js spécifiquement pour le jeu / Commentaire Alexis : si toute la page html se charge, on peut appeler script.js dès le head de la page, non? -->
     <div data-role="page" id="game">
-        <!-- On appelle le script du jeu -->
-        <script src="script.js"></script>
+        <!-- On appelle le script du jeu / Commentaire Alexis: voir ci-dessus  -->
+        <!-- <script src="script.js"></script> -->
         <div data-role="main" class="gameZone">
             <div class="gameZone">
             <div id="beta">Roulis : capteur de mouvement non autorisé</div>
