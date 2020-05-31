@@ -9,7 +9,6 @@ let beta, gamma, pression=0, gameover=false;
 //  }
 // }
 
-
 function clickRequestDeviceOrientationEvent() {
 
   window.DeviceOrientationEvent.requestPermission()
@@ -20,7 +19,7 @@ function clickRequestDeviceOrientationEvent() {
             beta=(Math.round(e.beta));
             gamma=(Math.round(e.gamma));
             increasePression();
-            changeColor();            
+            changeColor();
               }
           )} else {
           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
