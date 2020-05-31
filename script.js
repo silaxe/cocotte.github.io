@@ -1,4 +1,4 @@
-let beta, gamma, pression, gameover=false;
+let beta, gamma, pression=0, gameover=false;
 
 //window.onload = function () {
 function bannerAuthorisation() {
