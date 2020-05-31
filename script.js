@@ -48,7 +48,6 @@ function resetPression() {}
 
 function increasePression() {
 
-
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
     document.getElementById('pression').innerHTML = ('Pression : '+pression);
