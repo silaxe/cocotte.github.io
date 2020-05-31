@@ -34,7 +34,6 @@ function clickRequestDeviceOrientationEvent() {
   })
 }
 
-
 // document.getElementById("start").addEventListener("click", function() {
 // refreshInfo();
 // });
