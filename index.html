@@ -75,17 +75,15 @@
             <a href="#index" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-rel="back">J'ai compris!</a>
         </div>
     </div>
-    <!-- On créé la page game dans laquelle on appelle script.js spécifiquement pour le jeu / Commentaire Alexis : si toute la page html se charge, on peut appeler script.js dès le head de la page, non? -->
+    <!-- On créé la page game -->
     <div data-role="page" id="game">
-        <!-- On appelle le script du jeu / Commentaire Alexis: voir ci-dessus  -->
-        <!-- <script src="script.js"></script> -->
         <div data-role="main" class="gameZone">
             <div class="gameZone">
             <div id="beta">Roulis : capteur de mouvement non autorisé</div>
             <div id="gamma">Tangage : capteur de mouvement non autorisé</div>
             <div id="pression">Pression :</div>
-<!--            <audio id="audio" src="assets/son_hard.wav">Son :</audio>-->
-            <div id="gameover" class="gameover">Game over ! <a onclick='window.location.href="https://silaxe.github.io/#options?nocache=" + (new Date()).getTime()'>Retour</a></div>
+<!-- <audio id="audio" src="assets/son_hard.wav">Son :</audio> -->
+            <div id="gameover" class="gameover">Game over ! <a onclick='window.location.href="https://silaxe.github.io/index.html?nocache=" + (new Date()).getTime() + "#options"'>Retour</a></div>
         </div>
 </body>
 </html>
