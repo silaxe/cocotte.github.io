@@ -1,4 +1,4 @@
-let beta, gamma, pression=0, gameover=false;
+let beta, gamma, pression, gameover=false;
 
 //window.onload = function () {
 function bannerAuthorisation() {
@@ -34,7 +34,6 @@ function clickRequestDeviceOrientationEvent() {
   })
 }
 
-
 // document.getElementById("start").addEventListener("click", function() {
 // refreshInfo();
 // });
@@ -47,7 +46,6 @@ function clickRequestDeviceOrientationEvent() {
 function resetPression() {}
 
 function increasePression() {
-
 
     document.getElementById('beta').innerHTML = ('Roulis : '+beta);
     document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
