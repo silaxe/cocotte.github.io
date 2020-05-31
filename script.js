@@ -17,7 +17,7 @@ function clickRequestDeviceOrientationEvent() {
 
           window.addEventListener('deviceorientation',function (e) {
             document.getElementById('autorisation').style.display = 'none';
-            window.location.href=#game;
+            //window.location.href=#game;
             beta=(Math.round(e.beta));
             gamma=(Math.round(e.gamma));
             increasePression();
