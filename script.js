@@ -4,7 +4,7 @@ let beta, gamma, pression=0, gameover=false, audio_source;
 function bannerAuthorisation() {
    if (window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function'){
       const banner = document.createElement('div');
-      banner.innerHTML = `<div id="autorisation" style="z-index: 1; position: absolute; width: 100%; background-color:#000; color: #fff" onclick="clickRequestDeviceOrientationEvent();"><p style="padding: 10px">Cliquez ici pour autoriser l'accès à votre capteur de mouvements.</p></div>`;
+      banner.innerHTML = `<div id="autorisation" style="z-index: 1; position: absolute; width: 100%; background-color:#000; color: #fff" onclick="clickRequestDeviceOrientationEvent(); lvlSound();"><p style="padding: 10px">Cliquez ici pour autoriser l'accès à votre capteur de mouvements.</p></div>`;
 //      banner.onclick = clickRequestDeviceOrientationEvent();
       document.querySelector('body').appendChild(banner)
 }
@@ -21,7 +21,6 @@ function clickRequestDeviceOrientationEvent() {
             gamma=(Math.round(e.gamma));
             increasePression();
             changeColor();
-            lvlSound();
             }
           )} else {
           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
@@ -111,10 +110,11 @@ function lvlSound() {
 //  else {
 //  audio_source = "assets/son_hard.wav";
 //}
+    while(pression < 2000) {
     document.getElementById('son').innerHTML = ('Son : '+pression);
-
-    let audio = new Audio('assets/son_mini.wav');
-    audio.play();
+    pression++;
+//    let audio = new Audio('assets/son_mini.wav');
+//    audio.play();
 }
 
 /*
