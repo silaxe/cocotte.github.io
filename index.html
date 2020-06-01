@@ -61,7 +61,7 @@
                 <label for="menuDifficulty3">Difficile</label>
             </fieldset>
             <a href="#rules" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Comment jouer ?</a>
-            <a id="start" href="#game" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini" onclick="bannerAuthorisation();">Jouer !</a>
+            <a id="start" href="#game" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini" onclick="clickRequestDeviceOrientationEvent();">Jouer !</a>
         </div>
     </div>
     <!-- On crée la page Rules -->
@@ -84,6 +84,9 @@
             <div id="beta">Roulis : capteur de mouvement non autorisé</div>
             <div id="gamma">Tangage : capteur de mouvement non autorisé</div>
             <div id="pression">Pression :</div>
+            <div id="joueurs">Joueurs :</div>
+            <div id="difficulté">Difficulté :</div>
+            <div id="son">Son :</div>
 <!-- <audio id="audio" src="assets/son_hard.wav">Son :</audio> -->
             <div id="gameover" class="gameover">Game over ! <a onclick='window.location.href="https://silaxe.github.io/index.html?nocache=" + (new Date()).getTime() + "#options"'>Retour</a></div>
         </div>
