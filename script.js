@@ -21,6 +21,9 @@ function clickRequestDeviceOrientationEvent() {
             gamma=(Math.round(e.gamma));
             changeColor();
             increasePression();
+            document.getElementById('beta').innerHTML = ('Roulis : '+beta);
+            document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
+            document.getElementById('pression').innerHTML = ('Pression : '+pression);
             }
           )} else {
           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
@@ -42,9 +45,7 @@ function clickRequestDeviceOrientationEvent() {
 
 function increasePression() {
 
-    document.getElementById('beta').innerHTML = ('Roulis : '+beta);
-    document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
-    document.getElementById('pression').innerHTML = ('Pression : '+pression);
+
 
     if (gameover) {
       document.getElementById('pression').style.color = "purple";
