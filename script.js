@@ -1,4 +1,4 @@
-let beta, gamma, pression=0, gameover=false, audio, audio_source;
+let beta, gamma, pression=0, gameover=false, audio_source;
 
 //window.onload = function () {
 function bannerAuthorisation() {
@@ -20,7 +20,7 @@ function clickRequestDeviceOrientationEvent() {
             beta=(Math.round(e.beta));
             gamma=(Math.round(e.gamma));
             changeColor();
-            if (audio_source == "son_mini") { document.getElementById('son').innerHTML = "Son : mini"; audio = new Audio('assets/son_mini.wav'); audio.play(); }
+            if (audio_source == "son_mini") { document.getElementById('son').innerHTML = "Son : mini"; let audio = new Audio('assets/son_mini.wav'); audio.play(); }
             if (audio_source == "son_medium") { document.getElementById('son').innerHTML = "Son : medium"; }
             increasePression();
             document.getElementById('beta').innerHTML = ('Roulis : '+beta);
