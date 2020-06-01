@@ -116,6 +116,7 @@ function changeColor () {
 function playSound() {
 
 let audio = new Audio('assets/son_mini.wav');
+audio.loop = false;
 audio.play();
 
 }
