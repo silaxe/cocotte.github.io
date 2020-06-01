@@ -110,7 +110,7 @@ function changeColor () {
     }
   }
 
-function audioSource(); {
+function audioSource() {
 
 document.getElementById('son').innerHTML = "Son : " + audio_source;
 
