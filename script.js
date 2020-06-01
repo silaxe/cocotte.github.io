@@ -1,4 +1,4 @@
-let beta, gamma, pression=0, gameover=false;
+let beta, gamma, pression=0, gameover=false, audio_source;
 
 //window.onload = function () {
 function bannerAuthorisation() {
@@ -102,7 +102,16 @@ function changeColor () {
   }
 
 function playSound() {
-    var audio = new Audio('assets/son_hard.wav');
+  if (pression == 0){
+  audio_source = "assets/son_mini.wav";
+}
+  else if (pression == 500) {
+  audio_source = "assets/son_medium.wav";
+}
+  else {
+  audio_source = "assets/son_hard.wav";
+}
+    let audio = new Audio(audio_source);
     audio.play();
 }
 
