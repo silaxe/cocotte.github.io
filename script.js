@@ -20,12 +20,12 @@ function clickRequestDeviceOrientationEvent() {
             beta=(Math.round(e.beta));
             gamma=(Math.round(e.gamma));
             changeColor();
+            if audio_source == "son_mini" { document.getElementById('son').innerHTML = "Son : " + audio_source; }
+            if audio_source == "son_medium" { document.getElementById('son').innerHTML = "Son : " + audio_source; }
             increasePression();
             document.getElementById('beta').innerHTML = ('Roulis : '+beta);
             document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
             document.getElementById('pression').innerHTML = ('Pression : '+pression);
-            if audio_source == "son_mini" { document.getElementById('son').innerHTML = "Son : " + audio_source; }
-            if audio_source == "son_medium" { document.getElementById('son').innerHTML = "Son : " + audio_source; }
             }
           )} else {
           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
