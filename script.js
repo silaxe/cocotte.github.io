@@ -1,4 +1,6 @@
 let beta, gamma, pression=0, gameover=false, audio_source;
+let son_medium = new Audio('assets/son_medium.wav');
+let son_hard = new Audio('assets/son_hard.wav');
 
 //window.onload = function () {
 function bannerAuthorisation() {
@@ -105,7 +107,7 @@ function changeColor () {
 
   else if (pression > 500 && pression <= 2000) {
     document.getElementById('pression').style.color = "red";
-    audio_source = "undefined";
+    audio_source = "son_hard";
     }
 
   else {
