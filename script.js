@@ -95,7 +95,7 @@ function changeColor () {
 
   else if (pression > 0 && pression < 500) {
     document.getElementById('pression').style.color = "brown";
-    audio_source = "undefined";
+    audio_source = "son_mini";
     }
 
   else if (pression == 500) {
@@ -116,7 +116,7 @@ function changeColor () {
 function playSound() {
 
 let audio = new Audio('assets/son_mini.wav');
-audio.loop = false;
+audio.loop = true;
 audio.play();
 
 }
