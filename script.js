@@ -102,10 +102,10 @@ function changeColor () {
   }
 
 function playSound() {
-  if (pression == 0){
+  if (document.getElementById('pression') == 0){
   audio_source = "assets/son_mini.wav";
 }
-  else if (pression == 500) {
+  else if (document.getElementById('pression') == 500) {
   audio_source = "assets/son_medium.wav";
 }
   else {
