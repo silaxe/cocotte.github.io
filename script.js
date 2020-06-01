@@ -1,6 +1,8 @@
 let beta, gamma, pression=0, gameover=false, audio_source;
 let son_medium = new Audio('assets/son_medium.wav');
 let son_hard = new Audio('assets/son_hard.wav');
+let son_mini = new Audio('assets/son_mini.wav');
+
 
 //window.onload = function () {
 function bannerAuthorisation() {
@@ -117,12 +119,9 @@ function changeColor () {
 
 function playSound() {
 
-/*
-let audio = new Audio('assets/son_mini.wav');
-audio.loop = true;
-audio.play();
+audio.loop = false;
+audio_source.play();
 
-}*/
 
 /*
 Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
