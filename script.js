@@ -24,6 +24,8 @@ function clickRequestDeviceOrientationEvent() {
             document.getElementById('beta').innerHTML = ('Roulis : '+beta);
             document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
             document.getElementById('pression').innerHTML = ('Pression : '+pression);
+            if audio_source == "son_mini" { document.getElementById('son').innerHTML = "Son : " + audio_source; }
+            if audio_source == "son_medium" { document.getElementById('son').innerHTML = "Son : " + audio_source; }
             }
           )} else {
           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
@@ -44,8 +46,6 @@ function clickRequestDeviceOrientationEvent() {
 //}
 
 function increasePression() {
-
-
 
     if (gameover) {
       document.getElementById('pression').style.color = "purple";
@@ -110,12 +110,6 @@ function changeColor () {
     gameover = true;
     }
   }
-
-function audioSource() {
-
-document.getElementById('son').innerHTML = "Son : " + audio_source;
-
-}
 
 /*
 Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
