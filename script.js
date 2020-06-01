@@ -1,4 +1,4 @@
-let beta, gamma, pression=0, gameover=false, audio;
+let beta, gamma, pression=0, gameover=false, audio_source;
 
 //window.onload = function () {
 function bannerAuthorisation() {
@@ -89,7 +89,8 @@ function changeColor () {
 
   if (pression == 0) {
     document.getElementById('pression').style.color = "brown";
-    document.getElementById('son').innerHTML = "Son : son_mini";
+    audio_source = "son_mini";
+    document.getElementById('son').innerHTML = audio_source;
     }
 
   else if (pression > 0 && pression < 500) {
@@ -98,7 +99,8 @@ function changeColor () {
 
   else if (pression == 500) {
     document.getElementById('pression').style.color = "red";
-    document.getElementById('son').innerHTML = "Son : son_medium";
+    audio_source = "son_medium";
+    document.getElementById('son').innerHTML = son_medium;
     }
 
   else if (pression > 500 && pression <= 2000) {
