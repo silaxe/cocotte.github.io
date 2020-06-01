@@ -117,11 +117,12 @@ function changeColor () {
 
 function playSound() {
 
+/*
 let audio = new Audio('assets/son_mini.wav');
 audio.loop = true;
 audio.play();
 
-}
+}*/
 
 /*
 Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
