@@ -102,16 +102,16 @@ function changeColor () {
   }
 
 function playSound() {
-  if (document.getElementById('pression') == 0){
-  audio_source = "assets/son_mini.wav";
-}
-  else if (document.getElementById('pression') == 500) {
-  audio_source = "assets/son_medium.wav";
-}
-  else {
-  audio_source = "assets/son_hard.wav";
-}
-    let audio = new Audio(audio_source);
+//  if (document.getElementById('pression') == 0){
+//  audio_source = "assets/son_mini.wav";
+//}
+//  else if (document.getElementById('pression') == 500) {
+//  audio_source = "assets/son_medium.wav";
+//}
+//  else {
+//  audio_source = "assets/son_hard.wav";
+//}
+    let audio = new Audio('assets/son_mini.wav');
     audio.play();
 }
 
