@@ -100,7 +100,7 @@ function changeColor () {
   else if (pression == 500) {
     document.getElementById('pression').style.color = "red";
     audio_source = "son_medium";
-    document.getElementById('son').innerHTML = son_medium;
+    document.getElementById('son').innerHTML = audio_source;
     }
 
   else if (pression > 500 && pression <= 2000) {
