@@ -22,6 +22,7 @@ function clickRequestDeviceOrientationEvent() {
             gamma=(Math.round(e.gamma));
             increasePression();
             changeColor();
+            changeSound();
             //window.location.href=#game;
                           }
           )} else {
