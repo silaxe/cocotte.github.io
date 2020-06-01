@@ -12,7 +12,7 @@ function bannerAuthorisation() {
  //}
 
 function clickRequestDeviceOrientationEvent() {
-
+if (window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function'){
   window.DeviceOrientationEvent.requestPermission()
       .then(response => {
         if (response === 'granted') {
@@ -28,7 +28,7 @@ function clickRequestDeviceOrientationEvent() {
           )} else {
           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
       }
-  })
+  })}
       .catch(e => {
         console.error(e)
   })
