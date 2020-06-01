@@ -118,7 +118,7 @@ function changeColor () {
   }
 
 audio.loop = false;
-audio_source.play();
+audio.play();
 
 
 /*
