@@ -90,7 +90,7 @@ function changeColor () {
   if (pression == 0) {
     document.getElementById('pression').style.color = "brown";
     audio_source = "son_mini";
-    document.getElementById('son').innerHTML = audio_source;
+    document.getElementById('son').innerHTML = "Son :" + audio_source;
     }
 
   else if (pression > 0 && pression < 500) {
@@ -100,7 +100,7 @@ function changeColor () {
   else if (pression == 500) {
     document.getElementById('pression').style.color = "red";
     audio_source = "son_medium";
-    document.getElementById('son').innerHTML = audio_source;
+    document.getElementById('son').innerHTML = "Son :" + audio_source;
     }
 
   else if (pression > 500 && pression <= 2000) {
