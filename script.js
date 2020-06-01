@@ -22,10 +22,12 @@ function clickRequestDeviceOrientationEvent() {
         if (pression == 0){
             let audio = new Audio('assets/son_mini.wav');
             audio.play();
+            document.getElementById('son').innerHTML = ('Son : '+son_mini);
           }
         else if (pression == 500) {
             let audio = new Audio('assets/son_medium.wav');
             audio.play();
+            document.getElementById('son').innerHTML = ('Son : '+son_medium);
           }
             increasePression();
             changeColor();
