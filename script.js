@@ -19,16 +19,6 @@ function clickRequestDeviceOrientationEvent() {
             document.getElementById('autorisation').style.display = 'none';
             beta=(Math.round(e.beta));
             gamma=(Math.round(e.gamma));
-        if (pression == 0){
-            //audio = new Audio('assets/son_mini.wav');
-            //audio.play();
-            document.getElementById('son').innerHTML = ('Son : '+son_mini);
-          }
-        else if (pression == 500) {
-            //audio = new Audio('assets/son_medium.wav');
-            //audio.play();
-            document.getElementById('son').innerHTML = ('Son : '+son_medium);
-          }
             increasePression();
             changeColor();
             }
@@ -97,11 +87,17 @@ function increasePression() {
 
 function changeColor () {
 
-  if (pression >= 0 && pression < 500){
+  if (pression < 500) {
     document.getElementById('pression').style.color = "brown";
+    document.getElementById('son').innerHTML = ('Son : '+son_mini);
     }
 
-  else if (pression >= 500 && pression <= 2000) {
+  else if (pression == 500) {
+    document.getElementById('pression').style.color = "red";
+    document.getElementById('son').innerHTML = ('Son : '+son_medium);
+    }
+
+  else if (pression > 500 && pression <= 2000) {
     document.getElementById('pression').style.color = "red";
     }
 
