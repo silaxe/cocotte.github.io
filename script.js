@@ -89,7 +89,7 @@ function changeColor () {
 
   if (pression == 0) {
     document.getElementById('pression').style.color = "brown";
-    document.getElementById('son').innerHTML = "Son : son_mini"";
+    document.getElementById('son').innerHTML = "Son : son_mini";
     }
 
   else if (pression > 0 && pression < 500) {
