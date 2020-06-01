@@ -99,23 +99,25 @@ function changeColor () {
 
   else if (pression > 0 && pression < 500) {
     document.getElementById('pression').style.color = "brown";
-    audio_source = son_mini;
+    audio_source = "son_mini";
     }
 
   else if (pression == 500) {
     document.getElementById('pression').style.color = "red";
-    audio_source = son_medium;
+    audio_source = "son_medium";
     }
 
   else if (pression > 500 && pression <= 2000) {
     document.getElementById('pression').style.color = "red";
-    audio_source = son_hard;
+    audio_source = "son_hard";
     }
 
   else {
     gameover = true;
     }
   }
+
+function playSound() {
 
 audio.loop = false;
 audio_source.play();
