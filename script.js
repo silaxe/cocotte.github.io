@@ -95,7 +95,7 @@ function changeColor () {
 
   else if (pression > 0 && pression < 500) {
     document.getElementById('pression').style.color = "brown";
-    // audio_source = "undefined";
+    audio_source = "undefined";
     }
 
   else if (pression == 500) {
@@ -105,7 +105,7 @@ function changeColor () {
 
   else if (pression > 500 && pression <= 2000) {
     document.getElementById('pression').style.color = "red";
-    // audio_source = "undefined";
+    audio_source = "undefined";
     }
 
   else {
