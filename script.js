@@ -1,4 +1,4 @@
-let beta, gamma, pression=0, gameover=false, audio_source;
+let beta, gamma, pression=0, gameover=false, audio;
 
 //window.onload = function () {
 function bannerAuthorisation() {
@@ -20,13 +20,13 @@ function clickRequestDeviceOrientationEvent() {
             beta=(Math.round(e.beta));
             gamma=(Math.round(e.gamma));
         if (pression == 0){
-            let audio = new Audio('assets/son_mini.wav');
-            audio.play();
+            //audio = new Audio('assets/son_mini.wav');
+            //audio.play();
             document.getElementById('son').innerHTML = ('Son : '+son_mini);
           }
         else if (pression == 500) {
-            let audio = new Audio('assets/son_medium.wav');
-            audio.play();
+            //audio = new Audio('assets/son_medium.wav');
+            //audio.play();
             document.getElementById('son').innerHTML = ('Son : '+son_medium);
           }
             increasePression();
