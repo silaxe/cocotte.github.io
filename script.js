@@ -19,11 +19,11 @@ function clickRequestDeviceOrientationEvent() {
             document.getElementById('autorisation').style.display = 'none';
             beta=(Math.round(e.beta));
             gamma=(Math.round(e.gamma));
-        if (document.getElementById('pression') == 0){
+        if (pression == 0){
             let audio = new Audio('assets/son_mini.wav');
             audio.play();
           }
-        else if (document.getElementById('pression') == 500) {
+        else if (pression == 500) {
             let audio = new Audio('assets/son_medium.wav');
             audio.play();
           }
