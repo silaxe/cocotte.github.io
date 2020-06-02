@@ -1,4 +1,8 @@
 let beta, gamma, pression=0, gameover=false, audio_source;
+let son_medium = new Audio('assets/son_medium.wav');
+let son_hard = new Audio('assets/son_hard.wav');
+let son_mini = new Audio('assets/son_mini.wav');
+
 
 //window.onload = function () {
 function bannerAuthorisation() {
@@ -95,17 +99,17 @@ function changeColor () {
 
   else if (pression > 0 && pression < 500) {
     document.getElementById('pression').style.color = "brown";
-    audio_source = "undefined";
+    audio_source = son_mini;
     }
 
   else if (pression == 500) {
     document.getElementById('pression').style.color = "red";
-    audio_source = "son_medium";
+    audio_source = son_medium;
     }
 
   else if (pression > 500 && pression <= 2000) {
     document.getElementById('pression').style.color = "red";
-    audio_source = "undefined";
+    audio_source = son_hard;
     }
 
   else {
@@ -113,12 +117,9 @@ function changeColor () {
     }
   }
 
-function playSound() {
-
-let audio = new Audio('assets/son_mini.wav');
+audio.loop = false;
 audio.play();
 
-}
 
 /*
 Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
