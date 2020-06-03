@@ -4,7 +4,7 @@ let beta, gamma, pression=0, gameover=false, audio_source;
 function bannerAuthorisation() {
    if (window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function'){
       const banner = document.createElement('div');
-      banner.innerHTML = `<div id="autorisation" style="z-index: 1; position: absolute; width: 100%; background-color:#000; color: #fff" onclick="clickRequestDeviceOrientationEvent(); playAudio();"><p style="padding: 10px">Cliquez ici pour autoriser l'accès à votre capteur de mouvements.</p></div>`;
+      banner.innerHTML = `<div id="autorisation" style="z-index: 1; position: absolute; width: 100%; background-color:#000; color: #fff" onclick="clickRequestDeviceOrientationEvent(); playAudio('assets/son_mini.wav');"><p style="padding: 10px">Cliquez ici pour autoriser l'accès à votre capteur de mouvements.</p></div>`;
 //      banner.onclick = clickRequestDeviceOrientationEvent();
       document.querySelector('body').appendChild(banner)
 }
@@ -90,22 +90,22 @@ function changeColor () {
 
   if (pression == 0) {
     document.getElementById('pression').style.color = "brown";
-    audio_source = "son_mini";
+    // audio_source = "son_mini";
     }
 
   else if (pression > 0 && pression < 500) {
     document.getElementById('pression').style.color = "brown";
-    audio_source = "undefined";
+    // audio_source = "undefined";
     }
 
   else if (pression == 500) {
     document.getElementById('pression').style.color = "red";
-    audio_source = "son_medium";
+    // audio_source = "son_medium";
     }
 
   else if (pression > 500 && pression <= 2000) {
     document.getElementById('pression').style.color = "red";
-    audio_source = "undefined";
+    // audio_source = "undefined";
     }
 
   else {
@@ -113,8 +113,8 @@ function changeColor () {
     }
   }
 
-function playAudio() {
-  var audio = new Audio('assets/son_hard.wav');
+function playAudio(audio_source) {
+  var audio = new Audio(audio_source);
   audio.loop = true;
   audio.play();
 }
