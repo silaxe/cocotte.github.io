@@ -20,8 +20,7 @@ function clickRequestDeviceOrientationEvent() {
             beta=(Math.round(e.beta));
             gamma=(Math.round(e.gamma));
             changeColor();
-            if (audio_source == "son_mini") { document.getElementById('son').innerHTML = "Son : mini"; } //let audio = new Audio('assets/son_mini.wav'); audio.play(); }
-            if (audio_source == "son_medium") { document.getElementById('son').innerHTML = "Son : medium"; }
+            if (audio_source == "son_medium") { document.getElementById('son').innerHTML = "Son : medium"; playAudio('assets/son_medium.wav'); }
             increasePression();
             document.getElementById('beta').innerHTML = ('Roulis : '+beta);
             document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
@@ -113,8 +112,8 @@ function changeColor () {
     }
   }
 
-function playAudio(audio_source) {
-  var audio = new Audio(audio_source);
+function playAudio(source) {
+  var audio = new Audio(source);
   audio.loop = true;
   audio.play();
 }
