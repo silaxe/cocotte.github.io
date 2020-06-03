@@ -115,6 +115,7 @@ function changeColor () {
 
 function playAudio() {
   var audio = new Audio('assets/son_hard.wav');
+  audio.loop = true;
   audio.play();
 }
 
