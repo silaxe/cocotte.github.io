@@ -12,6 +12,8 @@ else {
   alert("paie toi un iphone");
   alert(typeof window.DeviceOrientationEvent);
   alert(typeof window.DeviceOrientationEvent.requestPermission);
+  alert(typeof DeviceOrientationEvent.requestPermission);
+
   }
 }
  //}
