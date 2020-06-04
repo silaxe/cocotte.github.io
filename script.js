@@ -8,6 +8,9 @@ function bannerAuthorisation() {
 //      banner.onclick = clickRequestDeviceOrientationEvent();
       document.querySelector('body').appendChild(banner)
 }
+else {
+  alert("paie toi un iphone");
+}
   }
  //}
 
@@ -96,7 +99,6 @@ function changeColor () {
   else if (pression > 0 && pression < 500) {
     document.getElementById('pression').style.color = "brown";
     audio_source = "son_mini";
-    audio_source = "undefined";
     }
 
   else if (pression == 500) {
