@@ -127,6 +127,17 @@ enablesound.addEventListener("click", ()=>{
   audio.play();
 });
 
+const startPlaying = ()=>{
+  audio.removeEventListener('playing', startPlaying);
+  audio.src = 'https://freesound.org/data/previews/475/475736_4397472-lq.mp3';
+  audio.play();
+}
+
+audio.addEventListener('playing', startPlaying);
+audio.addEventListener('error', ()=>{
+  console.log("error");
+});
+
 /*
 Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
 you can very easily use this to re-use the value of the variable in another function.
