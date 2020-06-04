@@ -8,9 +8,6 @@ function bannerAuthorisation() {
 //      banner.onclick = clickRequestDeviceOrientationEvent();
       document.querySelector('body').appendChild(banner)
 }
-else {
-alert("tu es pauvre");
-}
   }
  //}
 
