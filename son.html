@@ -1,17 +1,32 @@
 <html>
 <head>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=HKd7KixqWgZ8oh1GoG2YV3JzTNmKc2Kc3d1IgKC6m94oudyzZZT9OBlG9zOyusUw" charset="UTF-8"></script><style>
+        .hide{
+  display:none;
+}
+    </style>
+    <script src="/scripts/snippet-javascript-console.min.js?v=1"></script>
 </head>
 <body>
-
-<script type="text/javascript">
-
-document.addEventListener('mousedown',onMouseDown);
-function onMouseDown(event){
-    var audio = new Audio('assets/son_hard.wav');
-    audio.play();
+    <input id="bt" type="button" value="Accept">
+<audio id="au" preload="auto" src="https://raw.githubusercontent.com/anars/blank-audio/master/500-milliseconds-of-silence.mp3"></audio>
+    <script type="text/javascript">
+        const audio = document.getElementById("au");
+let bt = document.getElementById("bt");
+console.log(audio);
+bt.addEventListener("click", ()=>{
+  audio.play();
+});
+const startPlaying = ()=>{
+  audio.removeEventListener('playing', startPlaying);
+  bt.classList.add("hide");
+  audio.src = 'https://freesound.org/data/previews/475/475736_4397472-lq.mp3';
+  audio.play();
 }
-
-</script>
-
+audio.addEventListener('playing', startPlaying);
+audio.addEventListener('error', ()=>{
+  console.log("error");
+});
+    </script>
 </body>
 </html>
