@@ -3,7 +3,6 @@ let son_medium = new Audio('assets/son_medium.wav');
 let son_hard = new Audio('assets/son_hard.wav');
 let son_mini = new Audio('assets/son_mini.wav');
 
-
 //window.onload = function () {
 function bannerAuthorisation() {
    if (window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function'){
@@ -117,13 +116,11 @@ function changeColor () {
     }
   }
 
-function playSound() {
+/*function playSound() {
 
-audio.loop = false;
-audio_source.play();
+let audio = new Audio('assets/son_mini.wav');
+audio.play();
 
-
-/*
 Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
 you can very easily use this to re-use the value of the variable in another function.
 Use this in source window.var1= oEvent.getSource().getBindingContext();
