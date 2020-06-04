@@ -1,14 +1,10 @@
 let beta, gamma, pression=0, gameover=false, audio_source;
-let son_medium = new Audio('assets/son_medium.wav');
-let son_hard = new Audio('assets/son_hard.wav');
-let son_mini = new Audio('assets/son_mini.wav');
-
 
 //window.onload = function () {
 function bannerAuthorisation() {
    if (window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function'){
       const banner = document.createElement('div');
-      banner.innerHTML = `<div id="autorisation" style="z-index: 1; position: absolute; width: 100%; background-color:#000; color: #fff" onclick="clickRequestDeviceOrientationEvent(); playSound();"><p style="padding: 10px">Cliquez ici pour autoriser l'accès à votre capteur de mouvements.</p></div>`;
+      banner.innerHTML = `<div id="autorisation" style="z-index: 1; position: absolute; width: 100%; background-color:#000; color: #fff" onclick="clickRequestDeviceOrientationEvent(); playAudio('assets/son_mini.wav');"><p style="padding: 10px">Cliquez ici pour autoriser l'accès à votre capteur de mouvements.</p></div>`;
 //      banner.onclick = clickRequestDeviceOrientationEvent();
       document.querySelector('body').appendChild(banner)
 }
@@ -24,8 +20,8 @@ function clickRequestDeviceOrientationEvent() {
             beta=(Math.round(e.beta));
             gamma=(Math.round(e.gamma));
             changeColor();
-            if (audio_source == "son_mini") { document.getElementById('son').innerHTML = "Son : mini"; } //let audio = new Audio('assets/son_mini.wav'); audio.play(); }
-            if (audio_source == "son_medium") { document.getElementById('son').innerHTML = "Son : medium"; }
+            if (audio_source == "son_mini") { document.getElementById('son').innerHTML = "Son : mini" }
+            if (audio_source == "son_medium") { document.getElementById('son').innerHTML = "Son : medium"; playAudio('assets/son_medium.wav'); }
             increasePression();
             document.getElementById('beta').innerHTML = ('Roulis : '+beta);
             document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
@@ -99,7 +95,11 @@ function changeColor () {
 
   else if (pression > 0 && pression < 500) {
     document.getElementById('pression').style.color = "brown";
+<<<<<<< HEAD
     audio_source = "son_mini";
+=======
+    audio_source = "undefined";
+>>>>>>> fd8196f98a8b564e77a8b02adb49e9c8417e707b
     }
 
   else if (pression == 500) {
