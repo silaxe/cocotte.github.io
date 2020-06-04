@@ -120,13 +120,14 @@ function changeColor () {
     }
   }
 
-/*function playSound() {
+const audio = document.getElementById("au");
+let enablesound = document.getElementById("autorisation");
+console.log(audio);
+enablesound.addEventListener("click", ()=>{
+  audio.play();
+});
 
-let audio = new Audio('assets/son_mini.wav');
-audio.play();
-
-
-
+/*
 Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
 you can very easily use this to re-use the value of the variable in another function.
 Use this in source window.var1= oEvent.getSource().getBindingContext();
