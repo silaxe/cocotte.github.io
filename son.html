@@ -7,25 +7,31 @@
     </style>
 </head>
 <body>
-    <input id="bt" type="button" value="Accept">
+<input id="bt" type="button" value="Accept">
 <audio id="au" preload="auto" src="https://raw.githubusercontent.com/anars/blank-audio/master/500-milliseconds-of-silence.mp3"></audio>
-    <script type="text/javascript">
-        const audio = document.getElementById("au");
+
+<script type="text/javascript">
+
+const audio = document.getElementById("au");
 let bt = document.getElementById("bt");
 console.log(audio);
 bt.addEventListener("click", ()=>{
   audio.play();
 });
+
 const startPlaying = ()=>{
   audio.removeEventListener('playing', startPlaying);
   bt.classList.add("hide");
   audio.src = 'https://freesound.org/data/previews/475/475736_4397472-lq.mp3';
   audio.play();
 }
+
 audio.addEventListener('playing', startPlaying);
 audio.addEventListener('error', ()=>{
   console.log("error");
 });
-    </script>
+
+</script>
+
 </body>
 </html>
