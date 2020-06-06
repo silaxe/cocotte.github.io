@@ -9,7 +9,7 @@ function bannerAuthorisation() {
       document.querySelector('body').appendChild(banner)
 }
 else {
-  alert("paie toi un iphone");
+  alert("Essaye avec un iphone");
   alert(typeof window.DeviceOrientationEvent);
   alert(typeof window.DeviceOrientationEvent.requestPermission);
   alert(typeof DeviceOrientationEvent.requestPermission);
@@ -114,7 +114,7 @@ function changeColor () {
     audio_source = "son_medium";
     }
 
-  else if (pression >= 1000 && pression <= 2000) {
+  else if (pression >= 1000 && pression <= 1999) {
     document.getElementById('jauge').style.color = "red";
     audio_source = "son_hard";
     }
