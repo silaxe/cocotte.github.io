@@ -129,7 +129,7 @@ function test () {
     document.getElementById('difficulté').innerHTML = pression;
   }
 
-
+increasePression();
 changeColor();
 
 test();
