@@ -1,4 +1,4 @@
-let beta, gamma, pression==0, gameover=false, audio_source;
+let beta, gamma, pression=0, gameover=false, audio_source;
 
 //window.onload = function () {
 function bannerAuthorisation() {
@@ -51,8 +51,8 @@ function clickRequestDeviceOrientationEvent() {
 // function refreshInfo() {
 //  pression=0;
 //}
-while (pression <== 10000){
-increasePression();
+if (pression <= 10000) {
+  increasePression();
 }
 
 function test (){
