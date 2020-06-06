@@ -1,4 +1,4 @@
-let beta, gamma, pression, gameover=false, audio_source, incT, incR;
+let beta, gamma, pression, audio_source, incT, incR;
 
 //window.onload = function () {
 function bannerAuthorisation() {
@@ -51,10 +51,6 @@ function clickRequestDeviceOrientationEvent() {
 
 function increments() {
 
-    if (gameover) {
-      document.getElementById('pression').style.color = "purple";
-      document.getElementById('gameover').style.visibility = "visible";
-    } else {
       if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
       {
         incR=5;
@@ -88,14 +84,18 @@ function increments() {
         incT=1;
       }
   }
-}
 
 function increasePression () {
   pression=0;
   if (pression < 10000) {
     pression+=incR+incT;
   }
+  else () {
+    document.getElementById('pression').style.color = "purple";
+    document.getElementById('gameover').style.visibility = "visible";
+ }
 }
+
 
 function changeColor () {
 
@@ -108,14 +108,11 @@ function changeColor () {
     audio_source = "son_medium";
     }
 
-  else if (pression > 1000 && pression <= 2000) {
+  else {
     document.getElementById('pression').style.color = "red";
     audio_source = "son_hard";
     }
 
-  else {
-    gameover = true;
-    }
   }
 
 function test () {
