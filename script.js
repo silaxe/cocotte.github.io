@@ -9,7 +9,7 @@ function bannerAuthorisation() {
       document.querySelector('body').appendChild(banner)
 }
 else {
-  alert("Essaie sur un iPhone");
+  alert("paie toi un iphone");
   alert(typeof window.DeviceOrientationEvent);
   alert(typeof window.DeviceOrientationEvent.requestPermission);
   alert(typeof DeviceOrientationEvent.requestPermission);
@@ -22,7 +22,7 @@ function clickRequestDeviceOrientationEvent() {
   window.DeviceOrientationEvent.requestPermission()
       .then(response => {
         if (response === 'granted') {
-            window.addEventListener('deviceorientation', (e) => {
+            window.addEventListener('deviceorientation',function (e) {
             document.getElementById('autorisation').style.display = 'none';
             beta=(Math.round(e.beta));
             gamma=(Math.round(e.gamma));
@@ -30,8 +30,8 @@ function clickRequestDeviceOrientationEvent() {
             if (audio_source == "son_mini") { document.getElementById('son').innerHTML = "Son : mini" }
             if (audio_source == "son_medium") { document.getElementById('son').innerHTML = "Son : medium"; }
             increasePression();
-            document.getElementById('beta').innerHTML = ('Roulis : '+beta+" | "+e.beta);
-            document.getElementById('gamma').innerHTML = ('Tangage : '+gamma+" | "+e.gamma);
+            document.getElementById('beta').innerHTML = ('Roulis : '+beta);
+            document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
             document.getElementById('pression').innerHTML = ('Pression : '+pression);
             }
           )} else {
@@ -119,11 +119,6 @@ function changeColor () {
     gameover = true;
     }
   }
-
-function test () {
-  document.getElementById('difficulté').innerHTML=pression;
-}
-test();
 
 const audio = document.getElementById("au");
 let enablesound = document.getElementById("autorisation");
