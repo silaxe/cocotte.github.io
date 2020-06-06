@@ -1,4 +1,4 @@
-let beta, gamma, pression=0, gameover=false, audio_source;
+let beta, gamma, pression=0, gameover=false, audio_source, incT, incR;
 
 //window.onload = function () {
 function bannerAuthorisation() {
@@ -25,10 +25,11 @@ function clickRequestDeviceOrientationEvent() {
             document.getElementById('autorisation').style.display = 'none';
             beta=(Math.round(e.beta));
             gamma=(Math.round(e.gamma));
+            increments();
             if (audio_source == "son_mini") { document.getElementById('son').innerHTML = "Son : mini" }
             if (audio_source == "son_medium") { document.getElementById('son').innerHTML = "Son : medium"; }
-            document.getElementById('beta').innerHTML = ('Roulis : '+beta);
-            document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
+            document.getElementById('roulis').innerHTML = ('Roulis : '+beta);
+            document.getElementById('tangage').innerHTML = ('Tangage : '+gamma);
             document.getElementById('pression').innerHTML = ('Pression : '+pression);
             }
           )} else {
@@ -49,7 +50,7 @@ function clickRequestDeviceOrientationEvent() {
 //  pression=0;
 //}
 
-function increasePression() {
+function increments() {
 
     if (gameover) {
       document.getElementById('pression').style.color = "purple";
@@ -57,37 +58,41 @@ function increasePression() {
     } else {
       if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
       {
-        pression+=5;
+        incR=5;
       }
       else if((beta >= 10 && beta < 15) || (beta <= -10 && beta > -15))
       {
-        pression+=4;
+        incR=4;
       }
       else if(beta >= 15 || beta <= -15)
       {
-        pression+=6;
+        incR=6;
       }
       else
       {
-        pression+=3;
+        incR=3;
       }
       if((gamma >= 10 && gamma < 15) || (gamma <= -10 && gamma > -15))
       {
-        pression+=7;
+        incT=7;
       }
       else if((gamma >= 15 && gamma < 30) || (gamma <= -15 && gamma > -30))
       {
-        pression+=4;
+        incT=4;
       }
       else if(gamma >= 30 || gamma <= -30)
       {
-        pression+=6;
+        incT=6;
       }
       else
       {
-        pression+=1;
+        incT=1;
       }
   }
+}
+
+while (pression > 10000) {
+  pression+=incR+incT
 }
 
 function changeColor () {
@@ -121,7 +126,6 @@ function test () {
     document.getElementById('pression').innerHTML = ("pression");
   }
 
-increasePression();
 
 changeColor();
 
