@@ -96,21 +96,21 @@ function increasePression() {
 function changeColor () {
 
   if (pression == 0) {
-    document.getElementById('pression').style.color = "brown";
+    document.getElementById('pression').style.color = "purple";
     audio_source = "son_mini";
     }
 
-  else if (pression > 0 && pression < 500) {
-    document.getElementById('pression').style.color = "brown";
+  else if (pression >= 0 && pression < 500) {
+    document.getElementById('pression').style.color = "green";
     audio_source = "son_mini";
     }
 
-  else if (pression > 500 && pression < 1000) {
+  else if (pression >= 500 && pression < 1000) {
     document.getElementById('pression').style.color = "orange";
     audio_source = "son_medium";
     }
 
-  else if (pression > 1000 && pression <= 2000) {
+  else if (pression >= 1001 && pression <= 2000) {
     document.getElementById('pression').style.color = "red";
     audio_source = "son_hard";
     }
