@@ -53,6 +53,10 @@ function clickRequestDeviceOrientationEvent() {
 //  pression=0;
 //}
 
+function test (){
+  document.getElementById("difficulté").innerHTML = pression;
+}
+
 function increasePression() {
 
     if (gameover) {
