@@ -106,7 +106,7 @@ function changeColor () {
     }
 
   else if (pression == 500) {
-    document.getElementById('pression').style.color = "red";
+    document.getElementById('pression').style.color = "orange";
     audio_source = "son_medium";
     }
 
