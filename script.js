@@ -32,7 +32,7 @@ function clickRequestDeviceOrientationEvent() {
             increasePression();
             document.getElementById('roulis').innerHTML = ('Roulis : '+beta);
             document.getElementById('tangage').innerHTML = ('Tangage : '+gamma);
-            document.getElementById('pression').innerHTML = ('Pression : '+pression);
+            document.getElementById('jauge').innerHTML = ('Pression : '+pression);
             }
           )} else {
           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
@@ -55,7 +55,7 @@ function clickRequestDeviceOrientationEvent() {
 function increasePression() {
 
     if (gameover) {
-      document.getElementById('pression').style.color = "purple";
+      document.getElementById('jauge').style.color = "purple";
       document.getElementById('gameover').style.visibility = "visible";
     } else {
       if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
@@ -96,22 +96,22 @@ function increasePression() {
 function changeColor () {
 
   if (pression == 0) {
-    document.getElementById('pression').style.color = "purple";
+    document.getElementById('jauge').style.color = "purple";
     audio_source = "son_mini";
     }
 
   else if (pression >= 0 && pression < 500) {
-    document.getElementById('pression').style.color = "green";
+    document.getElementById('jauge').style.color = "green";
     audio_source = "son_mini";
     }
 
   else if (pression >= 500 && pression < 1000) {
-    document.getElementById('pression').style.color = "orange";
+    document.getElementById('jauge').style.color = "orange";
     audio_source = "son_medium";
     }
 
   else if (pression >= 1000 && pression <= 2000) {
-    document.getElementById('pression').style.color = "red";
+    document.getElementById('jauge').style.color = "red";
     audio_source = "son_hard";
     }
 
