@@ -52,7 +52,7 @@ function clickRequestDeviceOrientationEvent() {
 //  pression=0;
 //}
 while (pression < 10000){
-increasePression()
+increasePression();
 }
 
 function test (){
