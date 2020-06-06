@@ -9,7 +9,7 @@ function bannerAuthorisation() {
       document.querySelector('body').appendChild(banner)
 }
 else {
-  alert("paie toi un iphone");
+  alert("Essaie sur un iPhone");
   alert(typeof window.DeviceOrientationEvent);
   alert(typeof window.DeviceOrientationEvent.requestPermission);
   alert(typeof DeviceOrientationEvent.requestPermission);
@@ -50,7 +50,7 @@ function clickRequestDeviceOrientationEvent() {
 //  pression=0;
 //}
 
-function increasePression(pression) {
+function increasePression() {
 
     if (gameover) {
       document.getElementById('pression').style.color = "purple";
