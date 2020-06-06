@@ -51,7 +51,7 @@ function clickRequestDeviceOrientationEvent() {
 
 function increasePression() {
 
-    while (gameover = false) {
+    if (gameover) {
       document.getElementById('pression').style.color = "purple";
       document.getElementById('gameover').style.visibility = "visible";
     } else {
