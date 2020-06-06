@@ -92,7 +92,7 @@ function increments() {
 }
 
 while (pression < 10000) {
-  pression+=incR+incT
+  pression+=incR+incT;
 }
 
 function changeColor () {
