@@ -92,7 +92,7 @@ function increments() {
 }
 
 function increasePression () {
-  pression=0
+  pression=0;
   if (pression < 10000) {
     pression+=incR+incT;
   }
