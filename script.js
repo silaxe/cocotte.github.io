@@ -16,7 +16,6 @@ else {
 
   }
 }
- //}
 
 function clickRequestDeviceOrientationEvent() {
   window.DeviceOrientationEvent.requestPermission()
@@ -52,7 +51,7 @@ function clickRequestDeviceOrientationEvent() {
 
 function increasePression() {
 
-    if (gameover) {
+    while (gameover) {
       document.getElementById('pression').style.color = "purple";
       document.getElementById('gameover').style.visibility = "visible";
     } else {
@@ -122,9 +121,9 @@ function test () {
     document.getElementById('pression').innerHTML = ("pression");
   }
 
-  increasePression();
+increasePression();
 
-  changeColor();
+changeColor();
 
 test();
 
