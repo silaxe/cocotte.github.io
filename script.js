@@ -26,10 +26,8 @@ function clickRequestDeviceOrientationEvent() {
             document.getElementById('autorisation').style.display = 'none';
             beta=(Math.round(e.beta));
             gamma=(Math.round(e.gamma));
-            changeColor();
             if (audio_source == "son_mini") { document.getElementById('son').innerHTML = "Son : mini" }
             if (audio_source == "son_medium") { document.getElementById('son').innerHTML = "Son : medium"; }
-            increasePression();
             document.getElementById('beta').innerHTML = ('Roulis : '+beta);
             document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
             document.getElementById('pression').innerHTML = ('Pression : '+pression);
@@ -120,6 +118,16 @@ function changeColor () {
     }
   }
 
+function test () {
+    document.getElementById('pression').innerHTML = ("pression");
+  }
+
+  increasePression();
+
+  changeColor();
+
+test();
+
 const audio = document.getElementById("au");
 let enablesound = document.getElementById("autorisation");
 console.log(audio);
@@ -138,10 +146,7 @@ audio.addEventListener('error', ()=>{
   console.log("error");
 });
 
-function test () {
-  document.getElementById('pression').innerHTML = "pression";
-}
-test();
+
 
 /*
 Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
