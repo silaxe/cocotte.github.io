@@ -18,7 +18,9 @@ else {
 }
  //}
 
-function clickRequestDeviceOrientationEvent() {
+
+
+ function clickRequestDeviceOrientationEvent() {
    window.DeviceOrientationEvent.requestPermission()
        .then(response => {
          if (response === 'granted') {
@@ -39,7 +41,8 @@ function play() {
        document.getElementById('autorisation').style.display = 'none';
        beta=(Math.round(e.beta));
        gamma=(Math.round(e.gamma));
-
+       changeColor();
+       increasePression();
        document.getElementById('roulis').innerHTML = ('Roulis : '+beta);
        document.getElementById('tangage').innerHTML = ('Tangage : '+gamma);
        document.getElementById('jauge').innerHTML = ('Pression : '+pression);
@@ -47,9 +50,7 @@ function play() {
    }
      else {}
  }
- changeColor();
- increasePression();
- test();
+
 //if (audio_source == "son_mini") { document.getElementById('son').innerHTML = "Son : mini" }
 //if (audio_source == "son_medium") { document.getElementById('son').innerHTML = "Son : medium"; }
 
