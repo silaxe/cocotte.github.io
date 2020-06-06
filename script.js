@@ -29,7 +29,6 @@ function clickRequestDeviceOrientationEvent() {
             changeColor();
             if (audio_source == "son_mini") { document.getElementById('son').innerHTML = "Son : mini" }
             if (audio_source == "son_medium") { document.getElementById('son').innerHTML = "Son : medium"; }
-            increasePression();
             test();
             document.getElementById('roulis').innerHTML = ('Roulis : '+beta);
             document.getElementById('tangage').innerHTML = ('Tangage : '+gamma);
@@ -52,6 +51,7 @@ function clickRequestDeviceOrientationEvent() {
 // function refreshInfo() {
 //  pression=0;
 //}
+increasePression();
 
 function test (){
   document.getElementById("difficulté").innerHTML = pression;
