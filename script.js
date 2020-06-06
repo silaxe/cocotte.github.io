@@ -1,4 +1,4 @@
-let beta, gamma, pression, audio_source, incT, incR;
+let beta, gamma, pression=0, audio_source, incT, incR;
 
 //window.onload = function () {
 function bannerAuthorisation() {
@@ -25,6 +25,7 @@ function clickRequestDeviceOrientationEvent() {
             beta=(Math.round(e.beta));
             gamma=(Math.round(e.gamma));
             increments();
+            increasePression ();
             if (audio_source == "son_mini") { document.getElementById('son').innerHTML = "Son : mini" }
             if (audio_source == "son_medium") { document.getElementById('son').innerHTML = "Son : medium"; }
             document.getElementById('roulis').innerHTML = ('Roulis : '+beta);
@@ -86,7 +87,6 @@ function increments() {
   }
 
 function increasePression () {
-  pression=0;
   if (pression < 10000) {
     pression+=incR+incT;
   }
