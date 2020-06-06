@@ -4,14 +4,11 @@ let beta, gamma, pression=0, gameover=false, audio_source;
 function bannerAuthorisation() {
    if (window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function'){
       const banner = document.createElement('div');
-      banner.innerHTML = `<div id="autorisation" style="z-index: 1; position: absolute; width: 100%; background-color:#000; color: #fff" onclick="clickRequestDeviceOrientationEvent();"><p style="padding: 10px">Cliquez ici pour autoriser l'accès à votre capteur de mouvements.</p></div>`;
+      banner.innerHTML = `<div id="autorisation" style="z-index: 1; position: absolute; width: 100%; background-color:#000; color: #fff" onclick="clickRequestDeviceOrientationEvent(); playAudio('assets/son_mini.wav');"><p style="padding: 10px">Cliquez ici pour autoriser l'accès à votre capteur de mouvements.</p></div>`;
 //      banner.onclick = clickRequestDeviceOrientationEvent();
       document.querySelector('body').appendChild(banner)
 }
-else {
-  alert("paie toi un iphone");
   }
-}
  //}
 
 function clickRequestDeviceOrientationEvent() {
@@ -24,7 +21,7 @@ function clickRequestDeviceOrientationEvent() {
             gamma=(Math.round(e.gamma));
             changeColor();
             if (audio_source == "son_mini") { document.getElementById('son').innerHTML = "Son : mini" }
-            if (audio_source == "son_medium") { document.getElementById('son').innerHTML = "Son : medium"; }
+            if (audio_source == "son_medium") { document.getElementById('son').innerHTML = "Son : medium"; playAudio('assets/son_medium.wav'); }
             increasePression();
             document.getElementById('beta').innerHTML = ('Roulis : '+beta);
             document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
@@ -98,7 +95,7 @@ function changeColor () {
 
   else if (pression > 0 && pression < 500) {
     document.getElementById('pression').style.color = "brown";
-    audio_source = "son_mini";
+    audio_source = "undefined";
     }
 
   else if (pression == 500) {
@@ -108,7 +105,7 @@ function changeColor () {
 
   else if (pression > 500 && pression <= 2000) {
     document.getElementById('pression').style.color = "red";
-    audio_source = "son_hard";
+    audio_source = "undefined";
     }
 
   else {
@@ -116,23 +113,11 @@ function changeColor () {
     }
   }
 
-const audio = document.getElementById("au");
-let enablesound = document.getElementById("autorisation");
-console.log(audio);
-enablesound.addEventListener("click", ()=>{
-  audio.play();
-});
-
-const startPlaying = ()=>{
-  audio.removeEventListener('playing', startPlaying);
-  audio.src = 'https://freesound.org/data/previews/475/475736_4397472-lq.mp3';
+function playAudio(source) {
+  var audio = new Audio(source);
+  audio.loop = true;
   audio.play();
 }
-
-audio.addEventListener('playing', startPlaying);
-audio.addEventListener('error', ()=>{
-  console.log("error");
-});
 
 /*
 Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
