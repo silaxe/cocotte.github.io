@@ -51,7 +51,9 @@ function clickRequestDeviceOrientationEvent() {
 // function refreshInfo() {
 //  pression=0;
 //}
-increasePression();
+while (pression < 10000){
+increasePression()
+}
 
 function test (){
   document.getElementById("difficulté").innerHTML = pression;
