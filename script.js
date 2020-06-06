@@ -109,12 +109,12 @@ function changeColor () {
     audio_source = "son_mini";
     }
 
-  else if (pression = 500) {
-    document.getElementById('pression').style.color = "red";
+  else if (pression > 500 && pression <= 1000) {
+    document.getElementById('pression').style.color = "orange";
     audio_source = "son_medium";
     }
 
-  else if (pression > 500 && pression <= 2000) {
+  else if (pression > 1000 && pression <= 2000) {
     document.getElementById('pression').style.color = "red";
     audio_source = "son_hard";
     }
