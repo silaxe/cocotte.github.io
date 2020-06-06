@@ -51,7 +51,7 @@ function clickRequestDeviceOrientationEvent() {
 // function refreshInfo() {
 //  pression=0;
 //}
-while (pression < 10000){
+while (pression <== 10000){
 increasePression();
 }
 
