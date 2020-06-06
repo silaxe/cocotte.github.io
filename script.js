@@ -1,4 +1,4 @@
-let beta, gamma, pression=0, audio_source, incT, incR;
+let beta, gamma, pression=0, gameover=false, audio_source;
 
 //window.onload = function () {
 function bannerAuthorisation() {
@@ -13,23 +13,25 @@ else {
   alert(typeof window.DeviceOrientationEvent);
   alert(typeof window.DeviceOrientationEvent.requestPermission);
   alert(typeof DeviceOrientationEvent.requestPermission);
+
   }
 }
+ //}
 
 function clickRequestDeviceOrientationEvent() {
   window.DeviceOrientationEvent.requestPermission()
       .then(response => {
         if (response === 'granted') {
-            window.addEventListener('deviceorientation', (e) => {
+            window.addEventListener('deviceorientation',function (e) {
             document.getElementById('autorisation').style.display = 'none';
             beta=(Math.round(e.beta));
             gamma=(Math.round(e.gamma));
-            increments();
-            increasePression ();
+            changeColor();
             if (audio_source == "son_mini") { document.getElementById('son').innerHTML = "Son : mini" }
             if (audio_source == "son_medium") { document.getElementById('son').innerHTML = "Son : medium"; }
-            document.getElementById('roulis').innerHTML = ('Roulis : '+beta);
-            document.getElementById('tangage').innerHTML = ('Tangage : '+gamma);
+            increasePression();
+            document.getElementById('beta').innerHTML = ('Roulis : '+beta+" | "+e.beta);
+            document.getElementById('gamma').innerHTML = ('Tangage : '+gamma+" | "+e.gamma);
             document.getElementById('pression').innerHTML = ('Pression : '+pression);
             }
           )} else {
@@ -50,77 +52,77 @@ function clickRequestDeviceOrientationEvent() {
 //  pression=0;
 //}
 
-function increments() {
+function increasePression() {
 
+    if (gameover) {
+      document.getElementById('pression').style.color = "purple";
+      document.getElementById('gameover').style.visibility = "visible";
+    } else {
       if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
       {
-        incR=5;
+        pression+=2;
       }
       else if((beta >= 10 && beta < 15) || (beta <= -10 && beta > -15))
       {
-        incR=4;
+        pression+=4;
       }
       else if(beta >= 15 || beta <= -15)
       {
-        incR=6;
+        pression+=6;
       }
       else
       {
-        incR=3;
+        pression+=1;
       }
       if((gamma >= 10 && gamma < 15) || (gamma <= -10 && gamma > -15))
       {
-        incT=7;
+        pression+=2;
       }
       else if((gamma >= 15 && gamma < 30) || (gamma <= -15 && gamma > -30))
       {
-        incT=4;
+        pression+=4;
       }
       else if(gamma >= 30 || gamma <= -30)
       {
-        incT=6;
+        pression+=6;
       }
       else
       {
-        incT=1;
+        pression+=1;
       }
   }
-
-function increasePression () {
-  if (pression < 10000) {
-    pression+=incR+incT;
-  }
-  else () {
-    document.getElementById('pression').style.color = "purple";
-    document.getElementById('gameover').style.visibility = "visible";
- }
 }
-
 
 function changeColor () {
 
-  if (pression > 0.1 && pression < 500) {
+  if (pression == 0) {
     document.getElementById('pression').style.color = "brown";
     audio_source = "son_mini";
     }
-  else if (pression > 500 && pression <= 1000) {
-    document.getElementById('pression').style.color = "orange";
+
+  else if (pression > 0 && pression < 500) {
+    document.getElementById('pression').style.color = "brown";
+    audio_source = "son_mini";
+    }
+
+  else if (pression == 500) {
+    document.getElementById('pression').style.color = "red";
     audio_source = "son_medium";
     }
 
-  else {
+  else if (pression > 500 && pression <= 2000) {
     document.getElementById('pression').style.color = "red";
     audio_source = "son_hard";
     }
 
+  else {
+    gameover = true;
+    }
   }
 
 function test () {
-    document.getElementById('difficulté').innerHTML = pression;
-  }
-
-increasePression();
-changeColor();
+  document.getElementById("difficulté").innerHTML=pression;
+}
 test();
 
 const audio = document.getElementById("au");
@@ -140,7 +142,6 @@ audio.addEventListener('playing', startPlaying);
 audio.addEventListener('error', ()=>{
   console.log("error");
 });
-
 
 /*
 Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
