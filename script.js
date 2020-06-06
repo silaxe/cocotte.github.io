@@ -99,16 +99,10 @@ function increasePression () {
 
 function changeColor () {
 
-  if (pression = 0) {
+  if (pression > 0.1 && pression < 500) {
     document.getElementById('pression').style.color = "brown";
     audio_source = "son_mini";
     }
-
-  else if (pression > 0 && pression < 500) {
-    document.getElementById('pression').style.color = "brown";
-    audio_source = "son_mini";
-    }
-
   else if (pression > 500 && pression <= 1000) {
     document.getElementById('pression').style.color = "orange";
     audio_source = "son_medium";
