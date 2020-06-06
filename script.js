@@ -58,7 +58,7 @@ function increasePression(pression) {
     } else {
       if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
       {
-        pression+=2;
+        pression+=5;
       }
       else if((beta >= 10 && beta < 15) || (beta <= -10 && beta > -15))
       {
@@ -74,7 +74,7 @@ function increasePression(pression) {
       }
       if((gamma >= 10 && gamma < 15) || (gamma <= -10 && gamma > -15))
       {
-        pression+=2;
+        pression+=7;
       }
       else if((gamma >= 15 && gamma < 30) || (gamma <= -15 && gamma > -30))
       {
