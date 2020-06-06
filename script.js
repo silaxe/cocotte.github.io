@@ -22,7 +22,7 @@ function clickRequestDeviceOrientationEvent() {
   window.DeviceOrientationEvent.requestPermission()
       .then(response => {
         if (response === 'granted') {
-            window.addEventListener('deviceorientation',function (e) {
+            window.addEventListener('deviceorientation', (e) => {
             document.getElementById('autorisation').style.display = 'none';
             beta=(Math.round(e.beta));
             gamma=(Math.round(e.gamma));
@@ -121,7 +121,7 @@ function changeColor () {
   }
 
 function test () {
-  document.getElementById("difficulté").innerHTML=pression;
+  document.getElementById('difficulté').innerHTML=pression;
 }
 test();
 
