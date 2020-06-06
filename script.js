@@ -110,7 +110,7 @@ function changeColor () {
     audio_source = "son_medium";
     }
 
-  else if (pression >= 1001 && pression <= 2000) {
+  else if (pression >= 1000 && pression <= 2000) {
     document.getElementById('pression').style.color = "red";
     audio_source = "son_hard";
     }
@@ -139,7 +139,8 @@ audio.addEventListener('error', ()=>{
 });
 
 function test () {
-  document.getElementById('difficulté').innerHTML = pression;
+  document.getElementById('difficulté').innerHTML = (pression);
+
 }
 test();
 
