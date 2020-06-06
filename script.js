@@ -26,7 +26,7 @@ else {
          if (response === 'granted') {
            startPlaying=true;
 
-           } else {
+           )} else {
            alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
        }
    })
