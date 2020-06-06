@@ -50,7 +50,7 @@ function clickRequestDeviceOrientationEvent() {
 //  pression=0;
 //}
 
-function increasePression() {
+function increasePression(pression) {
 
     if (gameover) {
       document.getElementById('pression').style.color = "purple";
@@ -70,7 +70,7 @@ function increasePression() {
       }
       else
       {
-        pression+=1;
+        pression+=3;
       }
       if((gamma >= 10 && gamma < 15) || (gamma <= -10 && gamma > -15))
       {
