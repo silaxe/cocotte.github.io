@@ -22,7 +22,7 @@ function clickRequestDeviceOrientationEvent() {
   window.DeviceOrientationEvent.requestPermission()
       .then(response => {
         if (response === 'granted') {
-            window.addEventListener('deviceorientation',function (e) {
+            window.addEventListener('deviceorientation', (e) => {
             document.getElementById('autorisation').style.display = 'none';
             beta=(Math.round(e.beta));
             gamma=(Math.round(e.gamma));
@@ -137,6 +137,11 @@ audio.addEventListener('playing', startPlaying);
 audio.addEventListener('error', ()=>{
   console.log("error");
 });
+
+function test () {
+  document.getElementById('pression').innerHTML = "pression";
+}
+test();
 
 /*
 Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
