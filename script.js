@@ -100,7 +100,7 @@ function increasePression () {
 
 function changeColor () {
 
-  if (pression == 0) {
+  if (pression = 0) {
     document.getElementById('pression').style.color = "brown";
     audio_source = "son_mini";
     }
@@ -110,7 +110,7 @@ function changeColor () {
     audio_source = "son_mini";
     }
 
-  else if (pression == 500) {
+  else if (pression = 500) {
     document.getElementById('pression').style.color = "red";
     audio_source = "son_medium";
     }
@@ -131,7 +131,6 @@ function test () {
 
 increasePression();
 changeColor();
-
 test();
 
 const audio = document.getElementById("au");
