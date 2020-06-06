@@ -1,4 +1,4 @@
-let beta, gamma, pression=0, gameover=false, audio_source, incT, incR;
+let beta, gamma, pression, gameover=false, audio_source, incT, incR;
 
 //window.onload = function () {
 function bannerAuthorisation() {
@@ -91,8 +91,11 @@ function increments() {
   }
 }
 
-while (pression < 10000) {
-  pression+=incR+incT;
+function increasePression () {
+  pression=0
+  if (pression < 10000) {
+    pression+=incR+incT;
+  }
 }
 
 function changeColor () {
