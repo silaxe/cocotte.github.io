@@ -123,7 +123,7 @@ function changeColor () {
   }
 
 function test () {
-    document.getElementById('pression').innerHTML = ("pression");
+    document.getElementById('difficulté').innerHTML = pression;
   }
 
 
