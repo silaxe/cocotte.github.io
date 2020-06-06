@@ -1,4 +1,4 @@
-let beta, gamma, pression=0, gameover=false, audio_source, startPlaying=false;
+let beta, gamma, pression=0, gameover=false, audio_source;
 
 //window.onload = function () {
 function bannerAuthorisation() {
@@ -18,41 +18,30 @@ else {
 }
  //}
 
-
-
- function clickRequestDeviceOrientationEvent() {
-   window.DeviceOrientationEvent.requestPermission()
-       .then(response => {
-         if (response === 'granted') {
-           startPlaying=true;
-
-           } else {
-           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
-       }
-   })
-       .catch(e => {
-         console.error(e)
-   })
- }
-
-function play() {
-   if (startPlaying=true) {
-     window.addEventListener('deviceorientation', (e) => {
-       document.getElementById('autorisation').style.display = 'none';
-       beta=(Math.round(e.beta));
-       gamma=(Math.round(e.gamma));
-       changeColor();
-       increasePression();
-       document.getElementById('roulis').innerHTML = ('Roulis : '+beta);
-       document.getElementById('tangage').innerHTML = ('Tangage : '+gamma);
-       document.getElementById('jauge').innerHTML = ('Pression : '+pression);
-     })
-   }
-     else {}
- }
-
-//if (audio_source == "son_mini") { document.getElementById('son').innerHTML = "Son : mini" }
-//if (audio_source == "son_medium") { document.getElementById('son').innerHTML = "Son : medium"; }
+function clickRequestDeviceOrientationEvent() {
+  window.DeviceOrientationEvent.requestPermission()
+      .then(response => {
+        if (response === 'granted') {
+            window.addEventListener('deviceorientation', (e) => {
+            document.getElementById('autorisation').style.display = 'none';
+            beta=(Math.round(e.beta));
+            gamma=(Math.round(e.gamma));
+            changeColor();
+            if (audio_source == "son_mini") { document.getElementById('son').innerHTML = "Son : mini" }
+            if (audio_source == "son_medium") { document.getElementById('son').innerHTML = "Son : medium"; }
+            increasePression();
+            document.getElementById('roulis').innerHTML = ('Roulis : '+beta);
+            document.getElementById('tangage').innerHTML = ('Tangage : '+gamma);
+            document.getElementById('jauge').innerHTML = ('Pression : '+pression);
+            }
+          )} else {
+          alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
+      }
+  })
+      .catch(e => {
+        console.error(e)
+  })
+}
 
 // document.getElementById("start").addEventListener("click", function() {
 // refreshInfo();
