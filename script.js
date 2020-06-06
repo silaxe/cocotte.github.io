@@ -91,7 +91,7 @@ function increments() {
   }
 }
 
-while (pression > 10000) {
+while (pression < 10000) {
   pression+=incR+incT
 }
 
