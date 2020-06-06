@@ -1,4 +1,4 @@
-let beta, gamma, pression==0, gameover=false, audio_source, incT, incR;
+let beta, gamma, pression=0, gameover=false, audio_source, incT, incR;
 
 //window.onload = function () {
 function bannerAuthorisation() {
@@ -9,7 +9,7 @@ function bannerAuthorisation() {
       document.querySelector('body').appendChild(banner)
 }
 else {
-  alert("Essaie sur un iPhone ");
+  alert("Essaie sur un iPhone");
   alert(typeof window.DeviceOrientationEvent);
   alert(typeof window.DeviceOrientationEvent.requestPermission);
   alert(typeof DeviceOrientationEvent.requestPermission);
@@ -148,7 +148,6 @@ audio.addEventListener('playing', startPlaying);
 audio.addEventListener('error', ()=>{
   console.log("error");
 });
-
 
 
 /*
