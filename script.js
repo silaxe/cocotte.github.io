@@ -1,4 +1,4 @@
-let beta, gamma, pression=0, gameover=false, audio_source;
+let beta, gamma, pression==0, gameover=false, audio_source;
 
 //window.onload = function () {
 function bannerAuthorisation() {
