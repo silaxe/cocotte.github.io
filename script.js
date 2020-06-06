@@ -32,7 +32,7 @@ function clickRequestDeviceOrientationEvent() {
             increasePression();
             document.getElementById('roulis').innerHTML = ('Roulis : '+beta);
             document.getElementById('tangage').innerHTML = ('Tangage : '+gamma);
-            document.getElementById('pression').innerHTML = ('Pression : '+pression);
+            document.getElementById('jauge').innerHTML = ('Pression : '+pression);
             }
           )} else {
           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
@@ -55,7 +55,7 @@ function clickRequestDeviceOrientationEvent() {
 function increasePression() {
 
     if (gameover) {
-      document.getElementById('pression').style.color = "purple";
+      document.getElementById('jauge').style.color = "purple";
       document.getElementById('gameover').style.visibility = "visible";
     } else {
       if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
@@ -95,7 +95,7 @@ function increasePression() {
 
 function changeColor () {
 
-  if (pression == 0) {
+  if (pression = 0) {
     document.getElementById('pression').style.color = "purple";
     audio_source = "son_mini";
     }
@@ -120,6 +120,12 @@ function changeColor () {
     }
   }
 
+function test () {
+    document.getElementById('difficulté').innerHTML = (pression);
+
+  }
+  test();
+
 const audio = document.getElementById("au");
 let enablesound = document.getElementById("autorisation");
 console.log(audio);
@@ -138,11 +144,7 @@ audio.addEventListener('error', ()=>{
   console.log("error");
 });
 
-function test () {
-  document.getElementById('difficulté').innerHTML = (pression);
 
-}
-test();
 
 /*
 Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
