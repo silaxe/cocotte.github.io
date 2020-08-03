@@ -51,7 +51,7 @@ function clickRequestDeviceOrientationEvent() {
 // function refreshInfo() {
 //  pression=0;
 //}
-
+/*
 function increasePression() {
 
     if (gameover) {
