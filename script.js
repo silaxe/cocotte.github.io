@@ -30,7 +30,7 @@ function clickRequestDeviceOrientationEvent() {
             if (audio_source == "son_mini") { document.getElementById('son').innerHTML = "Son : mini" }
             if (audio_source == "son_medium") { document.getElementById('son').innerHTML = "Son : medium"; }
             increasePression();
-            document.getElementById('roulis').innerHTML = ('Roulis : '+beta);
+            document.getElementById('roulis').innerHTML = ('Roulis** : '+beta);
             document.getElementById('tangage').innerHTML = ('Tangage : '+gamma);
             document.getElementById('jauge').innerHTML = ('Pression : '+pression);
             }
