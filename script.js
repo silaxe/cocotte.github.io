@@ -9,7 +9,7 @@ function bannerAuthorisation() {
       document.querySelector('body').appendChild(banner)
 }
 else {
-  alert("paie toi un iphone");
+  alert("Essaye avec un iphone");
   alert(typeof window.DeviceOrientationEvent);
   alert(typeof window.DeviceOrientationEvent.requestPermission);
   alert(typeof DeviceOrientationEvent.requestPermission);
@@ -22,7 +22,7 @@ function clickRequestDeviceOrientationEvent() {
   window.DeviceOrientationEvent.requestPermission()
       .then(response => {
         if (response === 'granted') {
-            window.addEventListener('deviceorientation',function (e) {
+            window.addEventListener('deviceorientation', (e) => {
             document.getElementById('autorisation').style.display = 'none';
             beta=(Math.round(e.beta));
             gamma=(Math.round(e.gamma));
@@ -30,9 +30,9 @@ function clickRequestDeviceOrientationEvent() {
             if (audio_source == "son_mini") { document.getElementById('son').innerHTML = "Son : mini" }
             if (audio_source == "son_medium") { document.getElementById('son').innerHTML = "Son : medium"; }
             increasePression();
-            document.getElementById('beta').innerHTML = ('Roulis : '+beta);
-            document.getElementById('gamma').innerHTML = ('Tangage : '+gamma);
-            document.getElementById('pression').innerHTML = ('Pression : '+pression);
+            document.getElementById('roulis').innerHTML = ('Roulis : '+beta);
+            document.getElementById('tangage').innerHTML = ('Tangage : '+gamma);
+            document.getElementById('jauge').innerHTML = ('Pression : '+pression);
             }
           )} else {
           alert("Désolé, vous ne pouvez pas jouer à ce jeu car votre appareil n'a pas de capteur de mouvement.")
@@ -51,11 +51,15 @@ function clickRequestDeviceOrientationEvent() {
 // function refreshInfo() {
 //  pression=0;
 //}
-/*
+
+function test (){
+  document.getElementById("difficulté").innerHTML = pression;
+}
+
 function increasePression() {
 
     if (gameover) {
-      document.getElementById('pression').style.color = "purple";
+      document.getElementById('jauge').style.color = "purple";
       document.getElementById('gameover').style.visibility = "visible";
     } else {
       if((beta >= 5 && beta < 10) || (beta <= -5 && beta > -10))
@@ -96,22 +100,22 @@ function increasePression() {
 function changeColor () {
 
   if (pression == 0) {
-    document.getElementById('pression').style.color = "brown";
+    document.getElementById('jauge').style.color = "purple";
     audio_source = "son_mini";
     }
 
-  else if (pression > 0 && pression < 500) {
-    document.getElementById('pression').style.color = "brown";
+  else if (pression >= 0 && pression < 500) {
+    document.getElementById('jauge').style.color = "green";
     audio_source = "son_mini";
     }
 
-  else if (pression == 500) {
-    document.getElementById('pression').style.color = "red";
+  else if (pression >= 500 && pression < 1000) {
+    document.getElementById('jauge').style.color = "orange";
     audio_source = "son_medium";
     }
 
-  else if (pression > 500 && pression <= 2000) {
-    document.getElementById('pression').style.color = "red";
+  else if (pression >= 1000 && pression <= 1999) {
+    document.getElementById('jauge').style.color = "red";
     audio_source = "son_hard";
     }
 
@@ -137,6 +141,8 @@ audio.addEventListener('playing', startPlaying);
 audio.addEventListener('error', ()=>{
   console.log("error");
 });
+
+
 
 /*
 Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
