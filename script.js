@@ -127,8 +127,8 @@ function changeColor () {
 function playSound() {
 
 const audio = document.getElementById("au");
-let enablesound = document.getElementById("autorisation");
-console.log(audio);
+//let enablesound = document.getElementById("autorisation");
+//console.log(audio);
 //enablesound.addEventListener("click", ()=>{
   audio.play();
 //});
