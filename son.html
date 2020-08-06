@@ -8,16 +8,16 @@
 </head>
 <body>
 <input id="bt" type="button" value="Accept">
-<!-- <audio id="au" preload="auto" src="https://raw.githubusercontent.com/anars/blank-audio/master/5-seconds-of-silence.mp3"></audio> -->
+<audio id="au" preload="auto" src="https://raw.githubusercontent.com/anars/blank-audio/master/5-seconds-of-silence.mp3"></audio>
 
 <script type="text/javascript">
 
-//const audio = document.getElementById("au");
-//let bt = document.getElementById("bt");
-//console.log(audio);
-//bt.addEventListener("click", ()=>{
-//  audio.play();
-//});
+const audio = document.getElementById("au");
+let bt = document.getElementById("bt");
+console.log(audio);
+bt.addEventListener("click", ()=>{
+  audio.play();
+});
 
 const startPlaying = ()=>{
   audio.removeEventListener('playing', startPlaying);
