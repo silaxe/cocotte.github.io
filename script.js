@@ -128,11 +128,10 @@ function launchAudio() {
 
 function changeSound() {
 
-//Fonction sonore qui tourne dans la boucle:
-// i) lancer le premier son;
-// ii) créer une boucle infinie dans laquelle on examine le changement de la variable jauge;
-// iia) si la variable ne change pas, on recommence la boucle;
-// iib) si la variable change et que la nouvelle couleur est X, on lance le son suivant.
+//Fonction sonore qui tourne dans la boucle deviceorientation:
+// i) on examine le changement de la variable jauge;
+// ia) si la variable ne change pas, on break;
+// ib) si la variable change et que la nouvelle couleur est X, on lance le son suivant.
 
 //const startPlaying = ()=>{
 //  audio.removeEventListener('playing', startPlaying);
