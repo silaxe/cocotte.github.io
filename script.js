@@ -125,7 +125,7 @@ function launchAudio() {
   audio.play();
 
   const startPlaying = ()=>{
-    audio.removeEventListener('playing', startPlaying);
+    //audio.removeEventListener('playing', startPlaying);
     audio.src = 'assets/son_hard.mp3';
     audio.play();
     audio.loop = true;
