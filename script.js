@@ -102,21 +102,25 @@ function changeColor () {
   if (pression == 0) {
     document.getElementById('jauge').style.color = "purple";
     //audio_source = "son_mini";
+    audio.addEventListener('playing', startPlaying);
     }
 
   else if (pression >= 0 && pression < 500) {
     document.getElementById('jauge').style.color = "green";
     //audio_source = "son_mini";
+    audio.addEventListener('playing', startPlaying);
     }
 
   else if (pression >= 500 && pression < 1000) {
     document.getElementById('jauge').style.color = "orange";
     //audio_source = "son_medium";
+    audio.addEventListener('playing', startPlaying);
     }
 
   else if (pression >= 1000 && pression <= 1999) {
     document.getElementById('jauge').style.color = "red";
     //audio_source = "son_hard";
+    audio.addEventListener('playing', startPlaying);
     }
 
   else {
@@ -137,15 +141,16 @@ const startPlaying = ()=>{
   audio.removeEventListener('playing', startPlaying);
   audio.src = 'assets/son_hard.mp3';
   audio.play();
-  audio.loop = true;
+//  audio.loop = true;
 }
 
-audio.addEventListener('playing', startPlaying);
-audio.addEventListener('error', ()=>{
-  console.log("error");
-});
+//audio.addEventListener('error', ()=>{
+//  console.log("error");
+//});
 
 }
+
+// Pour faire des boucles sonores sans blanc, voir SeamlessLoop 2.0 for JavaScript: https://github.com/Hivenfour/SeamlessLoop
 
 /*
 Solution pour récupérer les paramètres de jeu depuis la fenêtre Options
