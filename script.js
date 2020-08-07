@@ -4,7 +4,7 @@ let beta, gamma, pression=0, gameover=false, audio_source;
 function bannerAuthorisation() {
    if (window.DeviceOrientationEvent && typeof window.DeviceOrientationEvent.requestPermission === 'function'){
       const banner = document.createElement('div');
-      banner.innerHTML = `<div id="autorisation" style="z-index: 1; position: absolute; width: 100%; background-color:#000; color: #fff" onclick="clickRequestDeviceOrientationEvent();"><p style="padding: 10px">Cliquez ici pour autoriser l'accès à votre capteur de mouvements.</p></div>`;
+      banner.innerHTML = `<div id="autorisation" style="z-index: 1; position: absolute; width: 100%; background-color:#000; color: #fff" onclick="launchAudio(); clickRequestDeviceOrientationEvent();"><p style="padding: 10px">Cliquez ici pour autoriser l'accès à votre capteur de mouvements.</p></div>`;
 //      banner.onclick = clickRequestDeviceOrientationEvent();
       document.querySelector('body').appendChild(banner)
 }
@@ -22,15 +22,13 @@ function clickRequestDeviceOrientationEvent() {
   window.DeviceOrientationEvent.requestPermission()
       .then(response => {
         if (response === 'granted') {
-            const audio = document.getElementById("au");
-            audio.play();
             window.addEventListener('deviceorientation', (e) => {
             document.getElementById('autorisation').style.display = 'none';
             beta=(Math.round(e.beta));
             gamma=(Math.round(e.gamma));
             changeColor();
             increasePression();
-            playSound();
+            changeSound();
             document.getElementById('roulis').innerHTML = ('Roulis** : '+beta);
             document.getElementById('tangage').innerHTML = ('Tangage : '+gamma);
             document.getElementById('jauge').innerHTML = ('Pression : '+pression);
@@ -121,7 +119,14 @@ function changeColor () {
     }
   }
 
-function playSound() {
+function launchAudio() {
+
+  const audio = document.getElementById("au");
+  audio.play();
+
+}
+
+function changeSound() {
 
 //Fonction sonore qui tourne dans la boucle:
 // i) lancer le premier son;
