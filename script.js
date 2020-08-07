@@ -126,13 +126,9 @@ function launchAudio() {
 
   const startPlaying = ()=>{
     audio.removeEventListener('playing', startPlaying);
-    audio.src = 'assets/son_hard.mp3';
+    audio.src = 'https://raw.githubusercontent.com/anars/blank-audio/master/5-seconds-of-silence.mp3';
     audio.play();
   }
-  audio.addEventListener('playing', startPlaying);
-  audio.removeEventListener('playing', startPlaying);
-  audio.src = 'https://freesound.org/data/previews/475/475736_4397472-lq.mp3';
-  audio.play();
   audio.addEventListener('playing', startPlaying);
 
 }
