@@ -125,6 +125,14 @@ function launchAudio() {
   const audio = document.getElementById("au");
   audio.play();
 
+  const startPlaying = ()=>{
+    audio.removeEventListener('playing', startPlaying);
+    audio.src = 'assets/son_hard.mp3';
+    audio.play();
+    audio.loop = true;
+  }
+  audio.addEventListener('playing', startPlaying);
+
 }
 
 function changeSound() {
