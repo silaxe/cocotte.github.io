@@ -123,19 +123,19 @@ function changeColor () {
 
 function playSound() {
 
-//Fonction sonore dont le rôle est le suivant:
+//Fonction sonore qui tourne dans la boucle:
 // i) lancer le premier son;
 // ii) créer une boucle infinie dans laquelle on examine le changement de la variable jauge;
 // iia) si la variable ne change pas, on recommence la boucle;
 // iib) si la variable change et que la nouvelle couleur est X, on lance le son suivant.
 
-const startPlaying = ()=>{
-  audio.removeEventListener('playing', startPlaying);
-  audio.src = 'assets/son_hard.mp3';
-  audio.play();
-  audio.loop = true;
-}
-audio.addEventListener('playing', startPlaying);
+//const startPlaying = ()=>{
+//  audio.removeEventListener('playing', startPlaying);
+//  audio.src = 'assets/son_hard.mp3';
+//  audio.play();
+//  audio.loop = true;
+//}
+//audio.addEventListener('playing', startPlaying);
 
 }
 
