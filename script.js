@@ -130,12 +130,9 @@ function launchAudio() {
     audio.play();
   }
   audio.addEventListener('playing', startPlaying);
-
-
-    audio.removeEventListener('playing', startPlaying);
-    audio.src = 'https://freesound.org/data/previews/475/475736_4397472-lq.mp3';
-    audio.play();
-
+  audio.removeEventListener('playing', startPlaying);
+  audio.src = 'https://freesound.org/data/previews/475/475736_4397472-lq.mp3';
+  audio.play();
   audio.addEventListener('playing', startPlaying);
 
 }
