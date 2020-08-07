@@ -125,8 +125,16 @@ function launchAudio() {
   audio.play();
 
   const startPlaying = ()=>{
-    //audio.removeEventListener('playing', startPlaying);
+    audio.removeEventListener('playing', startPlaying);
     audio.src = 'assets/son_hard.mp3';
+    audio.play();
+    audio.loop = true;
+  }
+  audio.addEventListener('playing', startPlaying);
+
+  const startPlaying = ()=>{
+    audio.removeEventListener('playing', startPlaying);
+    audio.src = 'https://freesound.org/data/previews/475/475736_4397472-lq.mp3';
     audio.play();
     audio.loop = true;
   }
